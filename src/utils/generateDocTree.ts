@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 11:41:37
- * @LastEditTime: 2022-09-04 11:47:48
+ * @LastEditTime: 2022-09-04 12:08:52
  * @Description: 
  */
 export type DocItem = {
@@ -15,7 +15,6 @@ export type DocItem = {
 };
 
 export const generate = (args: DocItem[]) => {
-  console.log("🚀 ~ file: generateDocTree.ts ~ line 19 ~ generate ~ args", args)
   return {
     total: args.length,
     tree: args
