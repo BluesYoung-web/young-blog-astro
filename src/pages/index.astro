@@ -1,16 +1,15 @@
 ---
+import { Code } from 'astro/components';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { type DocItem, generate } from '../utils/generateDocTree';
 
-import fn from '../apis/allDocs'
+const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}')
+const { tree, total } = generate(blogs);
 
-const docTree = await fn()
-console.log("🚀 ~ file: index.astro ~ line 10 ~ docTree", docTree)
-
-const display = JSON.stringify(docTree)
-console.log("🚀 ~ file: index.astro ~ line 13 ~ display", display)
+const display = JSON.stringify(tree, null, 2)
 ---
 
 <!DOCTYPE html>
@@ -21,8 +20,9 @@ console.log("🚀 ~ file: index.astro ~ line 13 ~ display", display)
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 node fs test</h1>
-			{ display }
+			<h1>🧑‍🚀 blogs test</h1>
+			<h2>total docs: { total }</h2>
+			<Code code={ display } lang="js" />
 		</main>
 		<Footer />
 	</body>
