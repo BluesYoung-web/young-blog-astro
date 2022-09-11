@@ -1,11 +1,11 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-09-04 10:40:27
+ * @LastEditTime: 2022-09-11 16:18:07
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
-import vercelAdapter from '@astrojs/vercel/serverless';
+import adapter from '@astrojs/netlify/functions';
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
@@ -16,7 +16,7 @@ import unocss from 'unocss/astro';
 export default defineConfig({
   site: 'https://young-blog-astro.vercel.app',
   output: 'server',
-  adapter: vercelAdapter(),
+  adapter: adapter(),
   integrations: [
 		mdx(),
 		sitemap({
