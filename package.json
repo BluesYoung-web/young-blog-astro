@@ -18,6 +18,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^1.1.1",
     "@astrojs/netlify": "^1.0.2",
     "@astrojs/prism": "^1.0.1",
     "@unocss/reset": "^0.45.18",
