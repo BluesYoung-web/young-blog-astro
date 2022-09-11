@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-09-11 16:53:43
+ * @LastEditTime: 2022-09-11 17:13:42
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
@@ -26,16 +26,6 @@ export default defineConfig({
 		unocss()
 	],
 	markdown: {
-		shikiConfig: {
-      // Choose from Shiki's built-in themes (or add your own)
-      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-      theme: 'github-dark',
-      // Add custom languages
-      // Note: Shiki has countless langs built-in, including .astro!
-      // https://github.com/shikijs/shiki/blob/main/docs/languages.md
-      langs: [],
-      // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
-    },
+		syntaxHighlight: 'prism',
 	}
 });

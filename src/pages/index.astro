@@ -1,5 +1,5 @@
 ---
-import { Code } from 'astro/components';
+import { Prism } from '@astrojs/prism';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -25,7 +25,7 @@ const display = JSON.stringify(tree, null, 2)
 			<h1>🧑‍🚀 blogs test</h1>
 			<Demo client:only />
 			<h2>total docs: { total }</h2>
-			<Code code={ display } lang="js" />
+			<Prism code={ display } lang="js" />
 		</main>
 		<Footer />
 	</body>
