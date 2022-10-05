@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
@@ -34,7 +34,7 @@ const {
 	</head>
 
 	<body>
-		<Header />
+		<Header client:only="vue" />
 		<main>
 			<article>
 				{heroImage && (

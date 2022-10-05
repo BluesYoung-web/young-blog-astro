@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-05 15:35:28
+ * @LastEditTime: 2022-10-05 16:13:05
  * @Description: 
  */
 export const SITE_TITLE = '小黑博客';
@@ -20,4 +20,16 @@ export const MUSIC = {
   server: 'netease',
   // # id 类型 song, playlist, album, search, artist
   type: 'playlist',
+};
+
+export const NAV = {
+  title: '小黑博客',
+  doc: '文章',
+  love: '关于',
+  gitee: 'Gitee',
+  github: 'GitHub',
+  gitee_addr: 'https://gitee.com/BluesYoung-web',
+  github_addr: 'https://github.com/BluesYoung-web',
+  mail: '邮箱联系',
+  mail_addr: 'mailto:bluesyoung_web@163.com',
 };
