@@ -1,13 +1,11 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '@unocss/reset/tailwind.css';
-
 export interface Props {
 	title: string;
 	description: string;
 	image?: string;
-}
+};
 
 const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 ---
