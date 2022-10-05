@@ -1,0 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.astro';
+import OneSay from '../components/OneSay';
+import Music from '../components/Music';
+import PageDown from '../components/PageDown';
+import ScrollTop from '../components/ScrollTop';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<main class="main">
+      <div class="header">
+    		<Header client:only="vue" title={SITE_TITLE} />
+        <div class="h-full flex flex-col justify-center items-center">
+          <p class="text-2xl font-bold mb-1 lg:text-4xl">
+            { SITE_TITLE }
+          </p>
+          <OneSay client:only="vue" />
+        </div>
+        <PageDown client:only="vue" />
+      </div>
+      <Music client:only="vue" />
+      <ScrollTop client:only="vue" />
+      <div id="main-content">
+        <slot />
+      </div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+
+<style lang="scss">
+.main {
+  @apply text-gray-50 dark:text-purple-500;
+}
+.header {
+  background-image: url('/img/poster-filter.png'), linear-gradient(60deg, rgba(255, 165, 150, 0.5) -6%, rgba(0, 228, 255, 0.35)), url('/img/goldenmeili.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #49b1f5;
+  background-position: center;
+  @apply w-full h-100vh transition-all duration-500;
+}
+</style>

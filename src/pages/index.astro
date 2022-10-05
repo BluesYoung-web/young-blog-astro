@@ -1,13 +1,7 @@
 ---
-import '@unocss/reset/tailwind.css';
+import Home from '../layouts/Home.astro';
 import { Prism } from '@astrojs/prism';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import { type DocItem, generate } from '../utils/generateDocTree';
-import Demo from '../components/Demo.vue'
-
 
 const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}')
 const { tree, total } = generate(blogs);
@@ -15,19 +9,7 @@ const { tree, total } = generate(blogs);
 const display = JSON.stringify(tree, null, 2)
 ---
 
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 blogs test</h1>
-			<Demo client:only />
-			<h2>total docs: { total }</h2>
-			<Prism code={ display } lang="js" />
-		</main>
-		<Footer />
-	</body>
-</html>
+<Home>
+	<h1>🧑‍🚀 blogs test</h1>
+	<Prism code={ display } lang="js" />
+</Home>
