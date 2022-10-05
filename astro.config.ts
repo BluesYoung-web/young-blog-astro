@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-05 10:13:32
+ * @LastEditTime: 2022-10-05 15:02:39
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
@@ -19,7 +19,9 @@ export default defineConfig({
 		sitemap({
 			customPages: ['https://young-blog-astro.vercel.app', 'https://young-blog-astro.vercel.app/about', 'https://young-blog-astro.vercel.app/blog']
 		}),
-		vue(),
+		vue({
+			jsx: true
+		}),
 		unocss()
 	],
 	markdown: {

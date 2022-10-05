@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import '@unocss/reset/tailwind.css';
 
 export interface Props {
 	title: string;
@@ -37,3 +37,35 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<style is:global>
+/* 全局美化滚动条样式9 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, .2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+  border-radius: 2em;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(73, 177, 245, .4);
+  background-image: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent
+}
+</style>
