@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-05 16:13:05
+ * @LastEditTime: 2022-10-07 18:32:56
  * @Description: 
  */
 export const SITE_TITLE = '小黑博客';
@@ -32,4 +32,11 @@ export const NAV = {
   github_addr: 'https://github.com/BluesYoung-web',
   mail: '邮箱联系',
   mail_addr: 'mailto:bluesyoung_web@163.com',
+};
+
+export const INTRO = {
+  author: 'BluesYoung-web',
+  say: '沉迷代码，无法自拔',
+  doc_toc: '文章目录',
+  search: '搜索',
 };
