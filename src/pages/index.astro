@@ -1,15 +1,40 @@
 ---
 import Home from '../layouts/Home.astro';
 import { Prism } from '@astrojs/prism';
+import MyCard from '../components/MyCard.vue';
+import MyDoc from '../components/MyDoc.vue';
 import { type DocItem, generate } from '../utils/generateDocTree';
 
-const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}')
+const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}');
 const { tree, total } = generate(blogs);
-
-const display = JSON.stringify(tree, null, 2)
+const display = JSON.stringify(tree, null, 2);
 ---
 
 <Home>
-	<h1>🧑‍🚀 blogs test</h1>
-	<Prism code={ display } lang="js" />
+	<div class="content">
+		todo: this will be filled by doc
+		<Prism code={ display } lang="js" />
+	</div>
+
+	<div class="card my-card">
+		<MyCard client:only="vue" />
+	</div>
+	<div class="card my-doc">
+		<MyDoc client:only="vue" total={total} tree={tree} />
+	</div>
 </Home>
+
+<style lang="scss">
+.content {
+	@apply w-full 2xl:w-[62.5%] mx-auto mt-10;
+}
+.card {
+	@apply absolute lt-2xl-hidden 2xl:left-[82%];
+}
+.my-card {
+	@apply top-0;
+}
+.my-doc {
+	@apply top-90;
+}
+</style>
