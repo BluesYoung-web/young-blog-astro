@@ -1,10 +1,11 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-05 16:10:16
- * @LastEditTime: 2022-10-05 16:34:37
+ * @LastEditTime: 2022-10-07 18:12:50
  * @Description: 头部导航栏组件
 -->
 <script lang="ts" setup>
+import 'uno.css';
 import { ref, watchEffect, toRefs } from 'vue';
 import { useScroll } from '@vueuse/core';
 import { NAV } from '../config';
