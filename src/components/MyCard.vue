@@ -1,14 +1,18 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:31:30
- * @LastEditTime: 2022-10-07 18:33:22
+ * @LastEditTime: 2022-10-08 08:49:59
  * @Description: 
  * @Description: 个人卡片
 -->
 <script lang="ts" setup>
 import 'uno.css';
-import { NCard, NImage } from 'naive-ui';
+import { NConfigProvider, darkTheme, lightTheme, NCard, NImage } from 'naive-ui';
 import { NAV, INTRO } from '../config';
+import { theme as th } from '../utils/useTheme';
+import { computed } from 'vue';
+
+const theme = computed(() => th.value === 'dark' ? darkTheme : lightTheme);
 
 const sendMail = () => {
   const a = document.createElement('a');
@@ -19,21 +23,23 @@ const sendMail = () => {
 
 <template>
   <div class="main">
-    <NCard hoverable>
-      <div class="container">
-        <NImage src="/img/lufei_siwangningshi.jpg" :width="120" class="img" />
-        <p class="title">
-          {{ INTRO.author }}
-        </p>
-        <p class="intro">
-          {{ INTRO.say }}
-        </p>
-        <div class="btn" :title="NAV.mail_addr" @click="sendMail">
-          <div class="i-mdi-light-email mr-1" />
-          <div>{{ NAV.mail }}</div>
+    <NConfigProvider :theme="theme">
+      <NCard hoverable>
+        <div class="container">
+          <NImage src="/img/lufei_siwangningshi.jpg" :width="120" class="img" />
+          <p class="title">
+            {{ INTRO.author }}
+          </p>
+          <p class="intro">
+            {{ INTRO.say }}
+          </p>
+          <div class="btn" :title="NAV.mail_addr" @click="sendMail">
+            <div class="i-mdi-light-email mr-1" />
+            <div>{{ NAV.mail }}</div>
+          </div>
         </div>
-      </div>
-    </NCard>
+      </NCard>
+    </NConfigProvider>
   </div>
 </template>
 

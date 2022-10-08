@@ -1,14 +1,15 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-07 19:04:00
+ * @LastEditTime: 2022-10-08 08:52:15
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
 import 'uno.css';
-import { NCard, NInput, NSpace, NTree } from 'naive-ui';
-import { ref } from 'vue';
+import { NConfigProvider, darkTheme, lightTheme, NCard, NSpace, NInput, NTree } from 'naive-ui';
 import { INTRO } from '../config';
+import { theme as th } from '../utils/useTheme';
+import { computed, ref } from 'vue';
 import type { DocItem } from '../utils/generateDocTree';
 
 type Props = {
@@ -17,33 +18,37 @@ type Props = {
 };
 defineProps<Props>();
 
+const theme = computed(() => th.value === 'dark' ? darkTheme : lightTheme);
+
 const pattern = ref('');
 const jump = (_: any, [v, ...__]: DocItem[]) => {
   console.log(v);
-}
+};
 </script>
 
 <template>
   <div class="main">
-    <NCard hoverable>
-      <div class="container">
-        <p class="title">
-          {{ `${INTRO.doc_toc}(${total ?? 0})` }}
-        </p>
-        <div class="data">
-          <NSpace vertical :size="12" class="w-80">
-            <NInput v-model:value="pattern" :placeholder="INTRO.search" />
-            <NTree
-              :pattern="pattern"
-              :data="tree || []"
-              block-line
-              class="max-h-120 overflow-auto"
-              @update-selected-keys="jump"
-            />
-          </NSpace>
+    <NConfigProvider :theme="theme">
+      <NCard hoverable>
+        <div class="container">
+          <p class="title">
+            {{ `${INTRO.doc_toc}(${total ?? 0})` }}
+          </p>
+          <div class="data">
+            <NSpace vertical :size="12" class="w-80">
+              <NInput v-model:value="pattern" :placeholder="INTRO.search" />
+              <NTree
+                :pattern="pattern"
+                :data="tree || []"
+                block-line
+                class="max-h-120 overflow-auto"
+                @update-selected-keys="jump"
+              />
+            </NSpace>
+          </div>
         </div>
-      </div>
-    </NCard>
+      </NCard>
+    </NConfigProvider>
   </div>
 </template>
 

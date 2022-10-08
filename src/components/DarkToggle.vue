@@ -1,16 +1,14 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-05 16:32:00
- * @LastEditTime: 2022-10-05 16:33:03
+ * @LastEditTime: 2022-10-08 08:48:55
  * @Description: 
 -->
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core';
-
-const color = useColorMode();
+import { theme } from '../utils/useTheme';
 
 function toggleDark() {
-  color.value = color.value === 'dark' ? 'light' : 'dark';
+  theme.value = theme.value === 'dark' ? 'light' : 'dark';
 };
 </script>
 

@@ -16,11 +16,13 @@ const display = JSON.stringify(tree, null, 2);
 		<Prism code={ display } lang="js" />
 	</div>
 
-	<div class="card my-card">
-		<MyCard client:only="vue" />
-	</div>
-	<div class="card my-doc">
-		<MyDoc client:only="vue" total={total} tree={tree} />
+	<div class="absolute right-5 top-10 h-full">
+		<div class="card my-card">
+			<MyCard client:only="vue" />
+		</div>
+		<div class="card my-doc">
+			<MyDoc client:only="vue" total={total} tree={tree} />
+		</div>
 	</div>
 </Home>
 
@@ -29,12 +31,12 @@ const display = JSON.stringify(tree, null, 2);
 	@apply w-full 2xl:w-[62.5%] mx-auto mt-10;
 }
 .card {
-	@apply absolute lt-2xl-hidden 2xl:left-[82%];
+	@apply lt-2xl-hidden 2xl:right-0 sticky;
 }
 .my-card {
-	@apply top-0;
+	@apply top-10;
 }
 .my-doc {
-	@apply top-90;
+	@apply top-90 mt-10;
 }
 </style>
