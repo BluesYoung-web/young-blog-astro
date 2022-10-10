@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:51:07
- * @LastEditTime: 2022-10-05 15:52:20
+ * @LastEditTime: 2022-10-10 08:51:30
  * @Description: 回到顶部
  */
 import { defineComponent, h } from 'vue';
@@ -25,11 +25,11 @@ export default defineComponent({
         {
           y.value > props.show
             ? <div
-                className="fixed right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer"
+                class="fixed z-100 right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer"
                 title="回到顶部"
                 onClick={() => scorll()}
               >
-                <div className="i-bi-arrow-up-circle" />
+                <div class="i-bi-arrow-up-circle" />
               </div>
             : null
         }
