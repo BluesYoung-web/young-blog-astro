@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-08 08:52:15
+ * @LastEditTime: 2022-10-10 08:15:41
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
@@ -10,19 +10,21 @@ import { NConfigProvider, darkTheme, lightTheme, NCard, NSpace, NInput, NTree } 
 import { INTRO } from '../config';
 import { theme as th } from '../utils/useTheme';
 import { computed, ref } from 'vue';
-import type { DocItem } from '../utils/generateDocTree';
+import type { DocTree } from '../utils/generateDocTree';
 
 type Props = {
   total: number;
-  tree: DocItem[];
+  tree: DocTree[];
 };
 defineProps<Props>();
 
 const theme = computed(() => th.value === 'dark' ? darkTheme : lightTheme);
 
 const pattern = ref('');
-const jump = (_: any, [v, ...__]: DocItem[]) => {
-  console.log(v);
+const jump = (_: any, [v, ...__]: DocTree[]) => {
+  if (v.path) {
+    location.href = v.path;
+  }
 };
 </script>
 
