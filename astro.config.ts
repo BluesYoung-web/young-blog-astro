@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-05 15:02:39
+ * @LastEditTime: 2022-10-10 09:47:01
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
@@ -26,5 +26,10 @@ export default defineConfig({
 	],
 	markdown: {
 		syntaxHighlight: 'prism',
+	},
+	vite: {
+		ssr: {
+			format: 'cjs'
+		}
 	}
 });
