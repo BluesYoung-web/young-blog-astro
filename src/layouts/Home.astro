@@ -17,14 +17,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	<body>
 		<main class="main">
       <div class="header">
-    		<Header client:only="vue" title={SITE_TITLE} />
+    		<Header client:load title={SITE_TITLE} />
         <div class="h-full flex flex-col justify-center items-center">
           <p class="text-2xl font-bold mb-1 lg:text-4xl">
             { SITE_TITLE }
           </p>
           <OneSay client:only="vue" />
         </div>
-        <PageDown client:only="vue" />
+        <PageDown client:visible />
       </div>
       <Music client:only="vue" />
       <ScrollTop client:only="vue" />

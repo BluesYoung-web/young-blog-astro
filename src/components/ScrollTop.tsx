@@ -1,11 +1,11 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:51:07
- * @LastEditTime: 2022-10-10 08:51:30
+ * @LastEditTime: 2022-10-10 09:26:13
  * @Description: 回到顶部
  */
 import { defineComponent, h } from 'vue';
-import { useScroll } from '@vueuse/core';
+import { isClient, useScroll } from '@vueuse/core';
 
 export default defineComponent({
   props: {
@@ -18,7 +18,7 @@ export default defineComponent({
         behavior: 'smooth',
       });
     };
-    const { y } = useScroll(window);
+    const { y } = useScroll(isClient ? window : null);
 
     return () => h(
       <>
