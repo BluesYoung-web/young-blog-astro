@@ -7,14 +7,13 @@ export interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate?: string;
-		updatedDate?: string;
+		date?: string;
 		heroImage?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, date, heroImage },
 } = Astro.props as Props;
 ---
 
@@ -46,8 +45,7 @@ const {
 					/>
 				)}
 				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+				{date && <time>{date}</time>}
 				<hr/>
 				<slot />
 			</article>
