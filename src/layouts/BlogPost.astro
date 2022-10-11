@@ -7,45 +7,27 @@ export interface Props {
 	content: {
 		title: string;
 		description: string;
-		date?: string;
-		image?: string;
+		date: string;
 	};
 }
 
 const {
-	content: { title, description, date, image },
+	content: { title, description, date },
 } = Astro.props as Props;
+
 ---
 
 <html>
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header client:only="vue" />
-		<main>
-			<article>
-				{image && (
-					<img
-						width={720}
-						height={360}
-						src={image}
-						alt=""
-					/>
-				)}
-				<h1 class="title">{title}</h1>
-				{date && <time>{date}</time>}
+		<main class="py-68px w-full">
+			<article class="mx-auto w-full xl:w-800px">
+				<h1 class="text-center text-2xl font-bold p-5">{title}</h1>
+				<time>{date.replace('T', ' ').replace('.000Z', '')}</time>
 				<hr/>
 				<slot />
 			</article>
