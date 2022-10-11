@@ -1,20 +1,19 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:37:57
- * @LastEditTime: 2022-10-07 18:12:29
+ * @LastEditTime: 2022-10-11 09:10:12
  * @Description: 音乐播放器
  */
 import { defineComponent, h } from 'vue';
-import { MUSIC } from '../config';
+import { MUSIC } from '@/config';
 import 'uno.css';
 import 'aplayer/dist/APlayer.min.css';
-import './styles/music.scss';
 import APlayer from 'aplayer';
 
 export default defineComponent({
   setup() {
     return () => h(
-      <div id="young-player"></div>
+      <div id="young-player" class="text-gray-800"></div>
     );
   },
   async mounted() {

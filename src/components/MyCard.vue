@@ -1,15 +1,15 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:31:30
- * @LastEditTime: 2022-10-08 08:49:59
+ * @LastEditTime: 2022-10-11 09:09:22
  * @Description: 
  * @Description: 个人卡片
 -->
 <script lang="ts" setup>
 import 'uno.css';
 import { NConfigProvider, darkTheme, lightTheme, NCard, NImage } from 'naive-ui';
-import { NAV, INTRO } from '../config';
-import { theme as th } from '../utils/useTheme';
+import { NAV, INTRO } from '@/config';
+import { theme as th } from '@/utils/useTheme';
 import { computed } from 'vue';
 
 const theme = computed(() => th.value === 'dark' ? darkTheme : lightTheme);

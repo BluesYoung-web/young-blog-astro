@@ -1,16 +1,16 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-10 08:15:41
+ * @LastEditTime: 2022-10-11 09:08:29
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
 import 'uno.css';
 import { NConfigProvider, darkTheme, lightTheme, NCard, NSpace, NInput, NTree } from 'naive-ui';
-import { INTRO } from '../config';
-import { theme as th } from '../utils/useTheme';
+import { INTRO } from '@/config';
+import { theme as th } from '@/utils/useTheme';
 import { computed, ref } from 'vue';
-import type { DocTree } from '../utils/generateDocTree';
+import type { DocTree } from '@/utils/generateDocTree';
 
 type Props = {
   total: number;

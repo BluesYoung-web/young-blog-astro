@@ -1,19 +1,19 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.astro";
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.astro';
 
 export interface Props {
 	content: {
 		title: string;
 		description: string;
 		date?: string;
-		heroImage?: string;
+		image?: string;
 	};
 }
 
 const {
-	content: { title, description, date, heroImage },
+	content: { title, description, date, image },
 } = Astro.props as Props;
 ---
 
@@ -36,11 +36,11 @@ const {
 		<Header client:only="vue" />
 		<main>
 			<article>
-				{heroImage && (
+				{image && (
 					<img
 						width={720}
 						height={360}
-						src={heroImage}
+						src={image}
 						alt=""
 					/>
 				)}

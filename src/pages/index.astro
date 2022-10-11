@@ -1,9 +1,9 @@
 ---
-import Home from '../layouts/Home.astro';
-import MyCard from '../components/MyCard.vue';
-import MyDoc from '../components/MyDoc.vue';
-import DocList from '../components/DocList.vue';
-import { type DocItem, generate } from '../utils/generateDocTree';
+import Home from '@/layouts/Home.astro';
+import MyCard from '@/components/MyCard.vue';
+import MyDoc from '@/components/MyDoc.vue';
+import DocList from '@/components/DocList.vue';
+import { type DocItem, generate } from '@/utils/generateDocTree';
 
 const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}');
 const { tree, total, list } = generate(blogs);

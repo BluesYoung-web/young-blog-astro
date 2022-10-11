@@ -1,11 +1,11 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:13:05
- * @LastEditTime: 2022-10-05 15:29:51
+ * @LastEditTime: 2022-10-11 09:07:30
  * @Description: 一言
  */
 import { defineComponent, h, ref } from 'vue';
-import { ONE_SAY } from '../config';
+import { ONE_SAY } from '@/config';
 import { useClipboard } from '@vueuse/core';
 interface OneSay {
   commit_from: string;
@@ -61,11 +61,11 @@ export default defineComponent({
     refresh();
     return () => h(
       <div
-        className="text-xl lg:text-2xl text-center hover:cursor-pointer"
+        class="text-xl lg:text-2xl text-center hover:cursor-pointer"
         title="左键刷新，中键复制，右键跳转详情"
         onClick={eventDiapatcher}
         onAuxclick={eventDiapatcher}
-        onContextMenu={(e: { preventDefault: () => any }) => e.preventDefault()}
+        onContextmenu={(e: { preventDefault: () => any }) => e.preventDefault()}
       >
         <p>{ sayObj.value?.hitokoto ?? '' }</p>
         <p>

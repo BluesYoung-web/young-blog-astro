@@ -1,15 +1,15 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-10 08:28:17
- * @LastEditTime: 2022-10-10 08:49:29
+ * @LastEditTime: 2022-10-11 09:11:23
  * @Description: 文章列表
 -->
 <script lang="ts" setup>
 import 'uno.css';
 import { NConfigProvider, darkTheme, lightTheme, NCard, NImage, NTime } from 'naive-ui';
-import { theme as th } from '../utils/useTheme';
+import { theme as th } from '@/utils/useTheme';
 import { computed } from 'vue';
-import type { DocItem } from '../utils/generateDocTree';
+import type { DocItem } from '@/utils/generateDocTree';
 
 defineProps<{
   list: DocItem[];
