@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 01-历史回顾
 date: 2020-12-28 14:41:53
 image: /img/hbs.png

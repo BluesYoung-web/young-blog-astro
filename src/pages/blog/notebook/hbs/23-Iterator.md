@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 23-迭代器
 image: /img/hbs.png
 description: JavaScript 迭代器

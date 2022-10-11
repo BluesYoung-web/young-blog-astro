@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 响应式——核心
 description: vue3 响应式——核心
 date: 2022-02-19 16:00:00

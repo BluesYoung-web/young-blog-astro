@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 41-location对象
 image: /img/hbs.png
 description: JavaScript Location

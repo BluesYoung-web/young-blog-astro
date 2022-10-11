@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: TypeScript 操作符(工具类)
 description: TypeScript 操作符(工具类)
 image: /img/ts.jpeg

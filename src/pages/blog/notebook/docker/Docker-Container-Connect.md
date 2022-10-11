@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Docker 容器连接
 description: Docker 容器连接
 date: 2020-12-23 16:10:47

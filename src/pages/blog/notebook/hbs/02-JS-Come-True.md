@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 02-实现
 date: 2020-12-28 15:36:00
 image: /img/hbs.png

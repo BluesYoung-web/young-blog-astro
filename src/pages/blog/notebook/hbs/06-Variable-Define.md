@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 06-变量声明
 image: /img/hbs.png
 date: 2020-12-28 16:26:48

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 实现 LRU 算法
 description: 实现 LRU (最近最少使用)算法
 date: 2022-03-23 09:49:58

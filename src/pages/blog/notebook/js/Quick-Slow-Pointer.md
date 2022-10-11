@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 快慢指针算法
 description: 快慢指针算法
 date: 2022-03-23 16:29:58

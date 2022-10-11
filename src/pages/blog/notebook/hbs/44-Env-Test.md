@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 44-能力检测
 image: /img/hbs.png
 description: JavaScript 能力(环境)检测

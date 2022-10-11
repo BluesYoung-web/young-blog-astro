@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 12-装饰器模式
 description: 12-装饰器模式
 date: 2022-04-04 15:40:00

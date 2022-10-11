@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 71-Cookie
 image: /img/hbs.png
 description: JavaScript Cookie

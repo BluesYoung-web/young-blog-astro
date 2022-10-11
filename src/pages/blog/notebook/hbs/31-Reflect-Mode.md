@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 31-代理模式
 image: /img/hbs.png
 description: JavaScript 代理模式

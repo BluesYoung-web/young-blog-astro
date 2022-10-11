@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 利用 docker-compose 部署后端程序
 description: 利用 docker-compose 部署后端程序(以树莓派)
 image: /img/docker.jpg

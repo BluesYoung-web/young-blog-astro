@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 10-函数
 image: /img/hbs.png
 description: JavaScript 函数

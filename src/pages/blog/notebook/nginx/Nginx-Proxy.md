@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Nginx 反向代理
 description: Nginx 反向代理
 image: /img/nginx.jpg

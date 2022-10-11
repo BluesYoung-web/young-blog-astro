@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 弹性滚动
 description: CSS 弹性滚动
 image: /img/css.jpg

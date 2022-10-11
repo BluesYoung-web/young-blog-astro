@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 响应式——进阶
 description: vue3 响应式——进阶
 date: 2022-02-20 10:25:00

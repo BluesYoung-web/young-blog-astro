@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 22-访问者模式
 description: 22-访问者模式
 date: 2022-04-04 19:35:00

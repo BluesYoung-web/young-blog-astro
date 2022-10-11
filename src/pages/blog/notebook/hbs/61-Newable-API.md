@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 61-新兴API
 image: /img/hbs.png
 description: JavaScript 新兴API

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 58-File
 image: /img/hbs.png
 description: JavaScript 文件处理

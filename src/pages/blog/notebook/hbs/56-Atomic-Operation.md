@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 56-原子化操作
 image: /img/hbs.png
 description: JavaScript 原子化操作

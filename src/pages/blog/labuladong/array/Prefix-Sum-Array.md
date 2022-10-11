@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 前缀和数组
 description: 前缀和数组
 date: 2022-04-24 15:30:00

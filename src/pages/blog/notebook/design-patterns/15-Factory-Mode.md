@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 15-工厂模式
 description: 15-工厂模式
 date: 2022-04-04 16:20:00

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 19-Array
 image: /img/hbs.png
 description: JavaScript 数组

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 39-异步函数
 image: /img/hbs.png
 description: JavaScript 异步函数

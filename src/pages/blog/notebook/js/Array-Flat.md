@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 多维数组拍平
 description: 多维数组拍平
 date: 2022-03-18 10:19:58

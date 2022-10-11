@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 15-RegExp
 image: /img/hbs.png
 description: JavaScript 正则表达式

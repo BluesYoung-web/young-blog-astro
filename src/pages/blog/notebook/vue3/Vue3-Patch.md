@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 查漏补缺
 description: vue3 查漏补缺
 date: 2022-02-22 12:00:00

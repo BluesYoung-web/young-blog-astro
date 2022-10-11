@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 20-外观模式
 description: 20-外观模式
 date: 2022-04-04 18:30:00

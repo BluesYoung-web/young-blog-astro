@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 花式遍历二维数组
 description: 花式遍历二维数组
 date: 2022-04-26 10:30:00

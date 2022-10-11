@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 2-策略模式
 description: 2-策略模式
 date: 2022-04-03 16:30:00

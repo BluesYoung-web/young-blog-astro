@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 19-桥接模式
 description: 19-桥接模式
 date: 2022-04-04 18:20:00

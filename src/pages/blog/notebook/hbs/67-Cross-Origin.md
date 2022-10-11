@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 67-跨域
 image: /img/hbs.png
 description: JavaScript 跨域

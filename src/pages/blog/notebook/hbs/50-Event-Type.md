@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 50-事件类型
 image: /img/hbs.png
 description: JavaScript 事件类型

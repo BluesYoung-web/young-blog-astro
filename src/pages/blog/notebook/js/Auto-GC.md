@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 垃圾回收
 description: 垃圾回收
 date: 2022-02-28 15:19:58

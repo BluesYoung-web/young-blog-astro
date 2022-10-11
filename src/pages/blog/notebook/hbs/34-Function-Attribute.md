@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 34-函数属性与方法
 image: /img/hbs.png
 description: JavaScript 函数属性与方法

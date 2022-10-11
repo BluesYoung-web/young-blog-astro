@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 65-XML-And-JSON
 image: /img/hbs.png
 description: JavaScript XML & JSON

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 59-媒体元素
 image: /img/hbs.png
 description: JavaScript 媒体元素

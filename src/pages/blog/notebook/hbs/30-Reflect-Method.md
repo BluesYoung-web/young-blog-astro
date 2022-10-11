@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 30-代理捕获器与反射方法
 image: /img/hbs.png
 description: JavaScript Reflect Methods

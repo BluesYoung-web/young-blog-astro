@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 二分搜索——进阶
 description: 二分搜索——进阶
 date: 2022-05-06 17:00:00

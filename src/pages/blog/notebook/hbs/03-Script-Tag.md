@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 03-script元素
 date: 2020-12-28 15:57:52
 image: /img/hbs.png

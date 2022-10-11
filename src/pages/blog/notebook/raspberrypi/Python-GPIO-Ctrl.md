@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 树莓派使用 GPIO 引脚控制继电器
 description: 树莓派使用 GPIO 引脚控制继电器
 image: /img/raspberrypi.jpg

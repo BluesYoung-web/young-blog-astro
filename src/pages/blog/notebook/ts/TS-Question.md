@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: TypeScript 常见练习题
 description: TypeScript 常见练习题
 image: /img/ts.jepg

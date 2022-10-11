@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Linux 用户管理
 description: Linux 用户管理
 image: /img/linux.jpeg

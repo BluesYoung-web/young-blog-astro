@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: VueRouter—01.基础
 description: VueRouter—01.基础
 image: /img/vue.jpeg

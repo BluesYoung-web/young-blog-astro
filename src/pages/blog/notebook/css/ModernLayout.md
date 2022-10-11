@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 常用的现代布局
 description: CSS 常用的现代布局
 image: /img/css.jpg

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 09-语句
 image: /img/hbs.png
 description: JavaScript 语句

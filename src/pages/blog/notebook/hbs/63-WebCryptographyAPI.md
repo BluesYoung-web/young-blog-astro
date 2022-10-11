@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 63-WebCryptographyAPI
 image: /img/hbs.png
 description: JavaScript 加解密

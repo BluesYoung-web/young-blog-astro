@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Linux 搭建 frp 内网穿透服务器
 description: Linux 搭建 frp 内网穿透服务器
 image: /img/linux.jpeg

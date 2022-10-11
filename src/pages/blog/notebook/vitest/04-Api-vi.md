@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vitest -> vi 超级有用的工具函数
 description: vitest -> vi 超级有用的工具函数
 image: /img/vitest.svg

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 手写响应式
 description: 手写响应式
 image: /img/writing-hand.svg

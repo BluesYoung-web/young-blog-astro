@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 20-定型数组
 image: /img/hbs.png
 description: JavaScript 定型数组

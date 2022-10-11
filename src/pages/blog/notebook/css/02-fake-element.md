@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: CSS3-02伪元素
 date: 2020-12-24 14:02:07
 image: /img/css.jpg

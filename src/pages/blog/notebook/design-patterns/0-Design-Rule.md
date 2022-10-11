@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 0-设计模式的基本原则
 description: 0-设计模式的基本原则
 date: 2022-04-03 16:05:41

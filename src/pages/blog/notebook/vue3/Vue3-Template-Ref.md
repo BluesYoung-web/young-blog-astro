@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 模板 ref
 description: vue3 模板 ref
 date: 2022-02-20 14:00:00

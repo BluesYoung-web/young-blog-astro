@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 27-继承
 image: /img/hbs.png
 description: JavaScript 集成

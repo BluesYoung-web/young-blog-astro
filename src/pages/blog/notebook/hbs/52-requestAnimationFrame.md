@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 52-requestAnimationFrame
 image: /img/hbs.png
 description: JavaScript 动画 API

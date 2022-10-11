@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 安装 Docker
 description: Linux 安装 Docker
 date: 2020-12-23 15:48:58

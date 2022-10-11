@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 68-FetchAPI
 image: /img/hbs.png
 description: JavaScript Fetch

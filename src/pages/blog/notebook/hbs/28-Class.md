@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 28-类
 image: /img/hbs.png
 description: JavaScript 类

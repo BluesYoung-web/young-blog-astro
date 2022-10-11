@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 73-模块
 image: /img/hbs.png
 description: JavaScript 模块

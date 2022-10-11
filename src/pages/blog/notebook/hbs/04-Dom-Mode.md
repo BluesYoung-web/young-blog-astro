@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 04-文档模式
 image: /img/hbs.png
 description: HTML 模式(版本迭代)

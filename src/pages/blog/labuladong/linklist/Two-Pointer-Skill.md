@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 双指针技巧秒杀链表
 description: 双指针技巧秒杀链表
 date: 2022-04-10 10:00:00

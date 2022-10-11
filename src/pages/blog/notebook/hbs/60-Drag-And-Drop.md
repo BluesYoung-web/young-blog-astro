@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 60-原生拖放
 image: /img/hbs.png
 description: JavaScript 原生拖放

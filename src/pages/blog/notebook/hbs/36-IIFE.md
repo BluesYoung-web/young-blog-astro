@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 36-闭包
 image: /img/hbs.png
 description: JavaScript 闭包

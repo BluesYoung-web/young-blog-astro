@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Linux 基础操作
 description: Linux 基础操作
 image: /img/linux.jpeg

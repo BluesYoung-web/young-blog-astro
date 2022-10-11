@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 43-screen及history对象
 image: /img/hbs.png
 description: JavaScript Screen & History

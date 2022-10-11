@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 08-操作符
 image: /img/hbs.png
 date: 2020-12-28 17:02:27

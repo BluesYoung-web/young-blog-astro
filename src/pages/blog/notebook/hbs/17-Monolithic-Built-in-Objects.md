@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 17-单体内置对象
 image: /img/hbs.png
 description: JavaScript 单体内置对象

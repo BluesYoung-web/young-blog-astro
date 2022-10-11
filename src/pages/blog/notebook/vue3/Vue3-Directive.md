@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 指令
 description: vue3 指令
 date: 2022-02-18 14:32:00

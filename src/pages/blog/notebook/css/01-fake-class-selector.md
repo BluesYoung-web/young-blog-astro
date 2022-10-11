@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: CSS3-01伪类选择器
 date: 2020-12-24 10:36:13
 image: /img/css.jpg

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 35-递归函数与尾调用优化
 image: /img/hbs.png
 description: JavaScript 递归函数与尾调用优化

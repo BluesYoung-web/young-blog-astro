@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 左右指针算法
 description: 左右指针算法
 date: 2022-03-24 14:29:58

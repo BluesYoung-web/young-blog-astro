@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 57-编解码
 image: /img/hbs.png
 description: JavaScript 编解码

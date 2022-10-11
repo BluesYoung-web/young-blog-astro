@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 6-命令模式
 description: 6-命令模式
 date: 2022-04-04 10:00:00

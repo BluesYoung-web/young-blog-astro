@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vitest -> expect
 description: vitest -> expect
 image: /img/vitest.svg

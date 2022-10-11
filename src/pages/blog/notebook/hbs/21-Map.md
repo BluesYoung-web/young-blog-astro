@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 21-Map
 image: /img/hbs.png
 description: JavaScript Map 映射

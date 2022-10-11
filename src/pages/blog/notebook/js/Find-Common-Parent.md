@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 查找两个 DOM 节点的最近公共父节点
 description: 查找两个 DOM 节点的最近公共父节点
 date: 2022-03-18 15:29:58

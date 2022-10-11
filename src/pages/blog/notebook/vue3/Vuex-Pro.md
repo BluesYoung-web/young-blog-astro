@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: Vuex—02.进阶
 description: Vuex—02.进阶
 image: /img/vue.jpeg

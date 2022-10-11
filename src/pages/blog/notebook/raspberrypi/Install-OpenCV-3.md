@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 树莓派安装 OpenCV3
 date: 2020-12-23 15:40:26
 image: /img/raspberrypi.jpg

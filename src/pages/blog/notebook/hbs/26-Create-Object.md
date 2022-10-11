@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 26-创建对象
 image: /img/hbs.png
 description: JavaScript 创建对象

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 正则表达式——精解
 description: 正则表达式——精解
 image: /img/regexp.jpg

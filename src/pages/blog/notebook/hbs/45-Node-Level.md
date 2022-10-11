@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 45-节点层级
 image: /img/hbs.png
 description: JavaScript 节点层级

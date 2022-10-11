@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: vue3 生命周期钩子
 description: vue3 生命周期钩子
 date: 2022-02-18 13:10:00

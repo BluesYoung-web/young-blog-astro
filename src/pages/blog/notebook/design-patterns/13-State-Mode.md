@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 13-状态模式
 description: 13-状态模式
 date: 2022-04-04 15:50:00

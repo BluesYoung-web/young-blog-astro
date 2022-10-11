@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 加权随机选择
 description: 加权随机选择
 date: 2022-05-04 14:30:00

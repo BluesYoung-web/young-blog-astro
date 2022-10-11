@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 常数时间插入、删除、随机获取数组中的元素
 description: 常数时间插入、删除、随机获取数组中的元素
 date: 2022-05-08 10:00:00

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 差分数组
 description: 差分数组
 date: 2022-04-25 15:30:00

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/BlogPost.astro"
 title: 37-异步编程
 image: /img/hbs.png
 description: JavaScript 异步编程
