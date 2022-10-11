@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-10 09:47:01
+ * @LastEditTime: 2022-10-11 09:14:52
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
@@ -13,11 +13,15 @@ import unocss from 'unocss/astro';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://young-blog-astro.vercel.app',
+  site: 'https://young-blog-astro.netlify.app',
   integrations: [
 		mdx(),
 		sitemap({
-			customPages: ['https://young-blog-astro.vercel.app', 'https://young-blog-astro.vercel.app/about', 'https://young-blog-astro.vercel.app/blog']
+			customPages: [
+				'https://young-blog-astro.netlify.app',
+				'https://young-blog-astro.netlify.app/about',
+				'https://young-blog-astro.netlify.app/blogs'
+			]
 		}),
 		vue({
 			jsx: true
