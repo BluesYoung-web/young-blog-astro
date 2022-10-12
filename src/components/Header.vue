@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-05 16:10:16
- * @LastEditTime: 2022-10-12 09:05:15
+ * @LastEditTime: 2022-10-12 09:08:36
  * @Description: 头部导航栏组件
 -->
 <script lang="ts" setup>
@@ -31,7 +31,7 @@ watchEffect(() => {
       <a href="/">{{ NAV.title }}</a>
     </div>
     <div class="right">
-      <a class="item" href="/blogs" :title="NAV.doc">
+      <a class="item" href="/blogs/1" :title="NAV.doc">
         <div class="i-ic-round-menu-book" />
         <span>{{ NAV.doc }}</span>
       </a>
