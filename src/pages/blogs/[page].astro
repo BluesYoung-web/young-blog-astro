@@ -1,0 +1,68 @@
+---
+import BlogList from '@/layouts/BlogList.astro';
+import { type DocItem, generate } from '@/utils/generateDocTree';
+import DocList from '@/components/DocList.vue';
+import MyCard from '@/components/MyCard.vue';
+import MyDoc from '@/components/MyDoc.vue';
+
+const blogs = await Astro.glob<DocItem>('../blog/**/*.{md,mdx}');
+const { tree, total } = generate(blogs);
+
+export async function getStaticPaths({ paginate }: any) {
+  const blogs = await Astro.glob<DocItem>('../blog/**/*.{md,mdx}');
+  const { list } = generate(blogs);
+  // 将根据列表数据自动分页
+  return paginate(list, { pageSize: 10 });
+}
+// 所有分页数据都将传递给 "page" 参数
+const { page } = Astro.props;
+---
+
+<BlogList>
+  <div class="content">
+		<DocList client:load list={page.data} />
+    <div class="paginage">
+      {
+        page.url.prev
+          && <a href={page.url.prev} title="上一页">上一页</a>
+      }
+      {
+        page.url.next
+          && <a href={page.url.next} title="下一页">下一页</a>
+      }
+    </div>
+	</div>
+
+  <div class="absolute right-18 top-10 h-full">
+		<div class="card my-card">
+			<MyCard client:load />
+		</div>
+		<div class="card my-doc">
+			<MyDoc client:load total={total} tree={tree} />
+		</div>
+	</div>
+</BlogList>
+
+<style lang="scss">
+.content {
+  @apply w-full 2xl:w-[62.5%] mx-auto mt-10;
+
+  .paginage {
+    @apply w-full 2xl:w-[62.5%] mx-auto my-10 flex justify-between;
+
+    a {
+      @apply bg-sky-600 text-white py-10px px-24px rounded-8px shadow;
+    }
+  }
+}
+.card {
+  @apply lt-2xl-hidden 2xl:right-0 sticky;
+}
+.my-card {
+  @apply top-10;
+}
+.my-doc {
+  @apply top-90 mt-10;
+}
+</style>
+  

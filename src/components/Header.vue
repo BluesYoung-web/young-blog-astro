@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-05 16:10:16
- * @LastEditTime: 2022-10-11 09:10:56
+ * @LastEditTime: 2022-10-12 09:05:15
  * @Description: 头部导航栏组件
 -->
 <script lang="ts" setup>
@@ -9,7 +9,7 @@ import 'uno.css';
 import { ref, watchEffect, toRefs } from 'vue';
 import { isClient, useScroll } from '@vueuse/core';
 import { NAV } from '@/config';
-import DarkToggle from './DarkToggle.vue';
+// import DarkToggle from './DarkToggle.vue';
 
 const { directions, y } = useScroll(isClient ? window : null);
 const { top, bottom } = toRefs(directions);
@@ -47,7 +47,7 @@ watchEffect(() => {
         <div class="i-ci-github" />
         <span>{{ NAV.github }}</span>
       </a>
-      <DarkToggle class="item" />
+      <!-- <DarkToggle class="item" /> -->
     </div>
   </nav>
 </template>
