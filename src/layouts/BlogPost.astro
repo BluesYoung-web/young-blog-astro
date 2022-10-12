@@ -27,11 +27,55 @@ const {
 		<main class="py-68px w-full">
 			<article class="mx-auto w-full xl:w-800px">
 				<h1 class="text-center text-2xl font-bold p-5">{title}</h1>
-				<time>{date.replace('T', ' ').replace('.000Z', '')}</time>
+				<time class="op-50">{date.replace('T', ' ').replace('.000Z', '')}</time>
 				<hr/>
-				<slot />
+				<div class="doc-content">
+					<slot />
+				</div>
 			</article>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style lang="scss" is:global>
+.doc-content {
+
+	h2 {
+		color: #222;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.3333333;
+	}
+
+	h3 {
+		color: inherit;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    opacity: .7;
+	}
+
+	p {
+		margin-top: 1.25em;
+    margin-bottom: 1.25em;
+		@apply text-gray-600;
+	}
+
+	blockquote {
+		font-weight: 400;
+    font-style: italic;
+    color: inherit;
+    border-left-width: 0.25rem;
+    border-color: #7d7d7d4d;
+    quotes: "\201c""\201d""\2018""\2019";
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    padding-left: 1em;
+	}
+}
+</style>
