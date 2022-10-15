@@ -1,32 +1,13 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
-import Header from '@/components/Header.vue';
-import Footer from '@/components/Footer.astro';
-import ScrollTop from '@/components/ScrollTop';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
+import Default from './Default.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<main class="main">
-      <div class="header">
-    		<Header client:load title={SITE_TITLE} />
-      </div>
-      <ScrollTop client:only="vue" />
-      <div id="main-content">
-        <slot />
-      </div>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Default>
+  <slot />
+</Default>
 
 
-<style lang="scss">
+<style lang="scss" is:global>
 .main {
   @apply text-gray-800 dark:text-purple-500;
 }

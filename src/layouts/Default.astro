@@ -1,0 +1,40 @@
+---
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.astro';
+import ScrollTop from '@/components/ScrollTop';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
+import Music from '@/components/Music';
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<main class="main">
+      <div class="header">
+    		<Header client:only="vue" title={SITE_TITLE} />
+        <slot name="header" />
+      </div>
+      <ScrollTop client:only="vue" />
+      <Music client:only="vue" />
+
+      <div id="main-content">
+        <slot />
+      </div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style lang="scss">
+.main {
+  @apply text-gray-50 dark:text-purple-500;
+}
+
+#main-content {
+  @apply w-full mx-auto min-h-100vh relative text-gray-800 dark:text-purple-500 flex;
+}
+</style>
