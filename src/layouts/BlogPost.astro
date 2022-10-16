@@ -12,6 +12,7 @@ export interface Props {
 const {
 	content: { title, description, date },
 } = Astro.props as Props;
+console.log("🚀 ~ file: BlogPost.astro ~ line 15 ~ Astro.props", Astro.props)
 
 ---
 
@@ -24,6 +25,13 @@ const {
 			<div class="doc-content">
 				<slot />
 			</div>
+
+			<script>
+			const el = document.querySelector('#main-content > main > article > div > p:nth-child(1)') as HTMLParagraphElement;
+			if (el?.innerHTML === '[[toc]]') {
+				el.style.display = 'none';
+			}
+			</script>
 		</article>
 	</main>
 </Default>
@@ -35,9 +43,10 @@ const {
 		color: #222;
     font-weight: 700;
     font-size: 1.5em;
-    margin-top: 2em;
     margin-bottom: 1em;
     line-height: 1.3333333;
+
+		@apply not-first:mt-8;
 	}
 
 	h3 {
