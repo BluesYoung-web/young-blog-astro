@@ -16,7 +16,7 @@ const {
 ---
 
 <Default>
-	<main class="py-68px w-full">
+	<main class="p-68px mx-auto bg-white shadow-x">
 		<article class="mx-auto w-full xl:w-800px">
 			<h1 class="text-center text-2xl font-bold p-5">{title}</h1>
 			<time class="op-50">{date.replace('T', ' ').replace('.000Z', '')}</time>
@@ -29,17 +29,6 @@ const {
 </Default>
 
 <style lang="scss" is:global>
-.main {
-  @apply text-gray-800 dark:text-purple-500;
-}
-.header {
-  background-attachment: fixed;
-  @apply w-full transition-all duration-500 h-68px shadow;
-}
-
-#main-content {
-  @apply w-full mx-auto min-h-100vh relative text-gray-800 dark:text-purple-500 flex bg-[#f5f5f5];
-}
 .doc-content {
 
 	h2 {

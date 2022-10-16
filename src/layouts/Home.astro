@@ -6,7 +6,7 @@ import { SITE_TITLE } from '@/config';
 
 ---
 
-<Default>
+<Default fullscreen={true}>
   <div slot="header" class="h-full flex flex-col justify-center items-center">
     <div>
       <p class="text-2xl font-bold mb-1 lg:text-4xl text-center">
@@ -19,15 +19,3 @@ import { SITE_TITLE } from '@/config';
 
   <slot />
 </Default>
-
-<style lang="scss" is:global>
-.header {
-  background-image: url('/img/poster-filter.png'), linear-gradient(60deg, rgba(255, 165, 150, 0.5) -6%, rgba(0, 228, 255, 0.35)), url('/img/goldenmeili.png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #49b1f5;
-  background-position: center;
-  @apply w-full h-100vh transition-all duration-500;
-}
-</style>

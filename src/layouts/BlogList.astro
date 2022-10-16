@@ -5,18 +5,3 @@ import Default from './Default.astro';
 <Default>
   <slot />
 </Default>
-
-
-<style lang="scss" is:global>
-.main {
-  @apply text-gray-800 dark:text-purple-500;
-}
-.header {
-  background-attachment: fixed;
-  @apply w-full transition-all duration-500 h-68px shadow;
-}
-
-#main-content {
-  @apply w-full mx-auto min-h-100vh relative text-gray-800 dark:text-purple-500 flex bg-[#f5f5f5];
-}
-</style>
