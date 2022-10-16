@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+[<div class="i-cib-leetcode"></div> 力扣原题-25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 
 给定一个单链表的头结点 `head`，每 `k` 个节点一组进行翻转，请你返回修改后的链表
 
@@ -27,12 +27,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -79,8 +78,8 @@ describe('测试用例：', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

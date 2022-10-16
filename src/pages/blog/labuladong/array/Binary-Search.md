@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-704. 二分查找](https://leetcode-cn.com/problems/binary-search/)
+[<div class="i-cib-leetcode"></div> 力扣原题-704. 二分查找](https://leetcode-cn.com/problems/binary-search/)
 
 给定一个 `n` 个元素有序的(升序)整形数组 `nums` 和一个目标值 `target`，写一个函数搜索 `nums` 中的 `target`，如果存在则返回数组索引，否则返回 `-1`
 
@@ -23,12 +23,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -47,8 +46,8 @@ describe('二分查找', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -79,7 +78,7 @@ function search(nums: number[], target: number): number {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+[<div class="i-cib-leetcode"></div> 力扣原题-34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 给定一个按照**升序排列**的整数数组 `nums` 和一个目标值 `target`，找出给定目标值在数组中的开始位置和结束位置，如果不存在则返回 `[-1, -1]`
 
@@ -90,12 +89,11 @@ function search(nums: number[], target: number): number {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -120,8 +118,8 @@ describe('二分查找', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

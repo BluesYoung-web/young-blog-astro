@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-380. O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
+[<div class="i-cib-leetcode"></div> 力扣原题-380. O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
 
 **实现RandomizedSet 类：**
 - RandomizedSet() 初始化 RandomizedSet 对象
@@ -28,12 +28,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -66,8 +65,8 @@ describe('O1', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -124,7 +123,7 @@ class RandomizedSet {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)
+[<div class="i-cib-leetcode"></div> 力扣原题-710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)
 
 给定一个整数 n 和一个**无重复黑名单整数数组的 blacklist**
 
@@ -141,18 +140,17 @@ class RandomizedSet {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 // 结果为随机值，不便测试
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

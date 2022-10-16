@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
+[<div class="i-cib-leetcode"></div> 力扣原题-875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 
 珂珂喜欢吃香蕉。这里有 n 堆香蕉，第 i 堆中有 piles[i] 根香蕉。警卫已经离开了，将在 h 小时后回来。
 
@@ -29,13 +29,12 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
-
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
+  
 ```ts
 import { describe, it, expect } from 'vitest';
 
@@ -60,8 +59,9 @@ describe('爱吃香蕉的珂珂', () => {
 
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+
+</details>
+
 
 ### 具体实现
 
@@ -95,7 +95,7 @@ function minEatingSpeed(piles: number[], h: number): number {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-1011. 在 D 天内送达包裹的能力](https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/)
+[<div class="i-cib-leetcode"></div> 力扣原题-1011. 在 D 天内送达包裹的能力](https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/)
 
 传送带上的包裹必须在 days 天内从一个港口运送到另一个港口。
 
@@ -110,12 +110,11 @@ function minEatingSpeed(piles: number[], h: number): number {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -146,8 +145,8 @@ describe('在 D 天内送达包裹的能力', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -201,7 +200,7 @@ function shipWithinDays(weights: number[], days: number): number {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-410. 分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)
+[<div class="i-cib-leetcode"></div> 力扣原题-410. 分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)
 
 给定一个非负整数数组 nums 和一个整数 m，需要将这个数组分成 m 个**非空的连续子数组**
 
@@ -214,12 +213,11 @@ function shipWithinDays(weights: number[], days: number): number {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -250,8 +248,8 @@ describe('分割数组的最大值', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

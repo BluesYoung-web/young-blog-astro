@@ -12,9 +12,9 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
+[<div class="i-cib-leetcode"></div> 力扣原题-316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 
-[<cib-leetcode /> 力扣原题-1081. 不同字符的最小子序列](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/)
+[<div class="i-cib-leetcode"></div> 力扣原题-1081. 不同字符的最小子序列](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/)
 
 给定一个字符串 `s`，请去除字符串中重复的字母，使得每个字母只出现一次
 
@@ -27,12 +27,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { it, expect, describe } from 'vitest';
@@ -46,8 +45,8 @@ describe('demo', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -84,7 +83,7 @@ function removeDuplicateLetters(str: string) {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
+[<div class="i-cib-leetcode"></div> 力扣原题-496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 
 nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应位置 **右侧** 的 **第一个** 比 x 大的元素
 
@@ -100,12 +99,11 @@ nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应�
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { it, expect, describe } from 'vitest';
@@ -127,8 +125,8 @@ describe('demo', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -166,7 +164,7 @@ function nextGreaterElement(
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
+[<div class="i-cib-leetcode"></div> 力扣原题-503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 
 给定一个**循环数组** nums （**nums[nums.length - 1] 的下一个元素是 nums[0]**），返回 nums 中每个元素的 **下一个更大元素**
 
@@ -178,12 +176,11 @@ function nextGreaterElement(
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { it, expect, describe } from 'vitest';
@@ -203,8 +200,8 @@ describe('demo', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -234,7 +231,7 @@ function nextGreaterElements(nums: number[]): number[] {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
+[<div class="i-cib-leetcode"></div> 力扣原题-739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
 
 给定一个整数数组 temperatures，表示每天的温度，返回一个数组 answer，其中 answer[i] 是指在第 i 天之后，才会有更高的温度
 
@@ -246,12 +243,11 @@ function nextGreaterElements(nums: number[]): number[] {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { it, expect, describe } from 'vitest';
@@ -275,8 +271,8 @@ describe('demo', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

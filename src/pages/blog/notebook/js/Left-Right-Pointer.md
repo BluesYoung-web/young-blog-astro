@@ -17,12 +17,11 @@ date: 2022-03-24 14:29:58
 
 > 给定一个无重复元素且按升序排序的整数数组和一个整数，返回整数在数组中的索引，若不存在则返回 -1
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('左右指针——二分查找', () => {
@@ -39,8 +38,8 @@ describe('左右指针——二分查找', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -80,14 +79,13 @@ const findIndex = (arr: number[], n: number) => {
 
 - 你可以**假设每个输入只对应唯一的答案** ，而且你**不可以重复使用相同的元素**。你所设计的解决方案必须**只使用常量级的额外空间**。
 
-[<cib-leetcode /> 力扣原题-167](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+[<div class="i-cib-leetcode"></div> 力扣原题-167](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('左右指针——两数之和', () => {
@@ -117,8 +115,8 @@ describe('左右指针——两数之和', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -151,14 +149,13 @@ const twoSum = (arr: number[], n: number) => {
 
 - **不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题**
 
-[<cib-leetcode /> 力扣原题-344](https://leetcode-cn.com/problems/reverse-string/)
+[<div class="i-cib-leetcode"></div> 力扣原题-344](https://leetcode-cn.com/problems/reverse-string/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('左右指针——两数之和', () => {
@@ -185,8 +182,8 @@ describe('左右指针——两数之和', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -210,14 +207,13 @@ const reverseString = (arr: string[]) => {
 
 > 给你一个字符串 s，找到 s 中最长的回文子串
 
-[<cib-leetcode /> 力扣原题-5](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+[<div class="i-cib-leetcode"></div> 力扣原题-5](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('左右指针——最长回文子串', () => {
@@ -231,8 +227,8 @@ describe('左右指针——最长回文子串', () => {
 });
 
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 

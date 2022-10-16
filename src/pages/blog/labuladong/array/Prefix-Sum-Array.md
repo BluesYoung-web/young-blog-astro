@@ -14,7 +14,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-303. 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)
+[<div class="i-cib-leetcode"></div> 力扣原题-303. 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)
 
 给定一个整数数组 `nums`，处理以下类型的多个查询：
 1. 计算索引 `left` 和 `right` 闭区间内所有元素的和，`left <= right`
@@ -27,12 +27,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -53,8 +52,8 @@ describe('区域和搜索', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -82,7 +81,7 @@ class NumArray {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-304. 二维区域和检索 - 矩阵不可变](https://leetcode-cn.com/problems/range-sum-query-2d-immutable/)
+[<div class="i-cib-leetcode"></div> 力扣原题-304. 二维区域和检索 - 矩阵不可变](https://leetcode-cn.com/problems/range-sum-query-2d-immutable/)
 
 给定一个二维矩阵 `matrix`，计算其子矩阵范围内元素的总和<br/> `(x1, y1, x2, y2)`
 
@@ -97,12 +96,11 @@ class NumArray {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -129,8 +127,8 @@ describe('二维区域和搜索', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -181,7 +179,7 @@ class NumMatrix {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-560. 和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
+[<div class="i-cib-leetcode"></div> 力扣原题-560. 和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 
 给定一个整数数组 `nums` 和一个整数 `k`，**请统计并返回该数组中和为 k 的子数组的个数**
 
@@ -192,12 +190,11 @@ class NumMatrix {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -216,8 +213,8 @@ describe('和为 k 的子数组', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

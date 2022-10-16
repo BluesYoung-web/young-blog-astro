@@ -16,7 +16,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
+[<div class="i-cib-leetcode"></div> 力扣原题-567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
 
 给定两个字符串 `s1` 和 `s2`，实现一个函数来判断 `s2` 是否包含 `s1` 的排列，如果存在则返回 `true`，否则返回 `false`
 
@@ -28,12 +28,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -58,8 +57,8 @@ describe('字符串的排列', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -127,7 +126,7 @@ function checkInclusion(s1: string, s2: string): boolean {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+[<div class="i-cib-leetcode"></div> 力扣原题-438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 
 给定两个字符串 `s` 和 `p`，找到 `s` 中所有 `p` 的**异位词**的子串，返回这些子串的起始索引，不用考虑顺序
 
@@ -138,12 +137,11 @@ function checkInclusion(s1: string, s2: string): boolean {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -164,8 +162,8 @@ describe('找到字母的异位词', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -236,7 +234,7 @@ function findAnagrams(srcStr: string, targetStr: string): number[] {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+[<div class="i-cib-leetcode"></div> 力扣原题-3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
 给定一个字符串 `s`，请你找出其中不含有重复字符的**最长字串**的长度
 
@@ -246,12 +244,11 @@ function findAnagrams(srcStr: string, targetStr: string): number[] {
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -273,8 +270,8 @@ describe('无重复最长字串', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

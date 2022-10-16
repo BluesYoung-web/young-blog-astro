@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
+[<div class="i-cib-leetcode"></div> 力扣原题-226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
 给你一棵二叉树的根节点 `root`，翻转这棵二叉树，并返回其根节点
 
@@ -23,13 +23,12 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
-
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
+  
 ```ts
 describe('binary tree thought', () => {
   it('invertTree', () => {
@@ -39,8 +38,8 @@ describe('binary tree thought', () => {
   })
 })
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -63,7 +62,7 @@ function invertTree(root: TreeNode | null): TreeNode | null {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)
+[<div class="i-cib-leetcode"></div> 力扣原题-116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)
 
 **提示：**
 - **满二叉树**

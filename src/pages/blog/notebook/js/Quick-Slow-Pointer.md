@@ -17,14 +17,13 @@ date: 2022-03-23 16:29:58
 
 > 给定一个**排序数组**，你需要在 **原地删除(空间复杂度O(1))** 重复出现的元素，使得每个元素只出现一次，**返回移除重复元素后的数组的新长度**
 
-[<cib-leetcode /> 力扣原题-26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/submissions/)
+[<div class="i-cib-leetcode"></div> 力扣原题-26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/submissions/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -50,8 +49,8 @@ describe('快慢指针', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -84,14 +83,13 @@ export const removeDuplicates = (arr: number[]) => {
 
 > 给定一个**排序链表**，你需要在 **原地删除(空间复杂度O(1))** 重复出现的元素，使得每个元素只出现一次，**返回移除重复元素之后的链表**
 
-[<cib-leetcode /> 力扣原题-83](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/submissions/)
+[<div class="i-cib-leetcode"></div> 力扣原题-83](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/submissions/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -137,8 +135,8 @@ describe('快慢指针', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -176,14 +174,13 @@ export const removeDupList = (node: ListNode | null) => {
 
 ### 原地删除数组中的某些重复项
 
-[<cib-leetcode /> 力扣原题-27](https://leetcode-cn.com/problems/remove-element/submissions/)
+[<div class="i-cib-leetcode"></div> 力扣原题-27](https://leetcode-cn.com/problems/remove-element/submissions/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('原地删除数组的重复项', () => {
@@ -206,8 +203,8 @@ describe('原地删除数组的重复项', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -236,14 +233,13 @@ export const removeElement = (nums: number[], val: number) => {
 
 ### 移动数组中的 0 至尾部
 
-[<cib-leetcode /> 力扣原题-283](https://leetcode-cn.com/problems/remove-element/submissions/)
+[<div class="i-cib-leetcode"></div> 力扣原题-283](https://leetcode-cn.com/problems/remove-element/submissions/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('移动 0 至数组尾部', () => {
@@ -266,8 +262,8 @@ describe('移动 0 至数组尾部', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 
@@ -301,14 +297,13 @@ export const moveZeroes = (nums: number[]) => {
 
 <n-tag type="error"> hard </n-tag>
 
-[<cib-leetcode /> 力扣原题-76](https://leetcode-cn.com/problems/minimum-window-substring/submissions/)
+[<div class="i-cib-leetcode"></div> 力扣原题-76](https://leetcode-cn.com/problems/minimum-window-substring/submissions/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('最小子串', () => {
@@ -368,8 +363,8 @@ describe('最小子串', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 
 **具体实现：**
@@ -461,14 +456,13 @@ function minWindow(s: string, t: string): string {
 
 <n-alert type="info">**快慢指针 + 滑动窗口**</n-alert>
 
-[<cib-leetcode /> 力扣原题-3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+[<div class="i-cib-leetcode"></div> 力扣原题-3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 describe('无重复最长子串', () => {
@@ -492,8 +486,8 @@ describe('无重复最长子串', () => {
   })
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 **具体实现：**
 

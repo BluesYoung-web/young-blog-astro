@@ -14,18 +14,17 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-370.区间加法(会员专享，需要氪金)](https://leetcode-cn.com/problems/range-addition/)
+[<div class="i-cib-leetcode"></div> 力扣原题-370.区间加法(会员专享，需要氪金)](https://leetcode-cn.com/problems/range-addition/)
 
 假设你有一个长度为 n 的数组，初始情况下所有的元素值都为 0，你将会被给出 k 个更新操作；其中每个操作会被表示为一个三元组：[startIndex, endIndex, incNum]，你需要将数组中 startIndex 至 endIndex 之间的所有元素增加 incNum，请返回 k 次操作之后的数组
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -50,8 +49,8 @@ describe('差分数组', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -91,7 +90,7 @@ class DiffArray {
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)
+[<div class="i-cib-leetcode"></div> 力扣原题-1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)
 
 这里有 n 个航班，它们**分别从 1 到 n 进行编号**
 
@@ -122,7 +121,7 @@ function corpFlightBookings(
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-1094. 拼车](https://leetcode-cn.com/problems/car-pooling/)
+[<div class="i-cib-leetcode"></div> 力扣原题-1094. 拼车](https://leetcode-cn.com/problems/car-pooling/)
 
 车上最初有 `capacity` 个空座位，**并且只能向一个方向行驶**
 
@@ -140,12 +139,11 @@ function corpFlightBookings(
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, expect, it } from 'vitest'
@@ -160,8 +158,8 @@ describe('拼车', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 

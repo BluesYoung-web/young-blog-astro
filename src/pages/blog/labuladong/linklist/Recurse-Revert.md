@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-206.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+[<div class="i-cib-leetcode"></div> 力扣原题-206.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 给定一个单链表的头结点 `head`，请你反转链表，并返回反转后的链表
 
@@ -22,12 +22,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -67,8 +66,8 @@ describe('反转链表', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
@@ -118,7 +117,7 @@ function reverseList(
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-92.反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
+[<div class="i-cib-leetcode"></div> 力扣原题-92.反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 
 给定一个单链表的头结点 `head`，和两个正整数 `left <= right`，请你反转位置从 `left` 到 `right` 的链表节点，并返回反转后的链表
 
@@ -129,12 +128,11 @@ function reverseList(
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码
+  </summary>
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -169,8 +167,8 @@ describe('反转链表 II', () => {
   });
 });
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 解题思路
 

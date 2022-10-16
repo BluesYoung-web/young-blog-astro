@@ -12,7 +12,7 @@ image: /img/algorithm.webp
 
 ### 题目描述
 
-[<cib-leetcode /> 力扣原题-528. 按权重随机选择](https://leetcode-cn.com/problems/random-pick-with-weight/)
+[<div class="i-cib-leetcode"></div> 力扣原题-528. 按权重随机选择](https://leetcode-cn.com/problems/random-pick-with-weight/)
 
 给定一个**下标从 0 开始的正整数数组 `w`**，其中 `w[i]` 代表第 `i` 个下标的权重
 
@@ -25,12 +25,11 @@ image: /img/algorithm.webp
 
 ### TDD
 
-<n-collapse>
-  <n-collapse-item name="1">
-    <template #header>
-      <vscode-icons-file-type-testts />
-      <span class="ml-1">测试代码(随机结果，不便测试，仅展示示例情况)</span>
-    </template>
+<details>
+  <summary class="cursor-pointer">
+    <div class="i-vscode-icons-file-type-testts mr-1"></div>
+    测试代码(随机结果，不便测试，仅展示示例情况)
+  </summary>
 
 **示例 1：**
 ```js
@@ -76,8 +75,8 @@ solution.pickIndex();
 [null,1,0,1,0,0]
 ......
 ```
-  </n-collapse-item>
-</n-collapse>
+  
+</details>
 
 ### 具体实现
 
