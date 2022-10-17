@@ -3,10 +3,6 @@ import BlogList from '@/layouts/BlogList.astro';
 import { type DocItem, generate } from '@/utils/generateDocTree';
 import DocList from '@/components/DocList.vue';
 import MyCard from '@/components/MyCard.vue';
-import SearchPopup from '@/components/SearchPopup.vue';
-
-const blogs = await Astro.glob<DocItem>('../blog/**/*.{md,mdx}');
-const { tree, total } = generate(blogs);
 
 export async function getStaticPaths({ paginate }: any) {
   const blogs = await Astro.glob<DocItem>('../blog/**/*.{md,mdx}');
@@ -38,19 +34,6 @@ const { page } = Astro.props;
 			<MyCard client:load />
 		</div>
 	</div>
-
-	<SearchPopup client:only="vue" total={total} tree={tree} />
-  <script>
-		document.body.addEventListener('young:trigger-search', () => {
-			const el = document.querySelector('#search-popup');
-			el && el.classList.remove('hidden');
-		});
-
-		document.body.addEventListener('young:hide-search', () => {
-			const el = document.querySelector('#search-popup');
-			el && el.classList.add('hidden');
-		});
-	</script>
 </BlogList>
 
 <style lang="scss">

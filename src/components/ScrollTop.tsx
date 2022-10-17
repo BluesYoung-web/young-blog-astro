@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:51:07
- * @LastEditTime: 2022-10-17 15:37:57
+ * @LastEditTime: 2022-10-10 09:26:13
  * @Description: 回到顶部
  */
 import { defineComponent, h } from 'vue';
@@ -20,30 +20,20 @@ export default defineComponent({
     };
     const { y } = useScroll(isClient ? window : null);
 
-    const searchEvent = () => new CustomEvent('young:trigger-search');
-
-    const searchDoc = () => {
-      document.body.dispatchEvent(searchEvent());
-    };
     return () => h(
-      <div
-        class="fixed z-100 right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer flex flex-col"
-      >
-        <div
-          class="i-bi-search mb-2"
-          title="搜索"
-          onClick={() => searchDoc()}
-        />
+      <>
         {
           y.value > props.show
             ? <div
-                class="i-bi-arrow-up-circle"
+                class="fixed z-100 right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer"
                 title="回到顶部"
-                onClick={() => scorll()}  
-              />
+                onClick={() => scorll()}
+              >
+                <div class="i-bi-arrow-up-circle" />
+              </div>
             : null
         }
-      </div>
+      </>
     );
   }
 });

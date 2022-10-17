@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-05 16:10:16
- * @LastEditTime: 2022-10-12 09:08:36
+ * @LastEditTime: 2022-10-17 16:03:32
  * @Description: 头部导航栏组件
 -->
 <script lang="ts" setup>
@@ -23,6 +23,12 @@ watchEffect(() => {
     isScrollUp.value = false;
   }
 });
+
+const searchEvent = () => new CustomEvent('young:trigger-search');
+
+const searchDoc = () => {
+  document.body.dispatchEvent(searchEvent());
+};
 </script>
 
 <template>
@@ -31,6 +37,11 @@ watchEffect(() => {
       <a href="/">{{ NAV.title }}</a>
     </div>
     <div class="right">
+      <a class="item" title="搜索" @click="searchDoc">
+        <div class="i-bi-search" />
+        <span>搜索</span>
+      </a>
+
       <a class="item" href="/blogs/1" :title="NAV.doc">
         <div class="i-ic-round-menu-book" />
         <span>{{ NAV.doc }}</span>

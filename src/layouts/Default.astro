@@ -5,12 +5,17 @@ import Footer from '@/components/Footer.astro';
 import ScrollTop from '@/components/ScrollTop';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
 import Music from '@/components/Music';
+import SearchPopup from '@/components/SearchPopup.vue';
+import { DocItem, generate } from '@/utils/generateDocTree';
 
 export interface Props {
 	fullscreen?: boolean;
 }
 
 const { fullscreen } = Astro.props as Props;
+
+const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}');
+const { tree, total } = generate(blogs);
 ---
 
 <!DOCTYPE html>
@@ -26,6 +31,20 @@ const { fullscreen } = Astro.props as Props;
       </div>
       <ScrollTop client:only="vue" />
       <Music client:only="vue" />
+
+      <SearchPopup client:only="vue" total={total} tree={tree} />
+
+      <script>
+        document.body.addEventListener('young:trigger-search', () => {
+          const el = document.querySelector('#search-popup');
+          el && el.classList.remove('hidden');
+        });
+
+        document.body.addEventListener('young:hide-search', () => {
+          const el = document.querySelector('#search-popup');
+          el && el.classList.add('hidden');
+        });
+      </script>
 
       <div id="main-content" class={fullscreen ? '' : 'bg-[#f5f5f5]'}>
         <slot />
