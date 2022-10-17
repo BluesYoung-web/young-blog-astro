@@ -2,8 +2,45 @@
 title: 03-script元素
 date: 2020-12-28 15:57:52
 image: /img/hbs.png
-description: <script> 元素的由来
+description: '<script> 元素的由来'
+
+tableHead:
+  - label: name
+    prop: name
+    width: 100
+  - label: 是否必填
+    prop: need
+    width: 100
+  - label: 含义
+    prop: des
+
+tableData:
+  - name: async
+    need: 可选
+    des: 立即开始下载脚本，不会阻塞页面，但是不保证执行的顺序
+  - name: charset
+    need: 可选
+    des: 使用 src 属性指定的代码字符集，很少使用，大多数浏览器直接忽略
+  - name: crossorigin
+    need: 可选
+    des: 配置相关请求的 CORS（跨源资源共享）设置。默认不使用 CORS。crossorigin="anonymous" 配置文件请求不必设置凭据标志。crossorigin="use-credentials" 设置凭据标志，意味着出站请求会包含凭据
+  - name: defer
+    need: 可选
+    des: 表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。 在 IE7 及更早的版本中，对行内脚本也可以指定这个属性。虽然 HTML5 规范要求按顺序执行，但是实际情况并不理想
+  - name: integrity
+    need: 可选
+    des: 允许比对接收到的资源和指定的加密签名以验证子资源完整性（SRI， Subresource Integrity）。如果接收到的资源的签名与这个属性指定的签名不匹配，则页面会报错， 脚本不会执行。这个属性可以用于确保内容分发网络（CDN，Content Delivery Network）不会提供恶意内容
+  - name: src
+    need: 可选
+    des: 表示包含要执行的代码的外部文件
+  - name: src
+    need: 可选
+    des: 代替 language，表示代码块中脚本语言的内容类型（也称 MIME 类型）。按照惯 例，这个值始终都是 text/javascript，尽管text/javascript 和 text/ecmascript 都已经废弃了。JavaScript 文件的 MIME 类型通常是 application/x-javascript，不过给 type 属性这个值有可能导致脚本被忽略。在非 IE 的浏览器中有效的其他值还有 application/javascript 和application/ecmascript。如果这个值是 module，则代码会被当成 ES6 模块，而且只有这时候代码中才能出现 import 和 export 关键字
 ---
+import Table from '@/components/post/table.astro'
+
+
+[[toc]]
 
 ## \<script\> 元素的由来
 
@@ -15,70 +52,14 @@ description: <script> 元素的由来
 
 ### 元素属性
 
-<script lang="ts" setup>
-const tableHead = [
-  { label: 'name', prop: 'name', width: 100 },
-  { label: '是否必填', prop: 'need', width: 100 },
-  { label: '含义', prop: 'des' }
-];
-const tableData = [
-  {
-    name: 'async',
-    need: '可选',
-    des: `立即开始下载脚本，不会阻塞页面，但是不保证执行的顺序`
-  },
-  {
-    name: 'charset',
-    need: '可选',
-    des: `使用 src 属性指定的代码字符集，很少使用，大多数浏览器直接忽略`
-  },
-  {
-    name: 'crossorigin',
-    need: '可选',
-    des: `配置相关请求的 CORS（跨源资源共享）设置。默认不使用 CORS。crossorigin=\"anonymous\" 配置文件请求不必设置凭据标志。crossorigin=\"use-credentials\" 设置凭据标志，意味着出站请求会包含凭据`
-  },
-  {
-    name: 'defer',
-    need: '可选',
-    des: `表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。 在 IE7 及更早的版本中，对行内脚本也可以指定这个属性。虽然 HTML5 规范要求按顺序执行，但是实际情况并不理想`
-  },
-  {
-    name: 'integrity',
-    need: '可选',
-    des: `允许比对接收到的资源和指定的加密签名以验证子资源完整性（SRI， Subresource Integrity）。如果接收到的资源的签名与这个属性指定的签名不匹配，则页面会报错， 脚本不会执行。这个属性可以用于确保内容分发网络（CDN，Content Delivery Network）不会提供恶意内容`
-  },
-  {
-    name: 'src',
-    need: '可选',
-    des: `表示包含要执行的代码的外部文件`
-  },
-  {
-    name: 'type',
-    need: '可选',
-    des: `代替 language，表示代码块中脚本语言的内容类型（也称 MIME 类型）。按照惯 例，这个值始终都是 text/javascript，尽管text/javascript 和 text/ecmascript 都已经废弃了。JavaScript 文件的 MIME 类型通常是 application/x-javascript，不过给 type 属性这个值有可能导致脚本被忽略。在非 IE 的浏览器中有效的其他值还有 application/javascript 和application/ecmascript。如果这个值是 module，则代码会被当成 ES6 模块，而且只有这时候代码中才能出现 import 和 export 关键字`
-  }
-];
-</script>
-
-<NTable :bordered="false" :single-line="false" striped>
-  <thead>
-    <tr>
-      <th v-for="(item, index) in tableHead" :key="index + 'head'" :width="item.width ?? ''">
-        {{ item.label }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(item, index) in tableData" :key="index + 'dasdasd'">
-      <td v-for="(it, idx) in tableHead" :key="idx + 'eret'" v-html="item[String(it.prop)]"></td>
-    </tr>
-  </tbody>
-</NTable>
-
+<Table
+  tableHead={frontmatter.tableHead}
+  tableData={frontmatter.tableData}
+/>
 
 ## 使用
 
-直接包裹在`<script></script>`标签之中
+直接包裹在 `<script></script>` 标签之中
 
 使用 `src` 属性引入外部代码（不受浏览器同源策略的限制，可跨域）
 
