@@ -1,0 +1,136 @@
+---
+export interface Props {
+	tableHead: TableHeadItem[];
+	tableData: TableDataItem[];
+};
+
+const {
+  tableHead = [],
+  tableData = []
+} = Astro.props as Props;
+
+const defaultStyles = {
+  bgcolor: '#F1F3F7',
+  color: '#78838F',
+  bgcolor_gradient: `linear-gradient(to right, #E2EBF4, #CBDCF2, #E2EBF4)`
+};
+---
+
+<div class="table-main">
+  <table class="t-head">
+    <colgroup>
+      {
+        tableHead.map((item) =>
+          <col
+            style={{
+              width: item?.width ? item.width + 'px' : 'auto'
+            }}
+          />
+        )
+      }
+    </colgroup>
+    <thead>
+      <tr>
+        {
+          tableHead.map((item) =>
+            <th class="p-2 font-bold text-center">
+              { item.label }
+            </th>
+          )
+        }
+      </tr>
+    </thead>
+  </table>
+  <div class="body-wrapper">
+    {
+      tableData.length > 0
+        ? <table class="t-body">
+            <colgroup>
+              {
+                tableHead.map((item) =>
+                  <col
+                    style={{
+                      width: item?.width ? item.width + 'px' : 'auto'
+                    }}
+                  />
+                )
+              }
+            </colgroup>
+            <tbody>
+              {
+                tableData.map((row, index) => 
+                  <tr
+                    style={{
+                      backgroundColor: defaultStyles.bgcolor,
+                      backgroundImage: index % 2 === 0 ? defaultStyles.bgcolor_gradient : 'none',
+                      color: defaultStyles.color,
+                    }}
+                    class="border-none"
+                  >
+                    {
+                      tableHead.map((cell) =>
+                        <td class="text-center p-2 border-none">
+                          { row[String(cell.prop)] }
+                        </td>
+                      )
+                    }
+                  </tr>
+                )
+              }
+            </tbody>
+          </table>
+        : <div class="t-body">
+            <div set:text="暂无数据" />
+          </div>
+    }
+  </div>
+</div>
+
+<style lang="scss">
+$head-bg-0: #96A8E0;
+$head-bg-1: #9AB1E2;
+$head-bg-2: #A8C0E9;
+$color: white;
+.table-main {
+  @apply w-full border shadow rounded;
+
+  .t-head {
+    border: none;
+    background-image: linear-gradient($head-bg-0, $head-bg-1, $head-bg-2);
+    color: $color;
+    table-layout: fixed;
+    @apply w-full;
+  }
+
+  .body-wrapper {
+    @apply w-full overflow-auto;
+    display: block;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(73, 177, 245, .2);
+      border-radius: 2em
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #49b1f5;
+      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+      border-radius: 2em
+    }
+
+    &::-webkit-scrollbar-corner {
+      background-color: transparent
+    }
+
+    .t-body {
+      border: none;
+      // 干掉默认的单元格边框
+      border-spacing: 0;
+      @apply w-full;
+    }
+  }
+}
+</style>
