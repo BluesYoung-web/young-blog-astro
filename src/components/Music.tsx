@@ -1,12 +1,13 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-05 15:37:57
- * @LastEditTime: 2022-10-11 09:10:12
+ * @LastEditTime: 2022-10-17 09:12:37
  * @Description: 音乐播放器
  */
 import { defineComponent, h } from 'vue';
 import { MUSIC } from '@/config';
 import 'uno.css';
+import './style/music.css';
 import 'aplayer/dist/APlayer.min.css';
 import APlayer from 'aplayer';
 
