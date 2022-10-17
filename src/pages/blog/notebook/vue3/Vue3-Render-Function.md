@@ -221,7 +221,7 @@ const vnode = withDirectives(h('div'), [
 
 ### 基本使用
 
-```ts
+```tsx
 export default defineComponent({
   setup() {
     return () => (<div>Hello World !</div>)
@@ -244,7 +244,7 @@ v-model => modelValue + onUpdate:modelValue
 
 ### 插槽
 
-```ts
+```tsx
 // 定义
 export default defineComponent({
   setup(props, { slots }) {
