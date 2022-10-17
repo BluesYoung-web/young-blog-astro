@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-17 11:27:59
- * @LastEditTime: 2022-10-17 12:24:22
+ * @LastEditTime: 2022-10-17 15:49:12
  * @Description: 
 -->
 <script lang="ts" setup>
@@ -28,7 +28,7 @@ const hide = () => {
       title="文章搜索"
       mask-closable
       type="info"
-      class="w-100vw h-100vh"
+      class="popup"
       @close="hide"
     >
       <MyDoc :total="total" :tree="tree" />
@@ -38,6 +38,10 @@ const hide = () => {
 
 <style lang="scss">
 .search {
-  @apply fixed left-0 top-0 z-999;
+  @apply fixed left-0 top-0 w-100vw h-100vh z-999;
+  background-color: rgba(0, 0, 0, .4);
+  .popup {
+    @apply w-full h-full xl:w-1/3 xl:h-full;
+  }
 }
 </style>

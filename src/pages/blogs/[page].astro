@@ -3,7 +3,6 @@ import BlogList from '@/layouts/BlogList.astro';
 import { type DocItem, generate } from '@/utils/generateDocTree';
 import DocList from '@/components/DocList.vue';
 import MyCard from '@/components/MyCard.vue';
-import MyDoc from '@/components/MyDoc.vue';
 import SearchPopup from '@/components/SearchPopup.vue';
 
 const blogs = await Astro.glob<DocItem>('../blog/**/*.{md,mdx}');
@@ -38,9 +37,6 @@ const { page } = Astro.props;
 		<div class="card my-card">
 			<MyCard client:load />
 		</div>
-		<div class="card my-doc">
-			<MyDoc client:load total={total} tree={tree} />
-		</div>
 	</div>
 
 	<SearchPopup client:only="vue" total={total} tree={tree} />
@@ -73,10 +69,7 @@ const { page } = Astro.props;
   @apply lt-2xl-hidden 2xl:right-0 sticky;
 }
 .my-card {
-  @apply top-10;
-}
-.my-doc {
-  @apply top-90 mt-10;
+  @apply top-30;
 }
 </style>
   

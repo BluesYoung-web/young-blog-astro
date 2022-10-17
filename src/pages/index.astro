@@ -1,7 +1,6 @@
 ---
 import Home from '@/layouts/Home.astro';
 import MyCard from '@/components/MyCard.vue';
-import MyDoc from '@/components/MyDoc.vue';
 import DocList from '@/components/DocList.vue';
 import SearchPopup from '@/components/SearchPopup.vue';
 import { type DocItem, generate } from '@/utils/generateDocTree';
@@ -19,9 +18,6 @@ const display = list.slice(0, 10);
 	<div class="absolute right-18 top-10 h-full">
 		<div class="card my-card">
 			<MyCard client:load />
-		</div>
-		<div class="card my-doc">
-			<MyDoc client:load total={total} tree={tree} />
 		</div>
 	</div>
 	<SearchPopup client:only="vue" total={total} tree={tree} />
@@ -47,9 +43,6 @@ const display = list.slice(0, 10);
 	@apply lt-2xl-hidden 2xl:right-0 sticky;
 }
 .my-card {
-	@apply top-10;
-}
-.my-doc {
-	@apply top-90 mt-10;
+	@apply top-30;
 }
 </style>
