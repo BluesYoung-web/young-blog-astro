@@ -4,13 +4,13 @@ import Default from './Default.astro';
 export interface Props {
 	content: {
 		title: string;
-		description: string;
+		minutesRead: string;
 		date: string;
 	};
 }
 
 const {
-	content: { title, date },
+	content: { title, date, minutesRead },
 } = Astro.props as Props;
 
 ---
@@ -20,6 +20,7 @@ const {
 		<article class="mx-auto w-full xl:w-800px">
 			<h1 class="text-center text-2xl font-bold p-5">{title}</h1>
 			<time class="op-50">{date.replace('T', ' ').replace('.000Z', '')}</time>
+			<time class="op-50 ml-18px">{minutesRead}</time>
 			<hr/>
 			<div class="doc-content">
 				<slot />

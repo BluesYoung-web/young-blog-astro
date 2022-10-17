@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-11 09:14:52
+ * @LastEditTime: 2022-10-17 14:53:24
  * @Description: 
  */
 import { defineConfig } from 'astro/config';
@@ -10,6 +10,8 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
 import unocss from 'unocss/astro';
+
+import { remarkLayout, remarkReadTime } from './md-plugins';
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,6 +32,10 @@ export default defineConfig({
 	],
 	markdown: {
 		syntaxHighlight: 'prism',
+		remarkPlugins: [
+			remarkLayout,
+			remarkReadTime
+		]
 	},
 	vite: {
 		ssr: {
