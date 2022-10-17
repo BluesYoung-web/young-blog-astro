@@ -94,7 +94,7 @@ sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
 
 修改内容如下：
 
-```conf
+```ini
 [connection]
 wifi.mac-address-randomization=1
 

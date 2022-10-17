@@ -231,7 +231,7 @@ export default defineComponent({
 
 ### 指令
 
-```code
+```sh
 v-if => 三元运算符
 
 v-for => arr.map
