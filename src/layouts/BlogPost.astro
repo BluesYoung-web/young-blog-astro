@@ -16,7 +16,7 @@ const {
 ---
 
 <Default>
-	<main class="p-68px mx-auto bg-white shadow-x">
+	<main class="p-10px xl:p-68px mx-auto bg-white shadow-x">
 		<article class="mx-auto w-full xl:w-800px">
 			<h1 class="text-center text-2xl font-bold p-5">{title}</h1>
 			<time class="op-50">{date.replace('T', ' ').replace('.000Z', '')}</time>
@@ -74,6 +74,11 @@ const {
     margin-top: 1.6em;
     margin-bottom: 1.6em;
     padding-left: 1em;
+	}
+
+	pre[class*="language-"] {
+		overflow-x: auto;
+		@apply w-[calc(100vw-20px)] xl:w-full;
 	}
 }
 </style>
