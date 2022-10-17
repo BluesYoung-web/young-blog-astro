@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Nginx 用途
 description: Nginx 用途
 image: /img/nginx.jpg

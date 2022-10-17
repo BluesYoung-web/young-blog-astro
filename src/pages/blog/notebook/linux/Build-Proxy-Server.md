@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Linux 使用 TinyProxy 搭建代理服务器
 description: Linux 使用 TinyProxy 搭建代理服务器
 image: /img/linux.jpeg

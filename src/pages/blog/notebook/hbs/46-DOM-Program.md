@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 46-DOM编程
 image: /img/hbs.png
 description: JavaScript DOM 编程

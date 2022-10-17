@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 53-Canvas
 image: /img/hbs.png
 description: JavaScript Canvas

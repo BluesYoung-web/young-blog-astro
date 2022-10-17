@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 18-Object
 image: /img/hbs.png
 description: JavaScript 对象(Object)

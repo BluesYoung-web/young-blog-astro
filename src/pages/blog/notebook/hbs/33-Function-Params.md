@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 33-函数参数
 image: /img/hbs.png
 description: JavaScript 函数参数

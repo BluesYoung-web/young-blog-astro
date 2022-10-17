@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 22-Set
 image: /img/hbs.png
 description: JavaScript Set 集合

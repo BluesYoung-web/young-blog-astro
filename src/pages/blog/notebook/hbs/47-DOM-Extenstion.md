@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 47-DOM扩展
 image: /img/hbs.png
 description: JavaScript DOM 扩展

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 4-迭代器模式
 description: 4-迭代器模式
 date: 2022-04-04 09:30:00

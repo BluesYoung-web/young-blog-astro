@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 递归反转链表
 description: 递归反转链表
 date: 2022-04-13 09:00:00

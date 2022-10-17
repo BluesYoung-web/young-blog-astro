@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 前端缓存
 description: 前端缓存
 date: 2022-03-22 10:10:50

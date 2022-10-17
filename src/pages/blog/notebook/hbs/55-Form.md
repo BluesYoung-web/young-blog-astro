@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 55-表单
 image: /img/hbs.png
 description: JavaScript 表单

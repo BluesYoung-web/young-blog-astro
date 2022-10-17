@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 二分搜索算法
 description: 二分搜索算法
 date: 2022-05-02 08:30:00

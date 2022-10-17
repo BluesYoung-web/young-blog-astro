@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Flex 布局
 description: CSS Flex 布局
 image: /img/css.jpg

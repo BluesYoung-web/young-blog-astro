@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vue3 应用级 API
 description: vue3 应用级 API
 date: 2022-02-21 11:40:00

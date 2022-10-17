@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vue3 provide & inject
 description: vue3 provide & inject
 date: 2022-02-20 11:35:00

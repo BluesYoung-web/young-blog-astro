@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 树莓派免费 FRP 内网穿透
 description: 树莓派免费 FRP 内网穿透
 image: /img/raspberrypi.jpg

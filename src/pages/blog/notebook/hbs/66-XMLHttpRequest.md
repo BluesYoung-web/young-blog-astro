@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 66-XMLHttpRequest
 image: /img/hbs.png
 description: JavaScript XHR(AJAX)

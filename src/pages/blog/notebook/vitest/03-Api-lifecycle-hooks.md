@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vitest -> 生命周期钩子
 description: vitest -> 生命周期钩子
 image: /img/vitest.svg

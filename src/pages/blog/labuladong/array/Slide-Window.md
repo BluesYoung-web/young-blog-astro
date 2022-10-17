@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 滑动窗口算法
 description: 滑动窗口算法
 date: 2022-05-01 09:30:00

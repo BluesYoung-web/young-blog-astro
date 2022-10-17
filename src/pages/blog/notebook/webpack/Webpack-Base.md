@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: webpack-01-基础
 description: webpack-01-基础
 date: 2021-09-22 09:47:53

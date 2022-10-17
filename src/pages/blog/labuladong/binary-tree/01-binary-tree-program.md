@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 二叉树算法——纲领篇
 description: 二叉树算法——纲领篇
 date: 2022-07-10 13:40:00

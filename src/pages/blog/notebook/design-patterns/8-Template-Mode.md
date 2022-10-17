@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 8-模板方法模式
 description: 8-模板方法模式
 date: 2022-04-04 10:30:00

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 72-WebStorage
 image: /img/hbs.png
 description: JavaScript WebStorage

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: VueRouter—04-API
 description: VueRouter—04-API
 image: /img/vue.jpeg

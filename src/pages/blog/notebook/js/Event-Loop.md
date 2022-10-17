@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 事件循环
 description: 事件循环
 image: /img/event_loop.png

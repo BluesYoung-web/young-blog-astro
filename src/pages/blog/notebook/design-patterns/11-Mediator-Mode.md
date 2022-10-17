@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 11-中介者模式
 description: 11-中介者模式
 date: 2022-04-04 15:25:00

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 18-原型模式
 description: 18-原型模式
 date: 2022-04-04 17:55:00

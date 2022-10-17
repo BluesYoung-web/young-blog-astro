@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: webpack-02-优化
 description: webpack-02-优化
 date: 2021-09-22 09:54:53

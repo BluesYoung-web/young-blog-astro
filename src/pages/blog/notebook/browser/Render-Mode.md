@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 渲染模式
 description: 前端应用渲染模式
 date: 2021-11-09 17:13:05

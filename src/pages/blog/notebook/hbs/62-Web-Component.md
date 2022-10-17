@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 62-Web原生组件
 image: /img/hbs.png
 description: JavaScript Web Component

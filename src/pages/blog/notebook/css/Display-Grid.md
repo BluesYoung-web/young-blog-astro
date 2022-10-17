@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Grid 布局
 description: CSS Grid 布局
 image: /img/css.jpg

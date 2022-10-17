@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 12-执行上下文与作用域
 image: /img/hbs.png
 date: 2020-12-28 17:24:46

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 树莓派基础操作
 image: /img/raspberrypi.jpg
 date: 2021-07-24 20:28:43

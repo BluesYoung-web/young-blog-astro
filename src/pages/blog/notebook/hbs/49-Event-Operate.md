@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 49-事件处理
 image: /img/hbs.png
 description: JavaScript 事件处理

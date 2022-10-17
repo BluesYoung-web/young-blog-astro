@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 算法中的田忌赛马
 description: 算法中的田忌赛马
 date: 2022-05-07 19:40:00

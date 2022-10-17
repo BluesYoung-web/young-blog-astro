@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 24-生成器
 image: /img/hbs.png
 description: JavaScript 生成器

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: TypeScript 装饰器
 description: TypeScript 装饰器
 image: /img/ts.jepg

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: About Me
 description: Lorem ipsum dolor sit amet
 date: August 08 2022

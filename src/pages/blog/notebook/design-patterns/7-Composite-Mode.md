@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 7-组合模式
 description: 7-组合模式
 date: 2022-04-04 10:10:00

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Nginx 配置文件
 description: Nginx 配置文件
 image: /img/nginx.jpg

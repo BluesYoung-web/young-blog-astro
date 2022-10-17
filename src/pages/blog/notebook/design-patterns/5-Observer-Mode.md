@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 5-观察者(发布订阅)模式
 description: 5-观察者(发布订阅)模式
 date: 2022-04-04 09:50:00

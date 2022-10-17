@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: VueRouter—03-进阶
 description: VueRouter—03-进阶
 image: /img/vue.jpeg

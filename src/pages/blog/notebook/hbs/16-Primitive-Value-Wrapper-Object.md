@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 16-原始值包装对象
 image: /img/hbs.png
 description: JavaScript 原始值的包装对象

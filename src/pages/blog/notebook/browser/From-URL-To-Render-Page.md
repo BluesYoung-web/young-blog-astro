@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 浏览器从输入 URL 到页面渲染完成
 description: 浏览器从输入 URL 到页面渲染完成
 date: 2022-03-21 15:33:05

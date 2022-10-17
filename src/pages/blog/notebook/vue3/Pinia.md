@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 全新的状态管理库——Pinia
 description: 全新的状态管理库——Pinia
 image: /img/pinia.svg

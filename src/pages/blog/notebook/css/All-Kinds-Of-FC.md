@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 各种各样的格式化上下文(FC)
 description: CSS 各种各样的格式化上下文(FC)
 image: /img/css.jpg

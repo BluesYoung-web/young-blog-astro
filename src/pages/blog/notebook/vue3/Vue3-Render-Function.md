@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vue3 渲染函数
 description: vue3 渲染函数
 date: 2022-02-22 10:20:00

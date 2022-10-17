@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 10-责任链模式
 description: 10-责任链模式
 date: 2022-04-04 15:12:00

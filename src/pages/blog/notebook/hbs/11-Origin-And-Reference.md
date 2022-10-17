@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 11-原始值与引用值
 image: /img/hbs.png
 description: JavaScript 的原始值与引用值

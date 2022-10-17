@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 单调栈
 description: 单调栈
 date: 2022-05-11 15:42:00

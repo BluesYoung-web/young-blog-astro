@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 40-window对象
 image: /img/hbs.png
 description: JavaScript Window 对象

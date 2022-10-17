@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vue3 内置组件
 description: vue3 内置组件
 date: 2022-02-20 15:30:00

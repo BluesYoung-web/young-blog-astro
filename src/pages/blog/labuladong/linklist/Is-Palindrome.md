@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 回文链表
 description: 回文链表
 date: 2022-04-23 13:20:00

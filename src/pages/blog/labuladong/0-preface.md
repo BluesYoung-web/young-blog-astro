@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 拉布拉多算法小抄——序章
 description: 拉布拉多算法小抄——序章
 date: 2022-04-09 15:30:50

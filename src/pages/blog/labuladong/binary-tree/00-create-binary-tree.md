@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 生成树的辅助函数
 description: 生成树的辅助函数
 date: 2022-07-10 12:00:00

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 48-样式
 image: /img/hbs.png
 description: JavaScript Style

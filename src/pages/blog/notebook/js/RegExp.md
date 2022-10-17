@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 正则表达式
 description: 正则表达式
 image: /img/regexp.jpg

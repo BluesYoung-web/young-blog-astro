@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 05-语法
 image: /img/hbs.png
 description: JavaScript 基本语法

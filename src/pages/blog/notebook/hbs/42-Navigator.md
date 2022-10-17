@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 42-navigator对象
 image: /img/hbs.png
 description: JavaScript Navigator 对象

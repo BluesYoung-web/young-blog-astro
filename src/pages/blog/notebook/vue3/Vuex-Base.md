@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Vuex—01.核心概念
 description: Vuex—01.核心概念
 image: /img/vue.jpeg

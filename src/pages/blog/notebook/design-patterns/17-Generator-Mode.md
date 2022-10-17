@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 17-生成器模式
 description: 17-生成器模式
 date: 2022-04-04 17:30:00

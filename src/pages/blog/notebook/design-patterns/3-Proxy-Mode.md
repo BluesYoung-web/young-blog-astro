@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 3-代理模式
 description: 3-代理模式
 date: 2022-04-03 16:40:00

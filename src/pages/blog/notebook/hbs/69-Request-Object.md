@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 69-网络请求常用对象
 image: /img/hbs.png
 description: JavaScript 网络请求常用对象

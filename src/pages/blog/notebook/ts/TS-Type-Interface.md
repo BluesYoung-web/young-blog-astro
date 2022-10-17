@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: type 与 interface 之间的区别与联系
 description: type 与 interface 之间的区别与联系
 image: /img/ts.jpeg

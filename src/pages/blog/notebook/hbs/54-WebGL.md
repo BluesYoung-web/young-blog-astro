@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 54-WebGL
 image: /img/hbs.png
 description: JavaScript WebGL

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 1-单例模式
 description: 1-单例模式
 date: 2022-04-03 16:20:00

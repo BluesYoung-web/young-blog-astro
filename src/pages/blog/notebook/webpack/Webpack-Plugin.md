@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: webpack-04-Plugin
 description: webpack-04-Plugin
 date: 2021-09-22 09:56:38

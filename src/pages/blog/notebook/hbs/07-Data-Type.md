@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 07-数据类型
 image: /img/hbs.png
 description: JavaScript 数据类型

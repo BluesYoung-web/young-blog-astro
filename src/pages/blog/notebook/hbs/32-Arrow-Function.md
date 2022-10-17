@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 32-箭头函数
 image: /img/hbs.png
 description: JavaScript 箭头函数

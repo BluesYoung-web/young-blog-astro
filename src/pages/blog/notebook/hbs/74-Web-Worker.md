@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 74-工作者线程
 image: /img/hbs.png
 description: JavaScript 工作者线程

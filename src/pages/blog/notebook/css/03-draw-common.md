@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: CSS3-03绘制常见图形
 date: 2020-12-24 14:27:46
 image: /img/css.jpg

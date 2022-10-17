@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Linux Shell
 description: Linux Shell
 image: /img/linux.jpeg

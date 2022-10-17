@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 16-抽象工厂模式
 description: 16-抽象工厂模式
 date: 2022-04-04 16:30:00

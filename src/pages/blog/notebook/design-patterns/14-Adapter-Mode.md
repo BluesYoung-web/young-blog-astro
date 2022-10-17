@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 14-适配器模式
 description: 14-适配器模式
 date: 2022-04-04 16:10:00

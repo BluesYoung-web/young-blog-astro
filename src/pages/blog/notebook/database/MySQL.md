@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: MySQL
 description: MySQL
 date: 2022-06-14 10:30:00

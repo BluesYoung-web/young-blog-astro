@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 38-期约
 image: /img/hbs.png
 description: JavaScript Promise

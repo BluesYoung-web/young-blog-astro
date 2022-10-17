@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 70-WebSocket
 image: /img/hbs.png
 description: JavaScript WebSocket

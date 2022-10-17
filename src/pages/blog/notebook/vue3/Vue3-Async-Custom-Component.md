@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vue3 异步组件&自定义原生组件(WebComponent)
 description: vue3 异步组件&自定义原生组件(WebComponent)
 date: 2022-02-21 10:00:00

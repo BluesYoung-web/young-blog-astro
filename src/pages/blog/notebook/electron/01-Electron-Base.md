@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Electron 基础
 description: Electron 基础
 date: 2022-06-13 10:12:00

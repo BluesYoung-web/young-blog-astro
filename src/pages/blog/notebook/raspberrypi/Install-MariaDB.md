@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Docker 内部安装 MariaDB
 date: 2020-12-23 16:12:56
 image: /img/raspberrypi.jpg

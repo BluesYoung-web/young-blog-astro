@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 21-备忘录模式
 description: 21-备忘录模式
 date: 2022-04-04 19:20:00

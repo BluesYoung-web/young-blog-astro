@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: vitest -> test
 description: vitest -> test
 image: /img/vitest.svg

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: Docker 基础操作
 description: Docker 基础操作
 date: 2020-12-23 16:05:41

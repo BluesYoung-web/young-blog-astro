@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 64-错误处理
 image: /img/hbs.png
 description: JavaScript 错误处理

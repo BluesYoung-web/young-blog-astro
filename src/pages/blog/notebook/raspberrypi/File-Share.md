@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 树莓派局域网文件共享
 image: /img/raspberrypi.jpg
 date: 2021-04-10 20:18:01

@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: HTTPS 对于安全的保障
 description: HTTPS 对于安全的保障
 date: 2022-03-27 16:11:11

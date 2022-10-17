@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 14-Date
 image: /img/hbs.png
 description: JavaScript Date 类

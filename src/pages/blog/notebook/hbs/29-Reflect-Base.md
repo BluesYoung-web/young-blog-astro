@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 29-代理基础
 image: /img/hbs.png
 description: JavaScript Reflect

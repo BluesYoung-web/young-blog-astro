@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: webpack-03-Loader
 description: webpack-03-Loader
 date: 2021-09-22 09:55:12

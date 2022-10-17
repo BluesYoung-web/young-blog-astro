@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: 51-事件模拟
 image: /img/hbs.png
 description: JavaScript 事件模拟

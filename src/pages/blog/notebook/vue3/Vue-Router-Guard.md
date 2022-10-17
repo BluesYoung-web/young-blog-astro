@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/BlogPost.astro"
 title: VueRouter—02.进阶-导航守卫
 description: VueRouter—02.进阶-导航守卫
 image: /img/vue.jpeg
