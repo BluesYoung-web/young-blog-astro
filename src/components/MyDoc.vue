@@ -1,22 +1,23 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-17 15:48:00
+ * @LastEditTime: 2022-10-18 11:56:19
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
 import 'uno.css';
-import { NConfigProvider, darkTheme, lightTheme, NCard, NSpace, NInput, NTree } from 'naive-ui';
+import { NConfigProvider, darkTheme, lightTheme, NCard, NSpace, NSelect, NTree } from 'naive-ui';
 import { INTRO } from '@/config';
 import { theme as th } from '@/utils/useTheme';
 import { computed, ref } from 'vue';
-import type { DocTree } from '@/utils/generateDocTree';
+import type { DocItem, DocTree } from '@/utils/generateDocTree';
 
 type Props = {
   total: number;
   tree: DocTree[];
+  list: DocItem[];
 };
-defineProps<Props>();
+const props = defineProps<Props>();
 
 const theme = computed(() => th.value === 'dark' ? darkTheme : lightTheme);
 
@@ -25,6 +26,20 @@ const jump = (_: any, [v, ...__]: DocTree[]) => {
   if (v.path) {
     location.href = v.path;
   }
+};
+
+const options = ref<DocItem[]>([]);
+
+const handleSearch = (query: string) => {
+  if (!query.length) {
+    options.value = [];
+  } else {
+    options.value = props.list.filter((d) => d.label.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
+  }
+};
+
+const searchJump = (url: string) => {
+  location.href = url;
 };
 </script>
 
@@ -38,9 +53,17 @@ const jump = (_: any, [v, ...__]: DocTree[]) => {
           </p>
           <div class="data">
             <NSpace vertical :size="12" class="w-80">
-              <NInput v-model:value="pattern" :placeholder="INTRO.search" />
+              <NSelect
+                v-model:value="pattern"
+                :placeholder="INTRO.search"
+                :options="options"
+                filterable
+                remote
+                clearable
+                @search="handleSearch"
+                @update-value="searchJump"
+              />
               <NTree
-                :pattern="pattern"
                 :data="tree || []"
                 block-line
                 class="max-h-72vh overflow-auto"

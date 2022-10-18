@@ -1,18 +1,19 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-17 11:27:59
- * @LastEditTime: 2022-10-17 15:49:12
+ * @LastEditTime: 2022-10-18 09:58:47
  * @Description: 
 -->
 <script lang="ts" setup>
 import 'uno.css';
 import { NDialog } from 'naive-ui';
 import MyDoc from '@/components/MyDoc.vue';
-import type { DocTree } from '@/utils/generateDocTree';
+import type { DocItem, DocTree } from '@/utils/generateDocTree';
 
 type Props = {
   total: number;
   tree: DocTree[];
+  list: DocItem[];
 };
 defineProps<Props>();
 
@@ -31,7 +32,7 @@ const hide = () => {
       class="popup"
       @close="hide"
     >
-      <MyDoc :total="total" :tree="tree" />
+      <MyDoc :total="total" :tree="tree" :list="list" />
     </NDialog>
   </div>
 </template>

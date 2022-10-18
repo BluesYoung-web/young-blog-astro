@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 11:41:37
- * @LastEditTime: 2022-10-10 08:11:06
+ * @LastEditTime: 2022-10-18 10:03:20
  * @Description: 
  */
 export type DocItem = {
@@ -17,6 +17,8 @@ export type DocItem = {
   rawContent: string;
   compiledContent: string;
   Content: string;
+  label: string;
+  value: string;
 };
 
 export type DocTree = {
@@ -32,7 +34,7 @@ export type ReturnDocTree = {
   list: DocItem[];
 };
 
-const getTree = (list: DocItem[]): DocTree[] => {
+const getTree = (list: DocItem[]) => {
   const docDir: Record<string, DocTree> = {};
   const docTreeMap: DocTree[] = [];
 
@@ -72,7 +74,15 @@ const getTree = (list: DocItem[]): DocTree[] => {
   // 按目录嵌套层级排序
   list.sort((a, b) => a.url.split('/').length - b.url.split('/').length);
 
+  const returnList: DocItem[] = [];
+
   for (const doc of list) {
+    returnList.push({
+      ...doc,
+      label: doc.frontmatter.title,
+      value: doc.url
+    });
+
     const tp: DocTree = {
       key: doc.url,
       label: doc.frontmatter.title,
@@ -87,17 +97,21 @@ const getTree = (list: DocItem[]): DocTree[] => {
       parent!.children = [tp];
     }
   }
-  return docTreeMap;
+  return {
+    tree: docTreeMap,
+    list: returnList
+  };
 };
 
 export const generate = (args: DocItem[]): ReturnDocTree => {
   if (Array.isArray(args) && args.length > 0) {
     // 按时间倒序
-    const list = args.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+    const list = args
+      
+      .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
     return {
       total: list.length,
-      tree: getTree(list.slice()),
-      list: list
+      ...getTree(list.slice()),
     };  
   } else {
     return {

@@ -15,7 +15,7 @@ export interface Props {
 const { fullscreen } = Astro.props as Props;
 
 const blogs = await Astro.glob<DocItem>('../pages/blog/**/*.{md,mdx}');
-const { tree, total } = generate(blogs);
+const { tree, total, list } = generate(blogs);
 ---
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ const { tree, total } = generate(blogs);
       <ScrollTop client:only="vue" />
       <Music client:only="vue" />
 
-      <SearchPopup client:only="vue" total={total} tree={tree} />
+      <SearchPopup client:only="vue" total={total} tree={tree} list={list} />
 
       <script>
         document.body.addEventListener('young:trigger-search', () => {
