@@ -3,7 +3,98 @@ title: 15-RegExp
 image: /img/hbs.png
 description: JavaScript 正则表达式
 date: 2020-12-28 17:28:59
+
+tableHead1:
+  - label: 属性名
+    prop: name
+    width: 100
+  - label: 类型
+    prop: type
+    width: 100
+  - label: 含义
+    prop: des
+
+tableData1:
+  - name: <strong>global</strong>
+    type: Boolean
+    des: 是否设置了 g 标记
+  - name: <strong>ignoreCase</strong>
+    type: Boolean
+    des: 是否设置了 i 标记
+  - name: <strong>unicode</strong>
+    type: Boolean
+    des: 是否设置了 u 标记
+  - name: <strong>sticky</strong>
+    type: Boolean
+    des: 是否设置了 y 标记
+  - name: <strong>lastIndex</strong>
+    type: Number
+    des: 源串下一次搜索开始的位置
+  - name: <strong>multiline</strong>
+    type: Boolean
+    des: 是否设置了 m 标记
+  - name: <strong>dotAll</strong>
+    type: Boolean
+    des: 是否设置了 s 标记
+  - name: <strong>source</strong>
+    type: String
+    des: 正则表达式的字面量字符串，没有开头和结尾的斜杠
+  - name: <strong>flags</strong>
+    type: Boolean
+    des: 正则表达式标记字符串
+
+tableHead2:
+  - label: 全名
+    prop: name
+    width: 100
+  - label: 简写
+    prop: type
+    width: 100
+  - label: 含义
+    prop: des
+
+tableData2:
+  - name: <strong>input</strong>
+    type: <strong>$_</strong>
+    des: 最后搜索的字符串（非标准特性）
+  - name: <strong>lastMatch</strong>
+    type: <strong>$&</strong>
+    des: 最后匹配的文本
+  - name: <strong>lastParen</strong>
+    type: <strong>$+</strong>
+    des: 最后匹配的捕获组（非标准特性）
+  - name: <strong>leftContext</strong>
+    type: <strong>$`</strong>
+    des: input 字符串中出现在 lastMatch 前面的文本
+  - name: <strong>rightContext</strong>
+    type: <strong>$'</strong>
+    des: input 字符串中出现在 lastMatch 后面的文本
+  - name: <strong>$1 ~ $9</strong>
+    type: '-'
+    des: 分别对应第 1~9 个捕获组的匹配项
+
+tableHead3:
+  - label: 字符序列
+    prop: name
+    width: 100
+  - label: 替换文本
+    prop: des
+
+tableData3:
+  - name: <strong>$$</strong>
+    des: $
+  - name: <strong>$&</strong>
+    des: 匹配整个模式的子字符串。与 RegExp.lastMatch 相同
+  - name: <strong>$'</strong>
+    des: 匹配的子字符串之前的字符串。与 RegExp.rightContext 相同
+  - name: <strong>$`</strong>
+    des: 匹配的子字符串之前的字符串。与 RegExp.leftContext 相同
+  - name: <strong>$n</strong>
+    des: 匹配第 n 个捕获组的字符串，其中 n 是 0~9。比如，$1 是匹配第一个捕获组的字符串，$2 是匹配第二个捕获组的字符串，以此类推。如果没有捕获组，则值为空字符串
+  - name: <strong>$nn</strong>
+    des: 匹配第 nn 个捕获组字符串，其中 nn 是 01~99。比如，$01 是匹配第一个捕获组的字符串，$02 是匹配第二个捕获组的字符串，以此类推。如果没有捕获组，则值为空字符串
 ---
+import Table from '@/components/post/table.astro'
 
 [[toc]]
 
@@ -83,66 +174,10 @@ let expression = /pattern/flags;
 
 ## 实例属性
 
-<script lang="ts" setup>
-const tableHead1 = [
-  { label: '属性名', prop: 'name' },
-  { label: '类型', prop: 'type' },
-  { label: '含义', prop: 'des' }
-];
-const tableData1 = [
-  { name: '<strong>global</strong>', type: `Boolean`, des: `是否设置了 g 标记` },
-  { name: '<strong>ignoreCase</strong>', type: `Boolean`, des: `是否设置了 i 标记` },
-  { name: '<strong>unicode</strong>', type: `Boolean`, des: `是否设置了 u 标记` },
-  { name: '<strong>sticky</strong>', type: `Boolean`, des: `是否设置了 y 标记` },
-  { name: '<strong>lastIndex</strong>', type: `Number`, des: `源串下一次搜索开始的位置` },
-  { name: '<strong>multiline</strong>', type: `Boolean`, des: `是否设置了 m 标记` },
-  { name: '<strong>dotAll</strong>', type: `Boolean`, des: `是否设置了 s 标记` },
-  { name: '<strong>source</strong>', type: `String`, des: `正则表达式的字面量字符串，没有开头和结尾的斜杠` },
-  { name: '<strong>flags</strong>', type: `Boolean`, des: `正则表达式标记字符串` }
-];
-
-const tableHead2 = [
-  { label: '全名', prop: 'name' },
-  { label: '简写', prop: 'type' },
-  { label: '含义', prop: 'des' }
-];
-const tableData2 = [
-  { name: '<strong>input</strong>', type: `<strong>$_</strong>`, des: `最后搜索的字符串（非标准特性）` },
-  { name: '<strong>lastMatch</strong>', type: `<strong>$&</strong>`, des: `最后匹配的文本` },
-  { name: '<strong>lastParen</strong>', type: `<strong>$+</strong>`, des: `最后匹配的捕获组（非标准特性）` },
-  { name: '<strong>leftContext</strong>', type: `<strong>$\`</strong>`, des: `input 字符串中出现在 lastMatch 前面的文本` },
-  { name: '<strong>rightContext</strong>', type: `<strong>$'</strong>`, des: `input 字符串中出现在 lastMatch 后面的文本` },
-  { name: '<strong>$1 ~ $9</strong>', type: `-`, des: `分别对应第 1~9 个捕获组的匹配项` },
-];
-
-const tableHead3 = [
-  { label: '字符序列', prop: 'name' },
-  { label: '替换文本', prop: 'des' }
-];
-const tableData3 = [
-  { name: '<strong>$$</strong>', des: `$` },
-  { name: '<strong>$&</strong>', des: `匹配整个模式的子字符串。与 RegExp.lastMatch 相同` },
-  { name: '<strong>$\'</strong>', des: `匹配的子字符串之前的字符串。与 RegExp.rightContext 相同` },
-  { name: '<strong>$\`</strong>', des: `匹配的子字符串之前的字符串。与 RegExp.leftContext 相同` },
-  { name: '<strong>$n</strong>', des: `匹配第 n 个捕获组的字符串，其中 n 是 0~9。比如，$1 是匹配第一个捕获组的字符串，$2 是匹配第二个捕获组的字符串，以此类推。如果没有捕获组，则值为空字符串` },
-  { name: '<strong>$nn</strong>', des: `匹配第 nn 个捕获组字符串，其中 nn 是 01~99。比如，$01 是匹配第一个捕获组的字符串，$02 是匹配第二个捕获组的字符串，以此类推。如果没有捕获组，则值为空字符串` }
-];
-</script>
-
-<NTable :bordered="false" :single-line="false" striped>
-  <thead>
-    <tr>
-      <th v-for="(item, index) in tableHead1" :key="index + 'head'" :width="item.width ?? ''">
-        {{ item.label }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(item, index) in tableData1" :key="index + 'dasdasd'">
-      <td v-for="(it, idx) in tableHead1" :key="idx + 'eret'" v-html="item[String(it.prop)]"></td>
-    </tr>
-  </tbody>
-</NTable>
+<Table
+  tableHead={frontmatter.tableHead1}
+  tableData={frontmatter.tableData1}
+/>
 
 ## 实例化
 
@@ -277,20 +312,10 @@ console.log(pattern.lastIndex); // 8
 
 **会根据最后执行的正则表达式操作而变化**
 
-<NTable :bordered="false" :single-line="false" striped>
-  <thead>
-    <tr>
-      <th v-for="(item, index) in tableHead2" :key="index + 'head'" :width="item.width ?? ''">
-        {{ item.label }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(item, index) in tableData2" :key="index + 'dasdaxxxxxxxxxsd'">
-      <td v-for="(it, idx) in tableHead2" :key="idx + 'eret'" v-html="item[String(it.prop)]"></td>
-    </tr>
-  </tbody>
-</NTable>
+<Table
+  tableHead={frontmatter.tableHead2}
+  tableData={frontmatter.tableData2}
+/>
 
 
 ```js
@@ -337,20 +362,10 @@ if (pattern.test(text)) {
 
 第二个参数是字符串的情况下，有几个特殊的字符序列，可以用来插入正则表达式操作的值
 
-<NTable :bordered="false" :single-line="false" striped>
-  <thead>
-    <tr>
-      <th v-for="(item, index) in tableHead3" :key="index + 'head'" :width="item.width ?? ''">
-        {{ item.label }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(item, index) in tableData3" :key="index + 'dasssssssssssssdasd'">
-      <td v-for="(it, idx) in tableHead3" :key="idx + 'eret'" v-html="item[String(it.prop)]"></td>
-    </tr>
-  </tbody>
-</NTable>
+<Table
+  tableHead={frontmatter.tableHead3}
+  tableData={frontmatter.tableData3}
+/>
 
 ```js
 let text = "cat, bat, sat, fat";
