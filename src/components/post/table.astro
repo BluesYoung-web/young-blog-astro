@@ -69,9 +69,7 @@ const defaultStyles = {
                   >
                     {
                       tableHead.map((cell) =>
-                        <td class="text-center p-2 border-none">
-                          { row[String(cell.prop)] }
-                        </td>
+                        <td class="text-center p-2 border-none" set:html={row[String(cell.prop)]}></td>
                       )
                     }
                   </tr>
@@ -92,7 +90,7 @@ $head-bg-1: #9AB1E2;
 $head-bg-2: #A8C0E9;
 $color: white;
 .table-main {
-  @apply w-full border shadow rounded;
+  @apply w-full border shadow rounded my-4;
 
   .t-head {
     border: none;
