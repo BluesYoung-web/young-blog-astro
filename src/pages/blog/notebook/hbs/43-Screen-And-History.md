@@ -5,6 +5,8 @@ description: JavaScript Screen & History
 date: 2021-01-20 11:44:37
 ---
 
+[[toc]]
+
 ## `screen` 对象
 
 **保存纯粹的客户端信息(显示器信息)**

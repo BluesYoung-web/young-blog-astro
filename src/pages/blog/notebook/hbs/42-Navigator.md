@@ -5,6 +5,8 @@ description: JavaScript Navigator 对象
 date: 2021-01-20 10:20:06
 ---
 
+[[toc]]
+
 ## 属性及方法
 
 `activeVrDisplays` 返回数组，包含 `ispresenting` 属性为 `true` 的 `VRDisplay` 实例 

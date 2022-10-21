@@ -5,6 +5,7 @@ description: JavaScript DOM 编程
 date: 2021-01-21 14:03:36
 ---
 
+[[toc]]
 
 ## 动态脚本
 

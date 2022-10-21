@@ -5,6 +5,8 @@ description: JavaScript 异步函数
 date: 2021-01-19 11:18:08
 ---
 
+[[toc]]
+
 ## 异步函数
 
 `async/await`
