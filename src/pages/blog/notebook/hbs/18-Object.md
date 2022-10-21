@@ -5,6 +5,8 @@ description: JavaScript 对象(Object)
 date: 2020-12-29 09:15:00
 ---
 
+[[toc]]
+
 ## 概述
 
 `ECMAScript`中最常用的类型之一
