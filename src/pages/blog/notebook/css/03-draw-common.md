@@ -7,53 +7,53 @@ description: 绘制常见图形
 
 [[toc]]
 
-<style lang="scss" scoped>
+<style>
 * {
 	padding: 0;
 	margin: 0;
 }
 .msg {
 	display: block;
-	.main {
-		padding: 1vh;
-		clear: both;
-	}
-	.main p {
-		background-color: #99f;
-		max-width: 10vw;
-		padding: 2vh;
-		border-radius: 20px;
-	}
-	.main::before {
-		content: '';
-		width: 0;
-		height: 0;
-		float: left;
-		position: relative;
-		top: 3vh;
-		left: -1vh;
-		border-right: 1vh solid #99f;
-		border-left: 0;
-		border-top: 1vh solid transparent;
-		border-bottom: 1vh solid transparent;
-	}
-
-	.right {
-		-webkit-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-						transform: scaleX(-1);
-	}
-	.right::before {
-		border-right-color: aquamarine;
-	}
-	.right p {
-		background-color: aquamarine;
-		color: #aaa;
-		-webkit-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-						transform: scaleX(-1);
-	}  
 }
+.msg .main {
+  padding: 1vh;
+  clear: both;
+}
+.msg .main p {
+  background-color: #99f;
+  max-width: 10vw;
+  padding: 2vh;
+  border-radius: 20px;
+}
+.msg .main::before {
+  content: '';
+  width: 0;
+  height: 0;
+  float: left;
+  position: relative;
+  top: 3vh;
+  left: -1vh;
+  border-right: 1vh solid #99f;
+  border-left: 0;
+  border-top: 1vh solid transparent;
+  border-bottom: 1vh solid transparent;
+}
+
+.msg .right {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.msg .right::before {
+  border-right-color: aquamarine;
+}
+.msg .right p {
+  background-color: aquamarine;
+  color: #aaa;
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}  
 
 .ling {
 	width: 10vh;

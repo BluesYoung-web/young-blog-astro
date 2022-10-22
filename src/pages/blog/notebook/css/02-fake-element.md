@@ -5,6 +5,8 @@ image: /img/css.jpg
 description: CSS 伪元素
 ---
 
+[[toc]]
+
 ## 伪元素
 
 <style lang="scss" scoped>

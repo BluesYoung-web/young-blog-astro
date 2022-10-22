@@ -10,7 +10,7 @@ date: 2022-03-17 16:56:50
 ## 超级居中
 
 <div class="demo1">
-  <div class="son1" />
+  <div class="son1"></div>
 </div>
 <style>
 .demo1 {
@@ -29,7 +29,7 @@ date: 2022-03-17 16:56:50
 
 ```html
 <div class="demo1">
-  <div class="son1" />
+  <div class="son1"></div>
 </div>
 <style>
 .demo1 {
@@ -50,9 +50,9 @@ date: 2022-03-17 16:56:50
 ## 自适应布局
 
 <div class="demo2">
-  <div class="son2" />
-  <div class="son2" />
-  <div class="son2" />
+  <div class="son2"></div>
+  <div class="son2"></div>
+  <div class="son2"></div>
 </div>
 <style>
 .demo2 {
@@ -76,9 +76,9 @@ date: 2022-03-17 16:56:50
 
 ```html
 <div class="demo2">
-  <div class="son2" />
-  <div class="son2" />
-  <div class="son2" />
+  <div class="son2"></div>
+  <div class="son2"></div>
+  <div class="son2"></div>
 </div>
 <style>
 .demo2 {
@@ -159,11 +159,15 @@ date: 2022-03-17 16:56:50
 
 ```html
 <div class="demo4">
-  <div class="header bg-yellow-100" />
+  <div class="header bg-yellow-100">
+    我是顶部
+  </div>
   <div class="body bg-blue-100" contenteditable>
     我是中间的内容，我可以自适应
   </div>
-  <div class="footer bg-purple-100" />
+  <div class="footer bg-purple-100">
+    我是底部
+  </div>
 </div>
 <style>
 .demo4 {
@@ -183,7 +187,7 @@ date: 2022-03-17 16:56:50
   <div class="right"></div>
 </div>
 
-<style lang="scss">
+<style>
 .demo5 {
   width: 100%;
   height: 500px;
@@ -191,29 +195,29 @@ date: 2022-03-17 16:56:50
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
-  .top {
-    grid-row: 1;
-    grid-column: 1/4;
-    background: brown;
-  }
-  .left {
-    grid-row: 2/3;
-    background: green;
-  }
-  .main {
-    background-color: purple;
-    grid-row: 2/3;
-    grid-column: 2/3;
-  }
-  .right {
-    background-color: yellow;
-    grid-row: 2/3;
-  }
-  .bottom {
-    background-color: gray;
-    grid-row: 3;
-    grid-column: 1/4;
-  }
+}
+.demo5 .top {
+  grid-row: 1;
+  grid-column: 1/4;
+  background: brown;
+}
+.demo5 .left {
+  grid-row: 2/3;
+  background: green;
+}
+.demo5 .main {
+  background-color: purple;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.demo5 .right {
+  background-color: yellow;
+  grid-row: 2/3;
+}
+.demo5 .bottom {
+  background-color: gray;
+  grid-row: 3;
+  grid-column: 1/4;
 }
 </style>
 
@@ -235,25 +239,25 @@ date: 2022-03-17 16:56:50
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
 }
-.top {
+.demo5 .top {
   grid-row: 1;
   grid-column: 1/4;
   background: brown;
 }
-.left {
+.demo5 .left {
   grid-row: 2/3;
   background: green;
 }
-.main {
+.demo5 .main {
   background-color: purple;
   grid-row: 2/3;
   grid-column: 2/3;
 }
-.right {
+.demo5 .right {
   background-color: yellow;
   grid-row: 2/3;
 }
-.bottom {
+.demo5 .bottom {
   background-color: gray;
   grid-row: 3;
   grid-column: 1/4;
