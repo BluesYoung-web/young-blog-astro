@@ -3,8 +3,97 @@ title: 55-表单
 image: /img/hbs.png
 description: JavaScript 表单
 date: 2021-01-25 10:43:21
----
 
+tableHead:
+  - label: 命令
+    prop: cmd
+    width: 180
+  - label: 值
+    prop: value
+    width: 180
+  - label: 说明
+    prop: des
+
+tableData:
+  - cmd: backcolor
+    value: 颜色字符串
+    des: 设置文档背景颜色
+  - cmd: bold
+    value: 'null'
+    des: 切换选中文本的粗体样式
+  - cmd: copy
+    value: 'null'
+    des: 将选中文本复制到剪切板
+  - cmd: createlink
+    value: <code>URL</code> 字符串 
+    des: 给当前选中文本添加链接
+  - cmd: cut
+    value: 'null'
+    des: 将选中文本剪切到剪切板
+  - cmd: delete
+    value: 'null'
+    des: 删除当前选中的文本
+  - cmd: fontname
+    value: 字体名
+    des: 将选中的文本改为指定的字体
+  - cmd: fontsize
+    value: 1~7
+    des: 将选中文本改为指定字体大小(反向对应 <strong>h 标签</strong>)
+  - cmd: forecolor
+    value: 颜色字符串
+    des: 将选中文本改为指定的颜色
+  - cmd: formatblock
+    value: '<code>HTML</code> 标签，如<code>h1</code>'
+    des: 将选中文本包含在指定的 <code>HTML</code> 标签中
+  - cmd: indent
+    value: 'null'
+    des: 缩进光标所在行
+  - cmd: inserthorizontalrule
+    value: 'null'
+    des: '在光标位置插入 <code>hr</code> 元素'
+  - cmd: insertimage
+    value: 图片地址
+    des: 在光标位置插入图片
+  - cmd: insertorderedlist
+    value: 'null'
+    des: '在光标位置插入 <code>ol</code> 元素'
+  - cmd: insertparagraph
+    value: 'null'
+    des: '在光标位置插入 <code>p</code> 元素'
+  - cmd: insertunorderedlist
+    value: 'null'
+    des: '在光标位置插入 <code>ul</code> 元素'
+  - cmd: italic
+    value: 'null'
+    des: 切换选中文本的斜体样式
+  - cmd: justifycenter
+    value: 'null'
+    des: 在光标位置居中文本块
+  - cmd: justifyleft
+    value: 'null'
+    des: 在光标位置左对齐文本块
+  - cmd: outdent
+    value: 'null'
+    des: 光标所在行减少缩进
+  - cmd: removeformat
+    value: 'null'
+    des: 移除包含光标所在位置块的 <code>HTML</code> 标签
+  - cmd: selectall
+    value: 'null'
+    des: 选中文档中的所有文本
+  - cmd: underline
+    value: 'null'
+    des: 切换选中文本的下划线样式
+  - cmd: unlink
+    value: 'null'
+    des: 移除文本的链接
+  - cmd: paste
+    value: 'null'
+    des: 在选中文本上粘贴剪切板内容
+---
+import Table from '@/components/post/table.astro'
+
+[[toc]]
 
 ## `<form>`
 
@@ -124,7 +213,7 @@ function getSelectedText(element) {
   // 设置选中范围
   element.setSelectionRange(selectionStart, selectionStart);
   // 开始偏移地址，结束偏移地址
-	return value.substring(element.selectionStart, element.selectionEnd);
+  return value.substring(element.selectionStart, element.selectionEnd);
 }
 
 // 屏蔽特定字符的输入
@@ -170,7 +259,7 @@ function setClipboardText (event, value){
 textbox.addEventListener("paste", (event) => {
  let text = getClipboardText(event);
  if (!/^\d*$/.test(text)){
- 	event.preventDefault(); 
+   event.preventDefault(); 
  }
 });
 ```
@@ -185,22 +274,22 @@ textbox.addEventListener("paste", (event) => {
 <input type="text" name="tel3" id="txtTel3" maxlength="4"> 
 <script>
 function tabForward(event){
-	const target = event.target;
-	// 到达最大输入的长度
-	if (target.value.length === +target.maxLength){
-		const form = target.form;
-		for (let i = 0, len = form.elements.length; i < len; i++) {
-			if (form.elements[i] === target) {
-				form.elements[i+1]?.focus();
-				return;
-			}
-		}
-	}
+  const target = event.target;
+  // 到达最大输入的长度
+  if (target.value.length === +target.maxLength){
+    const form = target.form;
+    for (let i = 0, len = form.elements.length; i < len; i++) {
+      if (form.elements[i] === target) {
+        form.elements[i+1]?.focus();
+        return;
+      }
+    }
+  }
 }
 const inputIds = ["txtTel1", "txtTel2", "txtTel3"];
 for (const id of inputIds) {
-	let textbox = document.getElementById(id);
-	textbox.addEventListener("keyup", tabForward);
+  let textbox = document.getElementById(id);
+  textbox.addEventListener("keyup", tabForward);
 }
 let textbox1 = document.getElementById("txtTel1");
 let textbox2 = document.getElementById("txtTel2");
@@ -269,13 +358,13 @@ let isUsernameRequired = document.forms[0].elements["username"].required;
 
 ```js
 if (input.validity && !input.validity.valid){
-	if (input.validity.valueMissing){
-		console.log("Please specify a value.")
-	} else if (input.validity.typeMismatch){
-		console.log("Please enter an email address.");
-	} else {
-		console.log("Value is invalid.");
-	}
+  if (input.validity.valueMissing){
+    console.log("Please specify a value.")
+  } else if (input.validity.typeMismatch){
+    console.log("Please enter an email address.");
+  } else {
+    console.log("Value is invalid.");
+  }
 } 
 ```
 
@@ -370,47 +459,47 @@ selectbox2.appendChild(selectbox1.options[0]);
 
 ```js
 function serialize(form) {
-	let parts = [];
-	let optValue;
-	for (let field of form.elements) {
-	switch(field.type) {
-		case "select-one":
-		case "select-multiple":
-			if (field.name.length) {
-			for (let option of field.options) {
-				if (option.selected) {
-					if (option.hasAttribute){
-						optValue = option.hasAttribute("value")
-							? option.value
-							: option.text;
-					} else {
-						optValue = option.attributes["value"].specified
-							? option.value
-							: option.text;
-					}
-						parts.push(`${encodeURIComponent(field.name)}=${encodeURIComponent(optValue)}`);
-					}
-				}
-			}
-		break;
-		case undefined: // 字段集
-		case "file": // 文件输入
-		case "submit": // 提交按钮
-		case "reset": // 重置按钮
-		case "button": // 自定义按钮
-		break;
-		case "radio": // 单选按钮
-		case "checkbox": // 复选框
-			if (!field.checked) {
-				break;
-			}
-		default:
-			// 不包含没有名字的表单字段
-			if (field.name.length) {
-				parts.push(`${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`);
-			}
-	}
-	return parts.join("&");
+  let parts = [];
+  let optValue;
+  for (let field of form.elements) {
+  switch(field.type) {
+    case "select-one":
+    case "select-multiple":
+      if (field.name.length) {
+      for (let option of field.options) {
+        if (option.selected) {
+          if (option.hasAttribute){
+            optValue = option.hasAttribute("value")
+              ? option.value
+              : option.text;
+          } else {
+            optValue = option.attributes["value"].specified
+              ? option.value
+              : option.text;
+          }
+            parts.push(`${encodeURIComponent(field.name)}=${encodeURIComponent(optValue)}`);
+          }
+        }
+      }
+    break;
+    case undefined: // 字段集
+    case "file": // 文件输入
+    case "submit": // 提交按钮
+    case "reset": // 重置按钮
+    case "button": // 自定义按钮
+    break;
+    case "radio": // 单选按钮
+    case "checkbox": // 复选框
+      if (!field.checked) {
+        break;
+      }
+    default:
+      // 不包含没有名字的表单字段
+      if (field.name.length) {
+        parts.push(`${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`);
+      }
+  }
+  return parts.join("&");
 } 
 ```
 
@@ -428,7 +517,7 @@ function serialize(form) {
 <iframe name="richedit" style="height: 100px; width: 100px"></iframe>
 <script>
 window.addEventListener("load", () => {
-	frames["richedit"].document.designMode = "on";
+  frames["richedit"].document.designMode = "on";
 });
 </script> 
 ```
@@ -460,33 +549,11 @@ richedit.contentEditable = "true";
 
 `document.queryCommandValue('command')` 返回执行命令时所使用的值
 
-| 命令                   | 值                   | 说明                                    |
-| ---------------------- | -------------------- | --------------------------------------- |
-| `backcolor`            | 颜色字符串           | 设置文档背景颜色                        |
-| `bold`                 | `null`               | 切换选中文本的粗体样式                  |
-| `copy`                 | `null`               | 将选中文本复制到剪切板                  |
-| `createlink`           | `URL` 字符串         | 给当前选中文本添加链接                  |
-| `cut`                  | `null`               | 将选中文本剪切到剪切板                  |
-| `delete`               | `null`               | 删除当前选中的文本                      |
-| `fontname`             | 字体名               | 将选中的文本改为指定的字体              |
-| `fontsize`             | 1~7                  | 将选中文本改为指定字体大小(反向对应`h`) |
-| `forecolor`            | 颜色字符串           | 将选中文本改为指定的颜色                |
-| `formatblock`          | `HTML`标签，如`<h1>` | 将选中文本包含在指定的 `HTML` 标签中    |
-| `indent`               | `null`               | 缩进光标所在行                          |
-| `inserthorizontalrule` | `null`               | 在光标位置插入`<hr>`元素                |
-| `insertimage`          | 图片`URL`            | 在光标位置插入图片                      |
-| `insertorderedlist`    | `null`               | 在光标位置插入`<ol>`元素                |
-| `insertparagraph`      | `null`               | 在光标位置插入`<p>`元素                 |
-| `insertunorderedlist`  | `null`               | 在光标位置插入`<ul>`元素                |
-| `italic`               | `null`               | 切换选中文本的斜体样式                  |
-| `justifycenter`        | `null`               | 在光标位置居中文本块                    |
-| `justifyleft`          | `null`               | 在光标位置左对齐文本块                  |
-| `outdent`              | `null`               | 光标所在行减少缩进                      |
-| `removeformat`         | `null`               | 移除包含光标所在位置块的 `HTML` 标签    |
-| `selectall`            | `null`               | 选中文档中的所有文本                    |
-| `underline`            | `null`               | 切换选中文本的下划线样式                |
-| `unlink`               | `null`               | 移除文本的链接                          |
-| `paste`                | `null`               | 在选中文本上粘贴剪切板内容              |
+<Table
+  tableHead={frontmatter.tableHead}
+  tableData={frontmatter.tableData}
+/>
+
 
 ## 富文本选择
 
