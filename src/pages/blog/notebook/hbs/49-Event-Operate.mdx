@@ -5,70 +5,69 @@ description: JavaScript 事件处理
 date: 2021-01-23 09:29:17
 
 tableHead1:
-  - label: name
+  - label: 名称
     prop: name
-    width: 100
-  - label: type
+    width: 240
+  - label: 类型
     prop: type
     width: 100
-  - label: des
+  - label: 含义
     prop: des
 
 tableData1:
-	- name: bubbles
-		type: 'boolean'
-		des: '只读，表示事件是否冒泡'
-	- name: 'cancelable'
-		type: 'boolean'
-		des: '只读，表示 <strong> 是否可以取消 </strong> 事件的默认行为 '
-	- name: currentTarget
-		type: element
-		des: 只读，表示<strong>当前事件处理程序所在的元素</strong>
-	- name: defaultPrevented
-		type: boolean
-		des: 只读，表示是否已经调用 <code>preventDefault()</code> 方法
-	- name: detail
-		type: number
-		des: 只读，事件相关的其他信息
-	- name: eventPhase
-		type: int
-		des: '只读，事件阶段：1->捕获，2->目标，3->冒泡'
-	- name: <code>preventDefault()</code>
-		type: function
-		des: 只读，取消事件默认行为，只有 <code>cancelable=true</code> 才可以调用
-	- name: <code>stopImmediatePropagation()</code>
-		type: function
-		des: 只读，取消所有后续事件的捕获或冒泡，并阻止调用任何后续的事件处理程序
-	- name: <code>stopPropagation()</code>
-		type: function
-		des: 只读，用于取消所有后续事件捕获或事件冒泡。只有 <code>bubbles</code> 为 <code>true</code> 才可以调用这个方法
-	- name: target
-		type: element
-		des: 只读，事件目标
-	- name: trusted
-		type: boolean
-		des: '<strong>只读，是否为浏览器生成，true->是，false->开发者调用</strong>'
-	- name: type
-		type: string
-		des: 只读，被触发的事件类型
-	- name: view
-		type: AbstractView
-		des: 只读，事件所发生的 <code>window</code> 对象
+  - name: bubbles
+    type: boolean
+    des: 只读，表示事件是否冒泡
+  - name: cancelable
+    type: boolean
+    des: 只读，表示 <strong> 是否可以取消 </strong> 事件的默认行为
+  - name: currentTarget
+    type: element
+    des: 只读，表示<strong>当前事件处理程序所在的元素</strong>
+  - name: defaultPrevented
+    type: boolean
+    des: 只读，表示是否已经调用 <code>preventDefault()</code> 方法
+  - name: detail
+    type: number
+    des: 只读，事件相关的其他信息
+  - name: eventPhase
+    type: number
+    des: 只读，事件阶段：1->捕获，2->目标，3->冒泡
+  - name: <code>preventDefault()</code>
+    type: function
+    des: 只读，取消事件默认行为，只有 <code>cancelable=true</code> 才可以调用
+  - name: <code>stopImmediatePropagation()</code>
+    type: function
+    des: 只读，取消所有后续事件的捕获或冒泡，并阻止调用任何后续的事件处理程序
+  - name: <code>stopPropagation()</code>
+    type: function
+    des: 只读，用于取消所有后续事件捕获或事件冒泡。只有 <code>bubbles</code> 为 <code>true</code> 才可以调用这个方法
+  - name: target
+    type: element
+    des: 只读，事件目标
+  - name: trusted
+    type: boolean
+    des: <strong>只读，是否为浏览器生成，true->是，false->开发者调用</strong>
+  - name: type
+    type: string
+    des: 只读，被触发的事件类型
+  - name: view
+    type: AbstractView
+    des: 只读，事件所发生的 <code>window</code> 对象
 
 tableData2:
-	- name: cancelBubble
-		type: boolean
-		des: 可读写，默认 <code>false</code>，设置为 <code>true</code> 可以取消冒泡
-	- name: returnValue
-		type: boolean
-		des: 可读写，默认 <code>true</code>，设置为 <code>false</code> 可以取消默认行为
-	- name: srcElement
-		type: element
-		des: 只读，事件目标
-	- name: type
-		type: string
-		des: 只读，触发的事件类型
-
+  - name: cancelBubble
+    type: boolean
+    des: 可读写，默认 <code>false</code>，设置为 <code>true</code> 可以取消冒泡
+  - name: returnValue
+    type: boolean
+    des: 可读写，默认 <code>true</code>，设置为 <code>false</code> 可以取消默认行为
+  - name: srcElement
+    type: element
+    des: 只读，事件目标
+  - name: type
+    type: string
+    des: 只读，被触发的事件类型
 ---
 import Table from '@/components/post/table.astro'
 
