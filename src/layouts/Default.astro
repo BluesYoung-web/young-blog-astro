@@ -35,6 +35,14 @@ const { tree, total, list } = generate(blogs);
       <SearchPopup client:only="vue" total={total} tree={tree} list={list} />
 
       <script>
+        document.addEventListener('keydown', (e) => {
+          // ctrl + k 快速搜索
+          if (e.ctrlKey && e.key.toLocaleLowerCase() === 'k') {
+            e.preventDefault();
+            document.body.dispatchEvent(new CustomEvent('young:trigger-search'));
+          }
+        });
+
         document.body.addEventListener('young:trigger-search', () => {
           const el = document.querySelector('#search-popup');
           el && el.classList.remove('hidden');
