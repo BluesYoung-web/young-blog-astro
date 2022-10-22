@@ -3,7 +3,35 @@ title: 69-网络请求常用对象
 image: /img/hbs.png
 description: JavaScript 网络请求常用对象
 date: 2021-02-05 09:31:18
+
+tableHead:
+  - label: 护卫
+    prop: name
+    width: 100
+  - label: 使用情形
+    prop: cond
+  - label: 限制
+    prop: limit
+    width: 200
+
+tableData:
+  - name: none
+    cond: 在通过构造函数创建 <code>Headers</code> 实例时激活
+    limit: 无
+  - name: request
+    cond: 在通过构造函数初始化 <code>Request</code> 对象，且 <code>mode</code> 值为非 <code>no-cors</code> 时激活
+    limit: 不允许修改禁止修改的头部
+  - name: request-no-cors
+    cond: 在通过构造函数初始化 <code>Request</code> 对象，且 <code>mode</code> 值为 <code>no-cors</code> 时激活
+    limit: 不允许修改非简单头部
+  - name: response
+    cond: 在通过构造函数创建 <code>Headers</code> 实例时激活
+    limit: 不允许修改禁止修改的响应头
+  - name: immutable
+    cond: 在通过 <code>error()</code> 或 <code>redirect()</code> 静态方法初始化 <code>Response</code> 对象时激活
+    limit: 不允许修改任何头部
 ---
+import Table from '@/components/post/table.astro'
 
 [[toc]]
 
@@ -47,13 +75,10 @@ h.delete('foo');
 
 违反护卫限制会抛出 `TypeError`
 
-| 护卫              | 使用情形                                                     | 限制                       |
-| ----------------- | ------------------------------------------------------------ | -------------------------- |
-| `none`            | 在通过构造函数创建 `Headers` 实例时激活                      | 无                         |
-| `request`         | 在通过构造函数初始化 `Request` 对象，且 `mode` 值为非 `no-cors` 时激活 | 不允许修改禁止修改的头部   |
-| `request-no-cors` | 在通过构造函数初始化 `Request` 对象，且 `mode` 值为 `no-cors` 时激活 | 不允许修改非简单头部       |
-| `response`        | 在通过构造函数初始化 `Response` 对象时激活                   | 不允许修改禁止修改的响应头 |
-| `immutable`       | 在通过 `error()` 或 `redirect()` 静态方法初始化 `Response` 对象时激活 | 不允许修改任何头部         |
+<Table
+  tableHead={frontmatter.tableHead}
+  tableData={frontmatter.tableData}
+/>
 
 ## `Request` 对象
 
