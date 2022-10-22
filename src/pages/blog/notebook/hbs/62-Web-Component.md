@@ -5,6 +5,8 @@ description: JavaScript Web Component
 date: 2021-02-02 09:43:07
 ---
 
+[[toc]]
+
 ## 定义
 
 一套用于增强 `DOM` 行为的工具
