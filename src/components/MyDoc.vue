@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-18 11:56:19
+ * @LastEditTime: 2022-10-22 18:48:15
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
@@ -39,7 +39,9 @@ const handleSearch = (query: string) => {
 };
 
 const searchJump = (url: string) => {
-  location.href = url;
+  if (url) {
+    location.href = url;    
+  }
 };
 </script>
 
