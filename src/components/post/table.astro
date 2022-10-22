@@ -77,9 +77,18 @@ const defaultStyles = {
               }
             </tbody>
           </table>
-        : <div class="t-body">
-            <div set:text="暂无数据" />
-          </div>
+        : <table class="t-body">
+            <tr
+              style={{
+                backgroundColor: defaultStyles.bgcolor,
+                backgroundImage: 'none',
+                color: defaultStyles.color,
+              }}
+              class="border-none"
+            >
+              <td colspan={tableHead.length} class="text-center p-4">暂无数据</td>  
+            </tr>
+          </table>
     }
   </div>
 </div>
