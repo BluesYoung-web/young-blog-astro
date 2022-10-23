@@ -11,7 +11,7 @@ date: 2022-02-23 11:18:01
 
 **支持 Vue2 + Vue3**
 
-<n-alert type="warning">**抛弃 mutations 操作，更加简洁直观**</n-alert>
+**抛弃 mutations 操作，更加简洁直观**
 
 **Composition API 式的写法，无需模块嵌套**
 
@@ -102,7 +102,7 @@ import.meta.hot && import.meta.hot.accept(acceptHMRUpdate(useXStore, import.meta
 
 ## 使用 `Store`
 
-<n-alert class="mt-4" type="warning">**`useStore` 返回的是 `reactive` 对象，不能直接解构使用**</n-alert>
+**`useStore` 返回的是 `reactive` 对象，不能直接解构使用**
 
 ```html
 <script lang="ts" setup>
