@@ -1,0 +1,52 @@
+---
+export interface Props {
+  title?: string;
+  type: 'info' | 'tip' | 'warning' | 'danger';
+};
+
+const { type = 'info', title } = Astro.props as Props;
+---
+
+<div class={ 'tip-block ' + type }>
+  <p class="font-700 lh-24px m-0">
+    { title }
+  </p>
+  <p class="lh-24px">
+    <slot></slot>
+  </p>
+</div>
+
+<style lang="scss">
+.tip-block {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+.info {
+  border-color: rgba(60, 60, 60, 0.12);
+  color: rgba(60, 60, 60, 0.7);
+  background-color: #f9f9f9;
+}
+
+.tip {
+  border-color: rgba(66, 184, 131, 0.5);
+  color: #155f3e;
+  background-color: rgba(66, 184, 131, 0.05);
+}
+
+.warning {
+  border-color: rgba(255, 197, 23, 0.5);
+  color: #ad850e;
+  background-color: rgba(255, 197, 23, 0.05);
+}
+
+.danger {
+  border-color: rgba(237, 60, 80, 0.5);
+  color: #ab2131;
+  background-color: rgba(237, 60, 80, 0.05);
+}
+</style>
