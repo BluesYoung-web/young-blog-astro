@@ -28,8 +28,10 @@ image: /img/algorithm.webp
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
@@ -100,8 +102,10 @@ nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应�
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
@@ -177,8 +181,10 @@ function nextGreaterElement(
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
@@ -244,8 +250,10 @@ function nextGreaterElements(nums: number[]): number[] {
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts

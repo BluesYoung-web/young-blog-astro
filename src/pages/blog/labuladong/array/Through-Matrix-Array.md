@@ -23,8 +23,10 @@ image: /img/algorithm.webp
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
@@ -122,8 +124,10 @@ function rotate(arr: number[][]): void {
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
@@ -220,8 +224,10 @@ function spiralOrder(matrix: number[][]): number[] {
 
 <details>
   <summary class="cursor-pointer">
-    <div class="i-vscode-icons-file-type-testts mr-1"></div>
-    测试代码
+    <div class="inline-flex">
+      <div class="i-vscode-icons-file-type-testts mr-1"></div>
+      <div>测试代码</div>
+    </div>
   </summary>
 
 ```ts
