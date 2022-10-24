@@ -1,7 +1,7 @@
 ---
 title: 使用 pm2 部署项目
 description: 守护进程，自动重启
-image: https://pm2.keymetrics.io/assets/pm2-logo-1.png
+image: /img/pm2.svg
 date: 2022-08-21 16:25:52
 ---
 
