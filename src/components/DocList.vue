@@ -1,12 +1,12 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-10 08:28:17
- * @LastEditTime: 2022-10-11 09:11:23
+ * @LastEditTime: 2022-10-24 09:23:10
  * @Description: 文章列表
 -->
 <script lang="ts" setup>
 import 'uno.css';
-import { NConfigProvider, darkTheme, lightTheme, NCard, NImage, NTime } from 'naive-ui';
+import { NConfigProvider, darkTheme, lightTheme, NCard, NImage } from 'naive-ui';
 import { theme as th } from '@/utils/useTheme';
 import { computed } from 'vue';
 import type { DocItem } from '@/utils/generateDocTree';
@@ -48,10 +48,7 @@ const jump = (url: string) => {
           </template>
           {{ item.frontmatter.description }}
           <template #action>
-            <NTime
-              :time="new Date(item.frontmatter.date)"
-              format="yyyy年MM月dd日 kk:mm:ss"
-            />
+            <time>{{ item.frontmatter.date.replace('T', ' ').replace('.000Z', '') }}</time>
           </template>
         </NCard>
       </div>
