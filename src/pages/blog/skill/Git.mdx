@@ -1,0 +1,325 @@
+---
+title: git 相关
+description: git 相关的技巧
+image: /img/git.png
+cover: /img/git.jpg
+date: 2022-02-16 17:01:47
+
+tableHead:
+  - label: 图标
+    prop: icon
+    width: 160
+  - label: 代码
+    prop: code
+    width: 160
+  - label: 含义
+    prop: des
+
+tableData:
+  - icon: 🎨
+    code: <code>:art:</code>
+    des: 改进代码结构/代码格式
+  - icon: ⚡️
+    code: <code>:zap:</code>
+    des: 提升性能
+  - icon: 🔥
+    code: <code>:fire:</code>
+    des: 删除代码或文件
+  - icon: 🐛
+    code: <code>:bug:</code>
+    des: 修复
+  - icon: 🚑
+    code: <code>:ambulance:</code>
+    des: 重要补丁
+  - icon: ✨
+    code: <code>:sparkles:</code>
+    des: 引入新特性
+  - icon: 📝
+    code: <code>:memo:</code>
+    des: 撰写文档
+  - icon: 🚀️
+    code: <code>:rocket:</code>
+    des: 部署功能
+  - icon: 💄
+    code: <code>:lipstick:</code>
+    des: 更新 UI 和样式文件
+  - icon: 🎉️
+    code: <code>:tada:</code>
+    des: 初次提交
+  - icon: ✅
+    code: <code>:white_check_mark:</code>
+    des: 增加测试
+  - icon: 🔒
+    code: <code>:lock:</code>
+    des: 修复安全问题
+  - icon: 🍎
+    code: <code>:apple:</code>
+    des: 修复 macOS 下的问题
+  - icon: 🐧
+    code: <code>:penguin:</code>
+    des: 修复 Linux 下的问题
+  - icon: 🏁
+    code: <code>:checkered_flag:</code>
+    des: 修复 Windows 下的问题
+  - icon: 🤖
+    code: <code>:robot:</code>
+    des: 修复 Android 下的问题
+  - icon: 🍏
+    code: <code>:green_apple:</code>
+    des: 修复 IOS 下的问题
+---
+import Table from '@/components/post/table.astro'
+
+[[toc]]
+
+## 基本操作
+
+```bash
+# 设置全局配置
+git config --global user.email "youremail@example.com"
+git config --global user.name "yourname"
+
+# 初始化
+git init
+
+# 加入暂存区
+git add 文件名(`.` 为通配符，表示将当前目录下的所有文件都加入暂存区)
+
+# 查看工作区的状态
+git status
+
+# 查看当前修改文件与之前版本的对比
+git diff
+
+# 删除文件
+git rm 文件名
+
+# 提交
+git commit -m "提交信息"
+
+# 查看提交日志
+git log
+```
+
+## `git reset` 版本回退
+
+```bash
+# 回退到上个版本
+git reset --hard HEAD^
+
+# 回到特定的版本
+git reset --hard dsadhg(一般为提交记录对应 hash 码的前 7 位，一般输入 3 位回车即可自动补全)
+
+# 查看操作记录，可以找到回退的记录并取消回退！！！
+git reflog
+```
+
+## `git checkout` 万金油
+
+```bash
+# 丢弃修改的文件(使用版本库内的版本，替换现有版本)
+#   未执行 git add，直接丢弃
+#   执行 git add 之后，恢复到 git add 时的内容
+git checkout -- 文件名
+
+# 创建并切换到对应的分支
+git checkout -b 分支名称
+# 等效于
+#   git branch 分支名称
+#   git checkout 分支名称
+
+# 基于远程分支创建并切换到本地分支
+git checkout -b dev origin/dev
+```
+
+## 分支操作
+
+```bash
+# 查看本地分支，当前分支会被 * 标出，-a 查看包含远程分支在内的所有分支
+git branch
+
+# 将对应的分支合并到当前分支
+git merge 分支名称
+
+# 删除已经合并过的分支
+git branch -d 分支名称
+# 强制删除分支
+git branch -D 分支名称
+
+# 建立本地分支与远程分支的关联
+git branch --set-upstream branch-name origin/branch-name
+
+# 创建并切换到对应分支(新版本才有 switch 命令 ！！！)
+git switch -c 分支名称
+# 切换到对应的分支
+git switch 分支名称
+```
+
+## `git stash` 栈操作
+
+**常用于保存现场**
+
+```bash
+# 查看栈
+git stash list
+
+# 将暂存区的内容入栈
+git stash push [-m '描述信息']
+
+# 取出栈中的内容(默认最新一条)，不会删除
+git stash apply [stash@{num}]
+
+# 删除栈中的内容(默认最新一条)
+git stash drop [stash@{num}]
+
+# 取出并删除栈中的内容(默认最新一条)
+git stash pop [stash@{num}]
+
+# 查看栈中的内容(默认最新一条)
+git stash show [stash@{num}]
+
+# 清空栈
+git stash clear
+```
+
+## `git tag` 标签操作
+
+```bash
+# 查看当前的标签
+git tag
+
+# 给对应的提交打标签，默认为最新的提交
+git tag v1.0 提交的 hash 码
+
+# 给某个提交打带有文字说明的标签
+git tag -a v1.1 -m "description" 提交的 hash 码
+
+# 删除标签
+git tag -d v1.0
+
+# 推送某个标签到远程
+git push origin v1.0
+# 推送所有标签到远程
+git push origin --tags
+
+# 删除远程标签
+#   先删除本地标签
+git tag -d v1.0
+#   然后推送到远程，删除远程标签
+git push origin :refs/tags/v1.0
+```
+
+## 远程操作
+
+```bash
+# 生成 ssh 秘钥，一路回车
+ssh-keygen -t rsa -C "youremail@example.com"
+# 将生成的公钥 `id_rsa.pub` 添加到对应的仓库
+
+# 设置远程仓库的地址
+# https 每次都需要输账号密码，git 只是需要首次添加秘钥，之后就是无感操作
+git remote add origin git@github.com:xxx/xxx.git
+
+# 重新设置远程地址
+git remote set-url origin ssh://git@xxx.git
+
+
+# 查看已添加的远程仓库
+git remote -v
+
+# 删除对应的远程仓库
+git remote rm origin(远程仓库名称)
+
+# 重命名远程仓库
+git remote rename oldname newname
+
+# 从远程仓库克隆
+git clone git@github.com:xxx/xxx.git
+
+# 首次推送
+git push -u origin dev
+# 后续推送，dev 分支默认推送到远程的 origin/dev 分支
+git push
+# 拉取并合并对应分支的最新提交内容
+git pull
+# 仅拉取，不合并
+git fetch
+
+# 拉取并合并指定版本
+git pull origin origin-name:local-name
+
+# 常规推送，推送对应的本地分支到远程
+git push origin feat-branch-name
+git push origin local-name:origin-name
+
+# 设置全局代理(clash)
+git config --global http.proxy http://127.0.0.1:7890
+# 取消全局代理(不使用 clash 时)
+git config --global --unset http.proxy
+```
+
+## `.gitignore` 忽略文件
+
+写入其中的内容会被 `git` 版本管理忽略
+
+```gitignore
+.DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist
+dist-ssr
+node_modules
+.idea/
+*.log
+
+# 例外的内容，以 `!` 修饰，例如
+!.env.test.local
+```
+
+## 小技巧
+
+```bash
+# 复制特定的提交到当前分支，相当于部分合并分支
+git cherry-pick 提交对应的 hash 码
+
+# 删除远程仓库的提交
+#   先进行本地版本回退
+git reset --hard HEAD~1
+#   然后强制推送到远程仓库
+git push -f
+
+# 误删恢复
+#   展示所有提交过但是如今不存在的版本的 hash
+git fsck --lost-found 
+#   查看提交的内容
+git show hash码前6位
+#   恢复被删除的版本
+git reset --hard hash码前6位
+
+# 变基 将分叉的提交树变成一条没有分叉的直线
+git rebase
+
+# 命令别名
+git config --global alias.st status
+# git st === git status
+
+# 搭建 git 服务器
+https://www.liaoxuefeng.com/wiki/896043488029600/899998870925664
+```
+
+## 配置文件
+
+全局配置 `~/.gitconfig`
+
+仓库配置 `.git/config`
+
+## gitmoji
+
+[https://gitmoji.dev/](https://gitmoji.dev/)
+
+
+<Table
+  tableHead={frontmatter.tableHead}
+  tableData={frontmatter.tableData}
+/>
