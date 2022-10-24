@@ -173,7 +173,7 @@ router.removeRoute('about');
 
 `router.getRoutes()` 返回一个包含所有路有记录的数组
 
-## `\<router-link\>`
+## `<router-link>`
 
 ### `props`
 
@@ -216,7 +216,7 @@ router.removeRoute('about');
 </router-link>
 ```
 
-## `\<router-view\>`
+## `<router-view>`
 
 ### `props`
 

@@ -75,7 +75,7 @@ const bro = computed(() => firstName.value + '\'s bro')
 - 声明对父组件暴露的属性和方法
 - 同 `defineExpose`
 
-## `\<style scoped\>`
+## `<style scoped>`
 
 限制当前 `css` 样式局限于**当前组件**
 
@@ -115,7 +115,7 @@ const bro = computed(() => firstName.value + '\'s bro')
 
 相较于另起一个 `<style></style>`，`:global()` 会更加优雅
 
-## `\<style module\>`
+## `<style module>`
 
 **会将内部的 `css` 类作为 `$style` 的属性暴露给 `<template>`**
 
@@ -173,7 +173,7 @@ const attrs = useAttrs();
 
 ## `TS` 工具类
 
-### `PropType\<T\>`
+### `PropType<T>`
 
 **用于在选项式 API 配置属性时声明属性类型**
 

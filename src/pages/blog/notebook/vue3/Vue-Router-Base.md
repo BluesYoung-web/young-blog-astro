@@ -7,13 +7,13 @@ date: 2021-07-22 15:00:09
 
 [[toc]]
 
-## `\<router-link\>`
+## `<router-link>`
 
 效果类似于 `a` 标签
 
 用于跳转到对应的组件
 
-## `\<router-view\>`
+## `<router-view>`
 
 组件占位符，效果类似于 `slot`
 
