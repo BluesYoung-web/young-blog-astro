@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyang
  * @Date: 2022-10-07 18:53:34
- * @LastEditTime: 2022-10-22 18:48:15
+ * @LastEditTime: 2022-10-24 08:21:59
  * @Description: 文章目录
 -->
 <script lang="ts" setup>
@@ -55,6 +55,12 @@ const searchJump = (url: string) => {
           </p>
           <div class="data">
             <NSpace vertical :size="12" class="w-80">
+              <NTree
+                :data="tree || []"
+                block-line
+                class="max-h-72vh overflow-auto"
+                @update-selected-keys="jump"
+              />
               <NSelect
                 v-model:value="pattern"
                 :placeholder="INTRO.search"
@@ -64,12 +70,6 @@ const searchJump = (url: string) => {
                 clearable
                 @search="handleSearch"
                 @update-value="searchJump"
-              />
-              <NTree
-                :data="tree || []"
-                block-line
-                class="max-h-72vh overflow-auto"
-                @update-selected-keys="jump"
               />
             </NSpace>
           </div>
