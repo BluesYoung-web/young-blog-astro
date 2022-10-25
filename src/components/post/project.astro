@@ -1,0 +1,42 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  des: string;
+};
+
+const {
+  title,
+  href,
+  des
+} = Astro.props as Props;
+---
+
+<a class="tip-block" href={href} title={des} target="_blank">
+  <p class="font-700 lh-24px m-0">
+    { title }
+  </p>
+  <p class="lh-24px">
+    { des }
+  </p>
+</a>
+
+<style lang="scss">
+.tip-block {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 16px 0;
+  border-color: rgba(60, 60, 60, 0.12);
+  color: rgba(60, 60, 60, 0.7);
+  background-color: #f9f9f9;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+</style>
