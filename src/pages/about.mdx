@@ -1,0 +1,100 @@
+---
+title: ❤️关于本人
+description: 关于本人
+date: 2022-10-24 10:10:10
+image: /placeholder-about.jpg
+---
+import { NAV, OPEN_SOURCE_PROJECT } from '@/config';
+import Project from '@/components/post/project.astro'
+
+[[toc]]
+
+## <div class="i-flat-color-icons-contacts text-3xl"></div> 联系方式
+
+<p>
+  <a href={NAV.mail_addr} title="邮件联系">
+    <div class="i-icon-park-send-email text-xl"></div>&nbsp;&nbsp;{NAV.mail_addr.slice(7)}
+  </a>
+</p>
+
+<p>
+  <a target="_blank" title="gitee" href={NAV.gitee_addr}>
+    <div class="i-simple-icons-gitee text-xl"></div>&nbsp;&nbsp;{NAV.gitee_addr}
+  </a>
+</p>
+
+<p>
+  <a target="_blank" title="github" href={NAV.github_addr}>
+    <div class="i-ci-github text-xl"></div>&nbsp;&nbsp;{NAV.github_addr}
+  </a>
+</p>
+
+## 📝 教育经历
+
+<div class="i-fa-solid-user-graduate text-xl"></div> 2020 年毕业于武汉工程大学
+
+<tag class="mr-2 p-2 bg-green-100 text-green-600 shadow"> 三好学生 </tag>
+<tag class="mr-2 p-2 bg-yellow-100 text-yellow-600 shadow" type="warning"> 国家励志奖学金 </tag>
+<tag class="mr-2 p-2 bg-blue-100 text-blue-600 shadow" type="info"> 优秀毕业生 </tag>
+
+## 🔧 技能
+
+<div class="i-game-icons-skills text-xl"></div> 熟悉 `ES6+`、`Vue3`，熟悉 `TypeScript` 的基本使用，**习惯在 `Linux` 系统下工作**
+
+<div class="i-ant-design-api-twotone text-xl"></div> 对功能模块化、组件封装及设计模式有一定的理解
+
+<div class="i-vscode-icons-file-type-testts text-xl"></div> 有过多个 npm 包的开发经验，倾向于使用 `vite` + `vitest` 测试驱动开发
+
+<div class="i-eos-icons-deploy text-xl"></div> 有中小型项目的独立开发及部署经验
+
+<div class="i-mdi-server-network text-xl"></div> 有过使用 docker 在树莓派上搭建服务器的经验
+
+<div class="flex flex-wrap gap-10 mt-8 text-6xl">
+  <div class="hover:scale-110 transition duration-200 i-logos-javascript" title="Javascript"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-html-5" title="HTML5"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-css-3" title="CSS3"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-vue" title="Vue3"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-unocss" title="UnoCSS"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-typescript-icon" title="TypeScript"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-vitejs" title="Vite"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-vitest" title="Vitest"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-nodejs-icon" title="NodeJS"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-nuxt-icon" title="Nuxt3"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-astro" title="Astro"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-lit-icon" title="Lit"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-raspberry-pi" title="RaspberryPI"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-linux-tux" title="Linux"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-nginx" title="Nginx"></div>
+  <div class="hover:scale-110 transition duration-200 i-logos-docker-icon" title="Docker"></div>
+</div>
+
+<br />
+
+
+## 💻️ 工作经历
+
+🏢 武汉卓讯互动信息科技有限公司(2020 年 7 月 —— 至今)
+
+### 工作内容：
+
+<span class="i-dashicons-admin-home text-xl"></span> 开发后台管理系统及其相关的各种操作界面
+
+<span class="i-fontisto-mobile text-xl"></span> 开发移动端游戏推广落地页(下载、唤端、微信支付)
+
+<span class="i-logos-webrtc text-xl"></span> 开发基于 `webrtc` 的低延时云钓鱼 `APP`(目前只实现了摄像头角度调节及内容实时播放)
+
+<span class="i-material-symbols-extension text-xl"></span> 开发浏览器插件(替代人工，自动收集抖音开放平台的数据，并导出为 `excel` 文件)
+
+<p class="font-bold"><span class="i-gg-website text-xl"></span> 开发 [来游戏官网](https://laiyouxi.com) 及其 `SDK`</p>
+
+<span class="i-simple-icons-codereview text-xl"></span> 负责部分项目的代码审核，把控团队成员的代码质量以及将项目部署到开发服
+
+<span class="i-carbon-user-identification text-xl"></span> 作为前端面试官考核面试者
+
+## <div class="i-mdi-open-source-initiative text-3xl"></div> 开源产出：
+
+<div class="grid grid-cols-2 gap-x-10">
+{
+  OPEN_SOURCE_PROJECT.map((item) => <Project {...item} />)
+}
+</div>
