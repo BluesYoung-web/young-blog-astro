@@ -459,7 +459,7 @@ window.opener?.postMessage('消息传递的数据，可以是任意值', '*')
 
 必须保证以下配置存在，否则无法正常使用
 
-```.npmrc
+```sh
 shamefully-hoist=true
 strict-peer-dependencies=false
 ```
