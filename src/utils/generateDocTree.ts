@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 11:41:37
- * @LastEditTime: 2022-10-18 10:03:20
+ * @LastEditTime: 2022-11-06 15:02:32
  * @Description: 
  */
 export type DocItem = {
@@ -10,6 +10,7 @@ export type DocItem = {
     description: string;
     date: string;
     image?: string;
+    draft?: boolean;
   } & Record<string, string>;
   default: Function;
   url: string;
@@ -105,9 +106,10 @@ const getTree = (list: DocItem[]) => {
 
 export const generate = (args: DocItem[]): ReturnDocTree => {
   if (Array.isArray(args) && args.length > 0) {
-    // 按时间倒序
     const list = args
-      
+      // 过滤草稿文件
+      .filter((item) => !item.frontmatter.draft)
+      // 按时间倒序
       .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
     return {
       total: list.length,
