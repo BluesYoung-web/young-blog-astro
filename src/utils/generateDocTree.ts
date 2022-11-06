@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 11:41:37
- * @LastEditTime: 2022-11-06 15:02:32
+ * @LastEditTime: 2022-11-06 16:33:27
  * @Description: 
  */
 export type DocItem = {
@@ -72,9 +72,11 @@ const getTree = (list: DocItem[]) => {
     }
   };
 
-  // 按目录嵌套层级排序
-  list.sort((a, b) => a.url.split('/').length - b.url.split('/').length);
-
+  list
+    // 按目录嵌套层级排序
+    .sort((a, b) => a.url.split('/').length - b.url.split('/').length)
+    // 按时间倒序
+    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   const returnList: DocItem[] = [];
 
   for (const doc of list) {
@@ -108,9 +110,7 @@ export const generate = (args: DocItem[]): ReturnDocTree => {
   if (Array.isArray(args) && args.length > 0) {
     const list = args
       // 过滤草稿文件
-      .filter((item) => !item.frontmatter.draft)
-      // 按时间倒序
-      .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+      .filter((item) => !item.frontmatter.draft);
     return {
       total: list.length,
       ...getTree(list.slice()),
