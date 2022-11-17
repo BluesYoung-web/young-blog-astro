@@ -99,3 +99,48 @@ stdout_logfile=/data/logs/sup_%(program_name)s.log
 ;stderr_logfile_maxbytes=1MB  ;标准错误输出单个日志文件大小，超出将滚动，redirect_stderr=false才有效
 ;stderr_logfile_backups=10       ;保留标准错误输出日志文件个数，超出删除，edirect_stderr=false才有效
 ```
+
+## 相关知识——`systemctl`
+
+
+### 配置文件
+
+读取位置(符号链接)：`/etc/systemd/system/`
+
+存储位置(真实配置文件)：`/usr/lib/systemd/system/`
+
+```ini
+; 配置文件示例 （supervisor.service）
+[Unit]
+; 服务描述
+Description=Supervisor process control system for UNIX
+; 文档链接
+Documentation=http://supervisord.org
+; 在特定的服务之后启动
+After=network.target
+
+[Service]
+; 启动当前服务的命令
+ExecStart=/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+; 停止当前服务的命令
+ExecStop=/usr/bin/supervisorctl $OPTIONS shutdown
+; 重启当前服务的命令
+ExecReload=/usr/bin/supervisorctl -c /etc/supervisor/supervisord.conf $OPTIONS reload
+; 进程模式
+KillMode=process
+; 失败之后 50s，自动重启
+Restart=on-failure
+RestartSec=50s
+
+[Install]
+; 配置文件要存入的子目录
+WantedBy=multi-user.target
+```
+
+
+```bash
+# 为对应的配置文件建立符号链接
+sudo systemctl enable xxx.service
+# 等同于
+sudo ln -s '/usr/lib/systemd/system/xxx.service' '/etc/systemd/system/multi-user.target.wants/xxx.service'
+```
