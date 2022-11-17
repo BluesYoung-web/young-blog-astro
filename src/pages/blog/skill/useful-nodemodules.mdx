@@ -1,0 +1,93 @@
+---
+title: 实用的 node 依赖包
+description: 实用的 node 依赖包
+date: 2022-11-13 17:20:00
+---
+import Alert from '@/components/post/alert.astro'
+
+[[toc]]
+
+## 自己造的一些常用的轮子
+
+### `@bluesyoung/rpc`
+
+🌟 基于 `postMessage` + `MessageChannel`
+
+🌟 可用于 `window.open` 打开的页面及 `iframe` 嵌套的子页面与父页面之间的通信(远程函数调用)
+
+🌟 无视跨域限制，拥有安全限制，阻隔恶意消息
+
+**🌟 `100% TypeScript`，拥有近乎完美的类型提示**
+
+🌟 `esm` | `cjs` | `umd`，各种环境一应俱全
+
+🌟 `IOC` 通信与调用解耦
+
+
+### `@bluesyoung/unplugin-json-conf`
+
+🌟 在运行/打包过程中，加载指定位置的 `JSON` 文件的内容作为虚拟模块的默认导出内容
+
+### `@bluesyoung/wechat-auth`
+
+🌟 微信网页授权/网页应用登录，获取授权码
+
+### `@bluesyoung/call-app`
+
+🌟 基于 `scheme` 的手机浏览器唤端
+
+### `@bluesyoung/qrcode-with-logo`
+
+🌟 绘制带有 `logo` 的二维码
+
+🌟 在 `qrcode-with-logos` 上进行了部分改进
+
+
+## canvas 操作
+
+### `fabric`
+
+**`@types/fabric` 需要依赖 `canvas` 包！！！**
+
+<Alert type="warning">**`canvas` 需要从 `github` 拉取，如非必要，不建议使用**</Alert>
+
+```ts
+import { fabric } from 'fabric';
+
+// 需要不交互的 canvas 时使用，有交互需求直接实例化 fabric.Canvas
+const canvas = new fabric.StaticCanvas('poster', {
+  width,
+  height
+});
+
+// 顶部黑色背景
+const top = new fabric.Rect({
+  left: 0,
+  top: 0,
+  fill: 'black',
+  width,
+  height: topHeight
+});
+canvas.add(top);
+
+// 图形绘制
+const icon = new Image();
+// 如果图片跨域，则需要以下两个属性，否则无法正常导出
+// 如果先前使用 img 标签获取过该图片，则 img 标签也必须带有 anonymous 属性，否则会导致第二次获取不到！！！
+icon.crossOrigin = 'anonymous';
+icon.referrerPolicy = 'no-referrer';
+
+icon.src = '图片地址';
+icon.onload = () => {
+  const oImg = new fabric.Image(icon);
+  // 将图片缩放到指定的宽高
+  oImg.scaleToHeight(iconWidth);
+  oImg.scaleToWidth(iconWidth);
+
+  oImg.left = width / 5 * 2;
+  oImg.top = (topHeight - iconWidth) / 2;
+
+  canvas.add(oImg);
+};
+
+```
