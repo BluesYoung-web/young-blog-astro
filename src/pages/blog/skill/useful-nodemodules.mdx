@@ -42,6 +42,71 @@ import Alert from '@/components/post/alert.astro'
 
 🌟 在 `qrcode-with-logos` 上进行了部分改进
 
+## 日志相关操作
+
+### `consola`
+
+🌟 `nuxt` 出品
+
+🌟 服务端/浏览器都可以使用
+
+🌟 可以直接将普通的 `console` 输出直接无感代理
+
+```ts
+// 浏览器
+import consola, { LogLevel } from 'consola';
+// 构建实例
+const logger = consola.create({
+  // 指定日志输出的等级为 warn 及更加严重的，不配置默认为 info
+  level: LogLevel.Warn,
+});
+// 代理全局的 console，此后所有的输出都会表现为 consola 输出
+logger.wrapAll();
+```
+
+```ts
+// 服务端
+import consola, { JSONReporter, BasicReporter, FancyReporter } from 'consola';
+const logger = consola.create({
+  reporters: [
+    new BasicReporter(),
+    new FancyReporter(),
+    new JSONReporter()
+  ],
+  defaults: {
+    tag: 'young',
+    message: 'Aloha',
+  }
+});
+logger.success('lalala');
+/**
+ * [success] [young] Aloha lalala
+ * √ Aloha lalala
+ * {"date":"2022-11-19T03:26:13.559Z","args":["Aloha","lalala"],"type":"success","level":3,"tag":"young"}
+ */
+```
+
+### `log4js`
+
+只能在服务端使用
+
+```ts
+import Log from 'log4js';
+import c from 'picocolors';
+
+const { getLogger } = Log;
+
+export const logger = getLogger('young');
+logger.level = process.env.LOG_LEVEL;
+
+export const logger_trace = (info: string = '') => logger.trace(c.inverse(c.bgBlue(info)));
+export const logger_debug = (info: string = '') => logger.debug(c.inverse(c.bgCyan(info)));
+export const logger_info = (info: string = '') => logger.info(c.inverse(c.bgGreen(info)));
+export const logger_warn = (info: string = '') => logger.warn(c.inverse(c.bgYellow(info)));
+export const logger_error = (info: string = '') => logger.error(c.inverse(c.bgRed(info)));
+export const logger_fatal = (info: string = '') => logger.fatal(c.inverse(c.bgMagenta(info)));
+```
+
 
 ## canvas 操作
 
@@ -89,5 +154,4 @@ icon.onload = () => {
 
   canvas.add(oImg);
 };
-
 ```
