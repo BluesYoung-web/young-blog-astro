@@ -146,3 +146,27 @@ img.onload = function (e) {
   e.style.height = `${e.natureHeight}px`
 }
 ```
+
+### 网站添加到手机主屏幕
+
+```html
+<head>
+  <!-- 主题色，如果不设置可能会导致不同机型导航栏颜色表现不一致 -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 安卓图标 -->
+  <link rel="shortcut icon" type="image/x-icon" href="图片地址">
+  <!-- <link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C" reportloaderror=""> -->
+  <!-- apple-touch-icon 系统会自动给图标添加圆角及高光 -->
+  <!-- apple-touch-icon-precomposed 系统不会添加圆角及高光 -->
+  <!-- 苹果图标 -->
+  <!-- <link rel="apple-touch-icon-precomposed" href=""> -->
+  <link rel="apple-touch-icon" href="">
+  <!-- 一键添加到桌面，并且打开状态为全屏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- 控制苹果状态栏样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- title 会默认作为应用名称 -->
+  <title>xxxx-高光</title>
+</head>
+```
