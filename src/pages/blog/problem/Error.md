@@ -137,6 +137,24 @@ export default defineConfig({
 // @ts-expect-error        忽略下一行
 ```
 
+### `*.d.ts` 导入 `import` 其他类型导致全局类型失效
+
+当在一个 `*.d.ts` 文件中引入其他模块之后，**就会使 `ts` 类型系统将其视为一个模块**，导致其中的所有类型即使添加了 `declare` 关键字也不能直接全局使用
+
+```ts
+import { A } from 'module-a';
+// 显示将其声明为全局类型
+declare global {
+  interface ExtA {
+    data: A;
+  }
+
+  interface ExtA2 {
+    xdata: A;
+  }
+};
+```
+
 ## vite
 
 ### 打包内存耗尽
@@ -625,3 +643,13 @@ str.match(/weixin:\/\/wap\/pay\?prepayid%3D[^"]+/img)
 }
 // 使用 <ClientOnly> 标签外层包裹
 ```
+
+## Canvas
+
+### `Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported`
+
+**画布中使用了跨域的图片，导致画布被污染，从而无法提取画布的数据**
+
+需要后端支持图片跨域，并在加载图片时设置 `crossorigin="anonymous"`
+
+**如果跨域的图片此前在别的地方使用过，则必须统一使用 `crossorigin="anonymous"`，否则由于资源缓存，图片将无法正常显示**
