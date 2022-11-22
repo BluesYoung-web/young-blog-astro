@@ -207,3 +207,78 @@ icon.onload = () => {
   canvas.add(oImg);
 };
 ```
+
+### [fireworks-js](https://www.npmjs.com/package/fireworks-js)
+
+基于 `canvas` 的烟花动效库
+
+## `rpc`
+
+### [comlink](https://www.npmjs.com/package/comlink)
+
+简化 `webworker` 调用
+
+### [vite-plugin-comlink](https://www.npmjs.com/package/vite-plugin-comlink)
+
+`comlink` 的 `Vite` 插件
+
+
+## 命令行
+
+### [vue-termui](https://www.npmjs.com/package/vue-termui)
+
+使用 `vue` 组件编写命令行程序
+
+### [tasuku](https://www.npmjs.com/package/tasuku)
+
+任务状态指示条
+
+```ts
+import task from 'tasuku';
+
+const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
+
+(async () => {
+  /**
+   * 串行执行
+   */
+  await task('Task 1', async ({ setStatus, setOutput }) => {
+    await sleep(1000);
+  });
+  await task('Task 2', async ({ setStatus, setOutput }) => {
+    await sleep(1000);
+  });
+  await task('Task 3', async ({ setStatus, setOutput }) => {
+    await sleep(1000);
+  });
+
+  /**
+   * Or in a group, like this...
+   */
+  await task.group(
+    (task) => [
+      task('Group task 1', async ({ setStatus, setOutput }) => {
+        await sleep(1000);
+      }),
+      task('Group task 2', async ({ setStatus, setOutput }) => {
+        await sleep(1000);
+      }),
+      task('Group task 3', async ({ setStatus, setOutput }) => {
+        await sleep(1000);
+      }),
+    ],
+    {
+      // 并行执行的个数
+      concurrency: 2,
+    }
+  );
+})();
+```
+
+## 手势
+
+### [any-touch](https://www.npmjs.com/package/any-touch)
+
+支持 PC 端 / 移动端 / 微信小程序
+
+默认加载 6 个手势, 也可按需加载手势, 核心 1kb, 完整 4kb
