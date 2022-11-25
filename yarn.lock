@@ -76,10 +76,10 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
-"@astrojs/mdx@^0.11.6":
-  version "0.11.6"
-  resolved "https://registry.npmmirror.com/@astrojs/mdx/-/mdx-0.11.6.tgz#07cdc2ae1994ee24fd8cd3973f8075b8808b8982"
-  integrity sha512-MEi8CZuz4vXn74/jCb0CMOAKEqd6nsLrShYfE+ddb1//14CwuaVGbXN7V6/zGj8ZvBhFk/darBbNpJBmzfbI6A==
+"@astrojs/mdx@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.npmmirror.com/@astrojs/mdx/-/mdx-0.12.0.tgz#10abd3c97f80e40d1f3056468f3c78f237bef569"
+  integrity sha512-KeX5YYla4KpiiDBVmbaYGqqt9QLVUj/Q2d3u+VRK3WnGI+lN9bVsJLid4wApU/kTA6iWlquIrbX2XmhUUF6viQ==
   dependencies:
     "@astrojs/prism" "^1.0.2"
     "@mdx-js/mdx" "^2.1.2"
@@ -566,10 +566,10 @@
   resolved "https://registry.npmmirror.com/@esbuild/linux-loong64/-/linux-loong64-0.15.12.tgz#475b33a2631a3d8ca8aa95ee127f9a61d95bf9c1"
   integrity sha512-tZEowDjvU7O7I04GYvWQOS4yyP9E/7YlsB0jjw1Ycukgr2ycEzKyIk5tms5WnLBymaewc6VmRKnn5IJWgK4eFw==
 
-"@iconify/json@^2.1.139":
-  version "2.1.139"
-  resolved "https://registry.npmmirror.com/@iconify/json/-/json-2.1.139.tgz#1288951246255e05e2d65b086a4e642f598ac626"
-  integrity sha512-H/DQ/yVgdUk4x4hU696fy0mZOkvLQaR6REQU/okFLgaiIFOS+EWw6GV5JDSKbbkh0YVaxUrAUaqB8XTSFVrFeA==
+"@iconify/json@^2.1.143":
+  version "2.1.143"
+  resolved "https://registry.npmmirror.com/@iconify/json/-/json-2.1.143.tgz#67c41474d6094d7e193ecc90c0f3cc9a99ac5708"
+  integrity sha512-atN7UAsuRgXkXE9MiOh59T2hIkN3ulE6GVbfZjKeYPYdyRpsAgFsLOAMjJ+u6jIzaiZn+rSVwx7m2gQG47sN0A==
   dependencies:
     "@iconify/types" "*"
     pathe "^0.3.0"
@@ -826,6 +826,11 @@
   version "0.0.30"
   resolved "https://registry.npmmirror.com/@types/json5/-/json5-0.0.30.tgz#44cb52f32a809734ca562e685c6473b5754a7818"
   integrity sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==
+
+"@types/katex@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.npmmirror.com/@types/katex/-/katex-0.14.0.tgz#b84c0afc3218069a5ad64fe2a95321881021b5fe"
+  integrity sha512-+2FW2CcT0K3P+JMR8YG846bmDwplKUTsWgT2ENwdQ1UdVfRk3GQrh6Mi4sTopy30gI8Uau5CEqHTDZ6YvWIUPA==
 
 "@types/lodash-es@^4.17.6":
   version "4.17.6"
@@ -1269,25 +1274,25 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.2.45.tgz#a3fffa7489eafff38d984e23d0236e230c818bc2"
   integrity sha512-Ewzq5Yhimg7pSztDV+RH1UDKBzmtqieXQlpTVm2AwraoRL/Rks96mvd8Vgi7Lj+h+TH8dv7mXD3FRZR3TUvbSg==
 
-"@vueuse/core@^9.5.0":
-  version "9.5.0"
-  resolved "https://registry.npmmirror.com/@vueuse/core/-/core-9.5.0.tgz#6726e952e8f92b465457d3bc95deb385aacd9a41"
-  integrity sha512-6GsWBsJHEb3sYw15mbLrcbslAVY45pkzjJYTKYKCXv88z7srAF0VEW0q+oXKsl58tCbqooplInahXFg8Yo1m4w==
+"@vueuse/core@^9.6.0":
+  version "9.6.0"
+  resolved "https://registry.npmmirror.com/@vueuse/core/-/core-9.6.0.tgz#de1d4730849cdbe28a9ebcf6cad167a700919603"
+  integrity sha512-qGUcjKQXHgN+jqXEgpeZGoxdCbIDCdVPz3QiF1uyecVGbMuM63o96I1GjYx5zskKgRI0FKSNsVWM7rwrRMTf6A==
   dependencies:
     "@types/web-bluetooth" "^0.0.16"
-    "@vueuse/metadata" "9.5.0"
-    "@vueuse/shared" "9.5.0"
+    "@vueuse/metadata" "9.6.0"
+    "@vueuse/shared" "9.6.0"
     vue-demi "*"
 
-"@vueuse/metadata@9.5.0":
-  version "9.5.0"
-  resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.5.0.tgz#b01c84230261ddee4d439ae5d9c21343dc5ae565"
-  integrity sha512-4M1AyPZmIv41pym+K5+4wup3bKuYebbH8w8BROY1hmT7rIwcyS4tEL+UsGz0Hiu1FCOxcoBrwtAizc0YmBJjyQ==
+"@vueuse/metadata@9.6.0":
+  version "9.6.0"
+  resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.6.0.tgz#b0a73277538cebef5d477983f74fdd2aa21ce5f9"
+  integrity sha512-sIC8R+kWkIdpi5X2z2Gk8TRYzmczDwHRhEFfCu2P+XW2JdPoXrziqsGpDDsN7ykBx4ilwieS7JUIweVGhvZ93w==
 
-"@vueuse/shared@9.5.0":
-  version "9.5.0"
-  resolved "https://registry.npmmirror.com/@vueuse/shared/-/shared-9.5.0.tgz#f5306548af0dc9f2b3a0d4da74e62bfdd6211241"
-  integrity sha512-HnnCWU1Vg9CVWRCcI8ohDKDRB2Sc4bTgT1XAIaoLSfVHHn+TKbrox6pd3klCSw4UDxkhDfOk8cAdcK+Z5KleCA==
+"@vueuse/shared@9.6.0":
+  version "9.6.0"
+  resolved "https://registry.npmmirror.com/@vueuse/shared/-/shared-9.6.0.tgz#ce2e0e8124c6bdb1e270fc213e334ccc71dcb951"
+  integrity sha512-/eDchxYYhkHnFyrb00t90UfjCx94kRHxc7J1GtBCqCG4HyPMX+krV9XJgVtWIsAMaxKVU4fC8NSUviG1JkwhUQ==
   dependencies:
     vue-demi "*"
 
@@ -1383,10 +1388,10 @@ astring@^1.8.0:
   resolved "https://registry.npmmirror.com/astring/-/astring-1.8.3.tgz#1a0ae738c7cc558f8e5ddc8e3120636f5cebcb85"
   integrity sha512-sRpyiNrx2dEYIMmUXprS8nlpRg2Drs8m9ElX9vVEXaCB4XEAJhKfs7IcX0IwShjuOAjLR6wzIrgoptz1n19i1A==
 
-astro@^1.6.9:
-  version "1.6.9"
-  resolved "https://registry.npmmirror.com/astro/-/astro-1.6.9.tgz#08d7aed72168f8f45fc46e3ac47dd1a8ac0e2bbc"
-  integrity sha512-KXFKXobe8MIYl4gduUPLcAazMz+thox6N1pOv3F3QMbJS5rMRXkWloVK/6XebBO7p3DYkOfOGB4qA9ijTc4ftA==
+astro@^1.6.11:
+  version "1.6.11"
+  resolved "https://registry.npmmirror.com/astro/-/astro-1.6.11.tgz#c57be038aef89eb65b0e08caf6fba3a6e3c11d9a"
+  integrity sha512-T0xb0U0FOrqXxl87x4mjpufhf0b47RMPIu8WWK+2ODrRZkPj1sr24alh3Y/PLSyiWSqoGZF7xzQ6hzt0jDCyVQ==
   dependencies:
     "@astrojs/compiler" "^0.29.15"
     "@astrojs/language-server" "^0.28.3"
@@ -3570,13 +3575,14 @@ ms@2.1.2:
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-naive-ui@^2.33.5:
-  version "2.33.5"
-  resolved "https://registry.npmmirror.com/naive-ui/-/naive-ui-2.33.5.tgz#4ae532046c26a8dca61dc857f9566d25d1b9a642"
-  integrity sha512-O87zwOduut3Xk9NzGIX+LZYr6sW/Y0oGuNJ6T2dka+14CtHD9iidi8gdxg6obhMpzdwa3SnlxO7nzDLqmXVUwA==
+naive-ui@^2.34.2:
+  version "2.34.2"
+  resolved "https://registry.npmmirror.com/naive-ui/-/naive-ui-2.34.2.tgz#0dad81d2fe28178d07de344688a0c027695247bc"
+  integrity sha512-JyvtVqHzS0O0DyPFFg95cJW0fp2WCEPsjXbeplkxFIfJHCgp5KC75PjnBycryegjPiZNLn9WlRDxXU5emEqRfg==
   dependencies:
     "@css-render/plugin-bem" "^0.15.10"
     "@css-render/vue3-ssr" "^0.15.10"
+    "@types/katex" "^0.14.0"
     "@types/lodash" "^4.14.181"
     "@types/lodash-es" "^4.17.6"
     async-validator "^4.0.7"
