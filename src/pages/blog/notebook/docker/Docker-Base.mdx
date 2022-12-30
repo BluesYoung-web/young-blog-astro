@@ -52,7 +52,7 @@ docker rmi node
 <Alert type="info">**`--privileged` 赋予容器真实的root权限 <br/> (某些特殊情况下需要配置，例如控制树莓派的 GPIO 端口)**</Alert>
 
 ```bash
-docker run -it --restart always  node /bin/bash
+docker run -it --restart always --env LISTEN_PORT=9527  node /bin/bash
 # -i: 交互式操作
 # -t: 终端
 # --restart: 自动重启策略
@@ -60,6 +60,7 @@ docker run -it --restart always  node /bin/bash
 #            on-failure:3(意外退出自动重启，上限3)
 #            always(总是)
 #            unless-stopped(总是，不考虑在Docker守护进程启动时就已经停止了的容器)
+# --env 指定环境变量 LISTEN_PORT=9527
 # node: node 镜像
 # /bin/bash：放在镜像名后的是命令，采用交互式 Shell
 
