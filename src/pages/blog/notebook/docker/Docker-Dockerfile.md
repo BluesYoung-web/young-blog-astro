@@ -1,7 +1,7 @@
 ---
 title: 利用 Dockerfile 定制镜像
 description: 利用 Dockerfile 定制镜像
-image: /img/docker.jpg
+image: /img/docker.svg
 date: 2022-12-30 12:00:00
 ---
 

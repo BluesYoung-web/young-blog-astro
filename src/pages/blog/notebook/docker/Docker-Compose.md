@@ -1,7 +1,7 @@
 ---
 title: 利用 docker-compose 部署后端程序
 description: 利用 docker-compose 部署后端程序(以树莓派)
-image: /img/docker.jpg
+image: /img/docker.svg
 date: 2021-04-24 20:12:06
 ---
 
