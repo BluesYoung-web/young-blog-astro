@@ -661,3 +661,18 @@ str.match(/weixin:\/\/wap\/pay\?prepayid%3D[^"]+/img)
 需要后端支持图片跨域，并在加载图片时设置 `crossorigin="anonymous"`
 
 **如果跨域的图片此前在别的地方使用过，则必须统一使用 `crossorigin="anonymous"`，否则由于资源缓存，图片将无法正常显示**
+
+### 绘制的图片清晰度降低
+
+**主要是因为设备的像素比，即虚拟像素与物理像素之间的差距**
+
+```js
+// 解决方案：
+const dpr = window.devicePixelRatio || 1;
+// 设置画布大小，可以影响绘制内容的质量
+canvas.width = width * dpr;
+canvas.height = height * dpr;
+// 设置显示的大小，可以保证内容不溢出；相同的区域内绘制了像素密度增加，绘制的质量自然增加
+canvas.style.width = `${width}px`;
+canvas.style.height = `${height}px`;
+```
