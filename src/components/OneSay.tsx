@@ -20,12 +20,12 @@ interface OneSay {
   reviewer: number;
   type: string;
   uuid: string;
-};
+}
 
 export default defineComponent({
   setup() {
     const sayObj = ref<OneSay>();
-    
+
     const refresh = async () => {
       sayObj.value = await (await fetch(ONE_SAY.refresh)).json();
     };
@@ -59,25 +59,24 @@ export default defineComponent({
     };
 
     refresh();
-    return () => h(
-      <div
-        class="text-xl lg:text-2xl text-center hover:cursor-pointer"
-        title="左键刷新，中键复制，右键跳转详情"
-        onClick={eventDiapatcher}
-        onAuxclick={eventDiapatcher}
-        onContextmenu={(e: { preventDefault: () => any }) => e.preventDefault()}
-      >
-        <p>{ sayObj.value?.hitokoto ?? '' }</p>
-        <p>
-          <span style={{ display: sayObj.value ? 'inline' : 'none' }}>出自：</span>
-          {
-            `
+    return () =>
+      h(
+        <div
+          class="text-xl lg:text-2xl text-center hover:cursor-pointer"
+          title="左键刷新，中键复制，右键跳转详情"
+          onClick={eventDiapatcher}
+          onAuxclick={eventDiapatcher}
+          onContextmenu={(e: { preventDefault: () => any }) => e.preventDefault()}
+        >
+          <p>{sayObj.value?.hitokoto ?? ''}</p>
+          <p>
+            <span style={{ display: sayObj.value ? 'inline' : 'none' }}>出自：</span>
+            {`
               ${sayObj.value?.from ?? ''}
               ${sayObj.value?.from_who ? ` —— ${sayObj.value?.from_who}` : ''}
-            `
-          }
-        </p>
-      </div>
-    )
+            `}
+          </p>
+        </div>,
+      );
   },
-})
+});

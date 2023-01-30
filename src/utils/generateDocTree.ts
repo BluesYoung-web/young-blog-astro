@@ -2,7 +2,7 @@
  * @Author: zhangyang
  * @Date: 2022-09-04 11:41:37
  * @LastEditTime: 2022-11-06 16:33:27
- * @Description: 
+ * @Description:
  */
 export type DocItem = {
   frontmatter: {
@@ -48,7 +48,7 @@ const getTree = (list: DocItem[]) => {
     if (docDir[p]) {
       const parent = docDir[p];
       path.shift();
-      return mkdir(path, parent)
+      return mkdir(path, parent);
     } else {
       const dir: DocTree = {
         label: p,
@@ -76,20 +76,22 @@ const getTree = (list: DocItem[]) => {
     // 按目录嵌套层级排序
     .sort((a, b) => a.url.split('/').length - b.url.split('/').length)
     // 按时间倒序
-    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+    .sort(
+      (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
+    );
   const returnList: DocItem[] = [];
 
   for (const doc of list) {
     returnList.push({
       ...doc,
       label: doc.frontmatter.title,
-      value: doc.url
+      value: doc.url,
     });
 
     const tp: DocTree = {
       key: doc.url,
       label: doc.frontmatter.title,
-      path: doc.url
+      path: doc.url,
     };
     const pathArr = doc.url.split('/').slice(2);
 
@@ -102,7 +104,7 @@ const getTree = (list: DocItem[]) => {
   }
   return {
     tree: docTreeMap,
-    list: returnList
+    list: returnList,
   };
 };
 
@@ -114,12 +116,12 @@ export const generate = (args: DocItem[]): ReturnDocTree => {
     return {
       total: list.length,
       ...getTree(list.slice()),
-    };  
+    };
   } else {
     return {
       total: 0,
       tree: [],
-      list: []
+      list: [],
     };
   }
 };

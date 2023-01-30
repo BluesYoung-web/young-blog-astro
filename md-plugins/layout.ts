@@ -2,9 +2,9 @@
  * @Author: zhangyang
  * @Date: 2022-10-17 14:45:38
  * @LastEditTime: 2022-10-17 14:57:06
- * @Description: 
+ * @Description:
  */
-import type { RemarkPlugin } from "@astrojs/markdown-remark";
+import type { RemarkPlugin } from '@astrojs/markdown-remark';
 
 export const remarkLayout: RemarkPlugin = () => {
   return function (tree, { data }) {

@@ -20,20 +20,19 @@ export default defineComponent({
     };
     const { y } = useScroll(isClient ? window : null);
 
-    return () => h(
-      <>
-        {
-          y.value > props.show
-            ? <div
-                class="fixed z-100 right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer"
-                title="回到顶部"
-                onClick={() => scorll()}
-              >
-                <div class="i-bi-arrow-up-circle" />
-              </div>
-            : null
-        }
-      </>
-    );
-  }
+    return () =>
+      h(
+        <>
+          {y.value > props.show ? (
+            <div
+              class="fixed z-100 right-2 bottom-2 lg:right-10 lg:bottom-10 text-2xl text-gray-400 dark:text-purple-500 hover:cursor-pointer"
+              title="回到顶部"
+              onClick={() => scorll()}
+            >
+              <div class="i-bi-arrow-up-circle" />
+            </div>
+          ) : null}
+        </>,
+      );
+  },
 });
