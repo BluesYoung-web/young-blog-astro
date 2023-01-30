@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview --host",
+    "format": "rome format . --write",
     "astro": "astro"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "@iconify/json": "^2.2.13",
     "astro": "^2.0.2",
     "reading-time": "^1.5.0",
+    "rome": "^11.0.0",
     "vue": "^3.2.45"
   },
   "dependencies": {
