@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-09-04 09:46:18
- * @LastEditTime: 2022-10-25 10:06:36
+ * @LastEditTime: 2023-01-30 15:50:59
  * @Description:
  */
 export const SITE_TITLE = '小黑博客';
@@ -13,7 +13,7 @@ export const ONE_SAY = {
 };
 
 export const MUSIC = {
-  api: 'https://api.i-meto.com/meting/api',
+  api: 'https://api.injahow.cn/meting/',
   // # 目前为播放清单的 id，可以为 歌曲id、清单id、专辑id、搜索关键词
   id: '3231649721',
   // # 歌曲服务器 netease, tencent, kugou, xiami, baidu
