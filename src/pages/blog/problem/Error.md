@@ -155,6 +155,41 @@ declare global {
 };
 ```
 
+### `error TS7056`
+
+**`error TS7056: The inferred type of this node exceeds the maximum length the`**
+
+突然报错，就挺突然的，莫名其妙
+
+```ts
+// 报错部分
+const Builder = <T extends {}>(model: T) => ({
+    withComment: (comment: string) => Builder({ ...model, comment }),
+    withSpecialComment: () => Builder(model).withComment('Special comment'),
+    withTrackingNumber: (tracking: number) => Builder({ ...model, tracking }),
+    build: () => model })
+
+const a = Builder({});
+// a.withComment('test').build().tracking // OK - expected "Property 'tracking' does not exist on type '{ comment: string; }'""
+console.log(a.withTrackingNumber(1234).withSpecialComment().build().tracking)
+
+// 解决方案
+type Builder<T> = {
+    withComment: (comment: string) => Builder<T & { comment: string }>,
+    withSpecialComment: () => Builder<T & { comment: string }>,
+    withTrackingNumber: (tracking: number) => Builder<T & { tracking: number }>,
+    build: () => T
+};
+
+const Builder: <T extends {}>(model: T) => Builder<T> = <T extends {}>(model: T) => ({
+    withComment: (comment: string) => Builder({ ...model, comment }),
+    withSpecialComment: () => Builder(model).withComment('Special comment'),
+    withTrackingNumber: (tracking: number) => Builder({ ...model, tracking }),
+    build: () => model });
+
+const a = Builder({});
+```
+
 ## vite
 
 ### 打包内存耗尽
