@@ -80,3 +80,16 @@ omz plugin enable plugin-name
 ```bash
 sudo apt-get install fonts-noto-cjk
 ```
+
+### 文件的 owner 全部为 root
+
+```bash
+# 编辑文件
+sudo nano /etc/wsl.conf
+# 内容如下：
+[automount]
+enabled = true      
+options = "metadata"
+mountFsTab = false
+# 保存之后重启即可
+```
