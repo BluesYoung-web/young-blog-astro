@@ -11,25 +11,25 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.17.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/vue": "^2.0.1",
-    "@iconify/json": "^2.2.23",
-    "astro": "^2.0.14",
+    "@astrojs/mdx": "^0.18.2",
+    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/vue": "^2.1.0",
+    "@iconify/json": "^2.2.43",
+    "astro": "^2.1.9",
     "reading-time": "^1.5.0",
-    "rome": "^11.0.0",
+    "rome": "^12.0.0",
     "vue": "^3.2.47"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^2.0.1",
-    "@astrojs/prism": "^2.0.0",
-    "@unocss/reset": "^0.49.7",
-    "@vueuse/core": "^9.12.0",
+    "@astrojs/markdown-remark": "^2.1.2",
+    "@astrojs/prism": "^2.1.1",
+    "@unocss/reset": "^0.50.6",
+    "@vueuse/core": "^9.13.0",
     "aplayer": "^1.10.1",
     "consola": "^2.15.3",
     "naive-ui": "^2.34.3",
-    "sass": "^1.58.3",
-    "unocss": "^0.49.7"
+    "sass": "^1.60.0",
+    "unocss": "^0.50.6"
   },
   "license": "MIT"
 }
