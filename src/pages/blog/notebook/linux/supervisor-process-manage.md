@@ -100,6 +100,17 @@ stdout_logfile=/data/logs/sup_%(program_name)s.log
 ;stderr_logfile_backups=10       ;保留标准错误输出日志文件个数，超出删除，edirect_stderr=false才有效
 ```
 
+### 新增配置文件之后的操作
+
+```bash
+# 重新读取配置
+sudo supervisorctl reread
+# 更新配置(会自动 启动新增的配置 | 重启修改的配置)
+sudo supervisorctl update
+# 查看程序状态
+sudo supervisorctl status
+```
+
 ## 相关知识——`systemctl`
 
 
