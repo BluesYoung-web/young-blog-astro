@@ -95,6 +95,19 @@ server {
   - 在 `nginx` 配置文件中加入 `proxy_max_temp_file_size 0;`，然后重载 `nginx`（原因一）
   - **分页并发请求，前端合成，更优**
 
+### 代理无法访问端口
+
+`[crit] 33274#33274: *34 connect() to 127.0.0.1:3000 failed (13: Permission denied) while connecting to upstream, client: 192.168.50.86, server: xxx.com, request: "GET / HTTP/1.0", upstream: "http://127.0.0.1:3000/", host: "***"`
+
+**解决方案：**
+
+```bash
+# 允许 nginx 连接到其他端口
+sudo setsebool -P httpd_can_network_connect 1
+# 再不行，就将 user 修改为 root
+sudo vim /etc/conf/nginx.conf
+```
+
 ## TypeScript
 
 ### `.vue` 文件引入报错
