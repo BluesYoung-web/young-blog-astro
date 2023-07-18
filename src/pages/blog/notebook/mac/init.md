@@ -11,6 +11,7 @@ image: /img/algorithm.webp
 
 [官网](https://brew.sh/index_zh-cn)
 
+> 亲测，还是直接使用代理 + 官网提供的脚本最靠谱
 
 ```bash
 # 安装：
@@ -53,3 +54,23 @@ https://juejin.cn/post/7134638634874961957
 https://juejin.cn/post/7236687156068286521
 
 https://juejin.cn/post/7235177983311740989
+
+
+## 报错处理
+
+### zsh: bad CPU type in executable: /usr/local/bin/git
+
+> 系统自带的 git 和新安装的 git 版本不兼容, 需要卸载
+
+```bash
+# 查看当前 git 的安装路径
+where git
+# /usr/bin/git
+# /usr/local/bin/git
+
+# 查看当前正在使用的 git
+which git
+# /usr/local/bin/git
+# 就是这个 git 造成的报错，使用下面的命令卸载就好了
+sh /usr/local/git/uninstall.sh
+```
