@@ -14,9 +14,9 @@ date: 2022-11-06 15:00:00
 
 ```bash
 # 切换 淘宝 镜像源
-npm config set registery https://registry.npmmirror.com
-yarn config set registery https://registry.npmmirror.com
-pnpm config set registery https://registry.npmmirror.com
+npm config set registry https://registry.npmmirror.com
+yarn config set registry https://registry.npmmirror.com
+pnpm config set registry https://registry.npmmirror.com
 
 # 设置代理，在安装某些需要从 github 直接下载的依赖包时很有用
 # 设置 http 的代理，基本没用
