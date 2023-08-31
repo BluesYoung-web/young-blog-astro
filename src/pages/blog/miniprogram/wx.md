@@ -347,3 +347,33 @@ defineExpose({
 }
 </style>
 ```
+
+## 微信内置变量
+
+### `__wxConfig`
+
+`__wxConfig.envVersion` 可以用来获取当前小程序运行的环境，它有三种可能的值：
+
+- `develop`：开发版
+- `trial`：体验版
+- `release`：正式版
+
+你可以在代码中使用 `__wxConfig.envVersion` 来判断当前小程序运行的环境。例如：
+
+```javascript
+if (__wxConfig.envVersion === 'develop') {
+  console.log('开发版')
+} else if (__wxConfig.envVersion === 'trial') {
+  console.log('体验版')
+} else if (__wxConfig.envVersion === 'release') {
+  console.log('正式版')
+}
+```
+
+`__wxConfig.accountInfo`:
+
+  - `.appId` appid
+  - `.icon` 小程序图标
+  - `.nickname` 小程序名称
+
+`__wxConfig.platform`：小程序运行的平台，例如 `ios、android、devtools` 等
