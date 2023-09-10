@@ -2,7 +2,7 @@
 title: nuxt3 相关
 description: nuxt3 相关
 date: 2023-09-02 10:10:00
-image: https://api.iconify.design/logos:nuxt.svg
+image: /img/logos-nuxt.svg
 ---
 
 [[toc]]
