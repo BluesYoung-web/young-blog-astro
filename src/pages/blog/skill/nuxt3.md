@@ -25,3 +25,36 @@ image: /img/logos-nuxt.svg
 
   - `vite.build.target: 'es2015`
   - 目前测试过最低兼容 `Chrome69`
+
+## 模块开发
+
+> **注意：最好只编译 esm 的，不然运行时会报错**
+
+### 可能会用到的依赖
+
+```json
+{
+  "devDependencies": {
+    "@nuxt/kit": "^3.7.3",
+    "@nuxt/schema": "^3.7.3",
+    "nuxt": "^3.7.3",
+    "unbuild": "^2.0.0"
+  }
+}
+```
+
+### 插件配置类型提示
+
+> 需要在插件入口文件配置下列的内容，不然 `unbuild` 之后会得到一个空的类型文件
+
+```ts
+// NAME 为当前的包名, YoungLazyLoadOptions 为选项类型, 按需替换
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    [NAME]?: YoungLazyLoadOptions
+  }
+  interface NuxtOptions {
+    [NAME]?: YoungLazyLoadOptions
+  }
+}
+```
