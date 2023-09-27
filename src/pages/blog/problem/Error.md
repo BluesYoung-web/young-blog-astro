@@ -724,3 +724,40 @@ canvas.height = height * dpr;
 canvas.style.width = `${width}px`;
 canvas.style.height = `${height}px`;
 ```
+
+## unbuild (打包工具)
+
+### 打包 Vue 的 tsx 时，编译结果为 React
+
+**需要单独给 `esbuild` 传递特定的配置**
+
+```ts
+// build.config.ts
+import { defineBuildConfig } from "unbuild";
+
+export default defineBuildConfig({
+  entries: [
+    {
+      builder: 'mkdist',
+      input: './src/',
+      outDir: './dist',
+      format: 'esm',
+      // 明确告诉 esbuild 使用 Vue 的 tsx
+      esbuild: {
+        jsxFactory: 'h',
+        jsxFragment: 'Fragment',
+        jsxImportSource: 'vue'
+      },
+    },
+  ],
+  externals: [
+    'vue',
+    '@vueuse/core',
+    'element-plus',
+    '@bluesyoung/utils',
+    '@vue/shared',
+    'sortablejs',
+  ],
+  declaration: true
+});
+```
