@@ -761,3 +761,23 @@ export default defineBuildConfig({
   declaration: true
 });
 ```
+
+## 浏览器
+
+### https 与 http 混用
+
+#### 简单粗暴（本地解决）
+
+旧：<del>打开 `chrome://flags/`，搜索控制台报错的 `mixed content`，调整对应的配置然后重启浏览器即可</del>
+
+新：点击网址部分的 🔒，调整网站设置/权限，将**不安全的内容**调整为**允许**，完成后根据提示刷新页面即可
+
+#### 一劳永逸（原始资源同时支持两种协议的情况）
+
+- 不指定协议，浏览器会自动选择（`//a.com/b.js`）
+
+- 加入特定的头部，自动将 `http` 请求升级为 `https` 请求
+
+```html
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+```
