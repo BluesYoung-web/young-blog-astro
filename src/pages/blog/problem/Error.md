@@ -564,6 +564,26 @@ nameserver 8.8.4.4
 # 修改完毕，保存即可生效
 ```
 
+### ubuntu 打开 chrome 时会提示密钥环
+
+第一次打开的时候就会提示你设置一个秘密，**此时建议直接留空**，不然后续打开 chrome 就会一直让你输入密码，虽然相对安全，不过很烦
+
+### ubuntu 实现盒盖不休眠
+
+```bash
+# 新建配置文件，目录不存在时请先新建对应的目录
+sudo nano /etc/systemd/logind.conf.d/nocloselid.conf
+# 内容如下：
+[Login]
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+```
+
+> 如果关闭盖盖后仍然希望系统保持未锁定状态，可以按照以下步骤设置Ubuntu：
+  打开"系统设置"应用程序。
+  导航到"隐私"选项卡。
+  在"屏幕锁定"部分，将"自动锁定屏幕"设置为"从不"或将切换关闭。
+
 ## 注意！！！
 
 **`window.addEventListener('storage')` 无法监听同一页面的变化**
