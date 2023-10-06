@@ -58,3 +58,11 @@ declare module '@nuxt/schema' {
   }
 }
 ```
+
+## 部署到 netlify
+
+必要条件：**正确设置 `Functions directory`**
+
+> 如果这一步出错了，那么部署之后永远都是 `404`。例如：我将默认的编译目录修改成了 `dist`，那么**配置目录应当为：`dist/server`**
+
+不知道是不是必须条件，反正在摸索过程中设置了。`package.json -> scripts -> start: "node dist/server/index.mjs"`
