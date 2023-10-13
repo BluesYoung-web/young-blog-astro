@@ -122,7 +122,8 @@ http {
   # gzip_comp_level 6;
   # gzip_buffers 16 8k;
   # gzip_http_version 1.1;
-  # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascrip$
+  # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascrip$;
+  # gzip_disable "MSIE [1-6]\."; #配置禁用gzip条件，支持正则。此处表示ie6及以下不启用gzip（因为ie低版本不支持）
 
   # 负载均衡
   upstream myserver {
@@ -160,7 +161,7 @@ http {
 http {
   server {
     listen 80;
-  server_name localhost;
+    server_name localhost;
     root /www/admin/localhost_80/wwwroot/;
     # 301重定向
     # rewrite ^(.*)$ $1 permanent;
