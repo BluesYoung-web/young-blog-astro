@@ -720,6 +720,12 @@ str.match(/weixin:\/\/wap\/pay\?prepayid%3D[^"]+/img)
 // 使用 <ClientOnly> 标签外层包裹
 ```
 
+### 水合(hydrition)警告
+
+- 标签的嵌套需要合法，不然浏览器修正之后就会有警告
+
+- `.server.vue` 与 `.client.vue` 编写的组件，最好保持唯一的根组件，否则也可能会有警告，而且警告的内容莫名其妙
+
 ## Canvas
 
 ### `Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported`
