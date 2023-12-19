@@ -807,3 +807,24 @@ export default defineBuildConfig({
 ```html
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 ```
+
+
+## github
+
+### ssh 突然推不了代码了
+
+`ssh: connect to host github.com port 22: Resource temporarily unavailable`
+
+**22 端口可能被防火墙屏蔽了，可以尝试连接 GitHub 的 443 端口**
+
+```bash
+$ vim ~/.ssh/config
+# Add section below to it
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+
+$ ssh -T git@github.com
+Hi xxxxx! You've successfully authenticated, but GitHub does not
+provide shell access.
+```
